@@ -274,6 +274,22 @@
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        .example-col-no-flex-1 {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            margin: 0.5rem;
+            font-size: 0.95rem;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         .example-col-no-flex {
             background: var(--primary);
             color: white;
@@ -291,7 +307,8 @@
         }
 
         .example-col.light,
-        .example-col-no-flex {
+        .example-col-no-flex,
+        .example-col-no-flex-1 {
             background: var(--primary-dark);
         }
 

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Grid System Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="utilityClasses.css">
-    <link rel="stylesheet" href="styles.css"
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" </head> <body>
     <header>
         <div class="container">
             <div class="logo">📱💻</div>
             <h1>Responsive Grid System</h1>
-            <p class="subtitle">A lightweight, Bootstrap-inspired grid system with Container, Row, and Column components for React applications</p>
+            <p class="subtitle">A lightweight, Bootstrap-inspired grid system with Container, Row, and Column components
+                for React applications</p>
             <div class="version">v1.0.0</div>
         </div>
     </header>
@@ -26,9 +26,12 @@
                     <li><a href="#breakpoints"><i class="fas fa-mobile-alt"></i> Breakpoints</a></li>
                     <li><a href="#grid-components"><i class="fas fa-th"></i> Grid Components</a>
                         <ul>
-                            <li><a href="#container-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-square"></i> Container</a></li>
-                            <li><a href="#row-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Row</a></li>
-                            <li><a href="#col-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-columns"></i> Column</a></li>
+                            <li><a href="#container-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-square"></i>
+                                    Container</a></li>
+                            <li><a href="#row-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Row</a>
+                            </li>
+                            <li><a href="#col-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-columns"></i> Column</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="#utility-classes"><i class="fas fa-toolbox"></i> Utility Classes</a>
@@ -47,7 +50,9 @@
             <div class="content">
                 <section id="overview">
                     <h2><i class="fas fa-home"></i> Overview</h2>
-                    <p>The <strong>Responsive Grid System</strong> is a lightweight, Bootstrap-inspired toolkit designed for React applications. It provides an essential responsive 12-column grid system without the overhead of a full CSS framework.</p>
+                    <p>The <strong>Responsive Grid System</strong> is a lightweight, Bootstrap-inspired toolkit designed
+                        for React applications. It provides an essential responsive 12-column grid system without the
+                        overhead of a full CSS framework.</p>
 
                     <div class="grid-example">
                         <div class="example-row">
@@ -65,7 +70,7 @@
                     </div>
 
                     <h3><i class="fas fa-star"></i> Key Features</h3>
-                    
+
                     <div class="feature-grid">
                         <div class="feature-card">
                             <i class="fas fa-columns"></i>
@@ -102,8 +107,9 @@
 
                 <section id="breakpoints">
                     <h2><i class="fas fa-mobile-alt"></i> Breakpoints</h2>
-                    <p>The grid system leverages 7 distinct breakpoints to control layout across various screen sizes. Styles defined at a specific breakpoint apply to that size and all larger screen sizes.</p>
-                    
+                    <p>The grid system leverages 7 distinct breakpoints to control layout across various screen sizes.
+                        Styles defined at a specific breakpoint apply to that size and all larger screen sizes.</p>
+
                     <div class="breakpoint-grid">
                         <div class="breakpoint-card">
                             <div class="bp-name">
@@ -165,22 +171,23 @@
 
                     <h3><i class="fas fa-code"></i> Breakpoint Usage</h3>
                     <p>Breakpoint prefixes are used with grid columns to apply styles conditionally:</p>
-                    
+
                     <div class="code-block">
                         <code>
                             <span class="comment">// Applies to medium screens (≥992px) and larger</span><br>
                             &lt;Col md={6} /&gt; <span class="comment">// Renders as .col-md-6</span><br><br>
-                            
+
                             <span class="comment">// Multiple breakpoints</span><br>
                             &lt;Col xs={12} sm={6} md={4} lg={3} /&gt;<br><br>
-                            
+
                             <span class="comment">// Auto-sizing at large breakpoints</span><br>
                             &lt;Col lg="auto" /&gt; <span class="comment">// Renders as .col-lg-auto</span>
                         </code>
                     </div>
-                    
+
                     <h3><i class="fas fa-expand"></i> Container Max-Widths</h3>
-                    <p>The grid system applies max-width constraints at different breakpoints to prevent content from becoming too wide:</p>
+                    <p>The grid system applies max-width constraints at different breakpoints to prevent content from
+                        becoming too wide:</p>
                     <div class="code-block">
                         <code>
                             <span class="comment">// Container max-width configuration in SCSS:</span><br>
@@ -194,7 +201,7 @@
                             );
                         </code>
                     </div>
-                    
+
                     <div class="mobile-first">
                         <i class="fas fa-mobile"></i>
                         <div>
@@ -212,15 +219,17 @@
 
                 <section id="grid-components">
                     <h2><i class="fas fa-th"></i> Grid Components</h2>
-                    <p>The grid system provides three core React components for building responsive layouts. These components work together to create a flexible grid system.</p>
-                    
+                    <p>The grid system provides three core React components for building responsive layouts. These
+                        components work together to create a flexible grid system.</p>
+
                     <div class="component-card" id="container-component">
                         <div class="component-header">
                             <i class="fas fa-square"></i>
                             <h3>Container</h3>
                         </div>
-                        <p>The Container component provides the foundational wrapper for the grid system. It centers content horizontally and applies responsive max-widths at different breakpoints.</p>
-                        
+                        <p>The Container component provides the foundational wrapper for the grid system. It centers
+                            content horizontally and applies responsive max-widths at different breakpoints.</p>
+
                         <h3><i class="fas fa-cog"></i> Props</h3>
                         <div class="prop-row">
                             <div class="prop-name">fluid</div>
@@ -244,7 +253,7 @@
                                 <p>Additional CSS classes to apply to the container</p>
                             </div>
                         </div>
-                        
+
                         <h3><i class="fas fa-code"></i> Usage</h3>
                         <div class="code-block">
                             <code>
@@ -254,7 +263,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col&gt;Content&lt;/Col&gt;<br>
                                 &nbsp;&nbsp;&lt;/Row&gt;<br>
                                 &lt;/Container&gt;<br><br>
-                                
+
                                 <span class="comment">// Full-width container</span><br>
                                 &lt;Container fluid&gt;<br>
                                 &nbsp;&nbsp;&lt;Row&gt;<br>
@@ -264,14 +273,15 @@
                             </code>
                         </div>
                     </div>
-                    
+
                     <div class="component-card" id="row-component">
                         <div class="component-header">
                             <i class="fas fa-grip-lines"></i>
                             <h3>Row</h3>
                         </div>
-                        <p>The Row component creates a horizontal group of columns. It handles negative margins to offset column padding for proper alignment.</p>
-                        
+                        <p>The Row component creates a horizontal group of columns. It handles negative margins to
+                            offset column padding for proper alignment.</p>
+
                         <h3><i class="fas fa-cog"></i> Props</h3>
                         <div class="prop-row">
                             <div class="prop-name">noGutters</div>
@@ -295,7 +305,7 @@
                                 <p>Additional CSS classes to apply to the row</p>
                             </div>
                         </div>
-                        
+
                         <h3><i class="fas fa-code"></i> Usage</h3>
                         <div class="code-block">
                             <code>
@@ -304,7 +314,7 @@
                                 &nbsp;&nbsp;&lt;Col&gt;Column 1&lt;/Col&gt;<br>
                                 &nbsp;&nbsp;&lt;Col&gt;Column 2&lt;/Col&gt;<br>
                                 &lt;/Row&gt;<br><br>
-                                
+
                                 <span class="comment">// Row without gutters</span><br>
                                 &lt;Row noGutters&gt;<br>
                                 &nbsp;&nbsp;&lt;Col&gt;Column without spacing&lt;/Col&gt;<br>
@@ -312,14 +322,15 @@
                             </code>
                         </div>
                     </div>
-                    
+
                     <div class="component-card" id="col-component">
                         <div class="component-header">
                             <i class="fas fa-columns"></i>
                             <h3>Column (Col)</h3>
                         </div>
-                        <p>The Col component defines a column within a row. It supports responsive width and offset settings across 7 breakpoints.</p>
-                        
+                        <p>The Col component defines a column within a row. It supports responsive width and offset
+                            settings across 7 breakpoints.</p>
+
                         <h3><i class="fas fa-cog"></i> Props</h3>
                         <div class="prop-row">
                             <div class="prop-name">xxs, xs, sm, md, lg, xl, xxl</div>
@@ -349,7 +360,7 @@
                                 <p>Additional CSS classes to apply to the column</p>
                             </div>
                         </div>
-                        
+
                         <h3><i class="fas fa-code"></i> Usage</h3>
                         <div class="code-block">
                             <code>
@@ -357,12 +368,12 @@
                                 &lt;Col xs={12} md={6}&gt;<br>
                                 &nbsp;&nbsp;Full width on mobile, half width on medium screens<br>
                                 &lt;/Col&gt;<br><br>
-                                
+
                                 <span class="comment">// Column with offset</span><br>
                                 &lt;Col md={4} offsetMd={4}&gt;<br>
                                 &nbsp;&nbsp;Column pushed by 4 columns on medium screens<br>
                                 &lt;/Col&gt;<br><br>
-                                
+
                                 <span class="comment">// Auto-sizing column</span><br>
                                 &lt;Col lg="auto"&gt;<br>
                                 &nbsp;&nbsp;Column that sizes to its content on large screens<br>
@@ -374,14 +385,16 @@
 
                 <section id="utility-classes">
                     <h2><i class="fas fa-toolbox"></i> Utility Classes</h2>
-                    <p>Utility classes provide single-purpose, immutable styles to quickly build and modify components.</p>
+                    <p>Utility classes provide single-purpose, immutable styles to quickly build and modify components.
+                    </p>
 
                     <div class="component-card" id="borders">
                         <div class="component-header">
                             <i class="fas fa-border-all"></i>
                             <h3>Borders</h3>
                         </div>
-                        <p>Control borders with these utility classes. You can add or remove borders from all sides or individual sides, adjust border width, and apply various border radius styles.</p>
+                        <p>Control borders with these utility classes. You can add or remove borders from all sides or
+                            individual sides, adjust border width, and apply various border radius styles.</p>
 
                         <h3><i class="fas fa-cog"></i> Additive Borders</h3>
                         <p>Add borders to an element or just to specific sides.</p>
@@ -409,10 +422,14 @@
                         <div class="grid-example">
                             <div class="example-row" style="display: flex; flex-wrap: wrap; gap: 1rem;">
                                 <div class="border-example-box border-0" style="flex: 1;">.border-0</div>
-                                <div class="border-example-box border-top-0" style="flex: 1; border: 1px solid black;">.border-top-0</div>
-                                <div class="border-example-box border-end-0" style="flex: 1; border: 1px solid black;">.border-end-0</div>
-                                <div class="border-example-box border-bottom-0" style="flex: 1; border: 1px solid black;">.border-bottom-0</div>
-                                <div class="border-example-box border-start-0" style="flex: 1; border: 1px solid black;">.border-start-0</div>
+                                <div class="border-example-box border-top-0" style="flex: 1; border: 1px solid black;">
+                                    .border-top-0</div>
+                                <div class="border-example-box border-end-0" style="flex: 1; border: 1px solid black;">
+                                    .border-end-0</div>
+                                <div class="border-example-box border-bottom-0"
+                                    style="flex: 1; border: 1px solid black;">.border-bottom-0</div>
+                                <div class="border-example-box border-start-0"
+                                    style="flex: 1; border: 1px solid black;">.border-start-0</div>
                             </div>
                         </div>
                         <div class="code-block">
@@ -429,11 +446,16 @@
                         <p>Change the width of an element's border.</p>
                         <div class="grid-example">
                             <div class="example-row" style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                                <div class="border-example-box" style="flex: 1; border: 1px solid black;">.border-1</div>
-                                <div class="border-example-box" style="flex: 1; border: 2px solid black;">.border-2</div>
-                                <div class="border-example-box" style="flex: 1; border: 3px solid black;">.border-3</div>
-                                <div class="border-example-box" style="flex: 1; border: 4px solid black;">.border-4</div>
-                                <div class="border-example-box" style="flex: 1; border: 5px solid black;">.border-5</div>
+                                <div class="border-example-box" style="flex: 1; border: 1px solid black;">.border-1
+                                </div>
+                                <div class="border-example-box" style="flex: 1; border: 2px solid black;">.border-2
+                                </div>
+                                <div class="border-example-box" style="flex: 1; border: 3px solid black;">.border-3
+                                </div>
+                                <div class="border-example-box" style="flex: 1; border: 4px solid black;">.border-4
+                                </div>
+                                <div class="border-example-box" style="flex: 1; border: 5px solid black;">.border-5
+                                </div>
                             </div>
                         </div>
                         <div class="code-block">
@@ -456,8 +478,11 @@
                                 <div class="border-example-box border rounded-3" style="flex: 1;">.rounded-3</div>
                                 <div class="border-example-box border rounded-4" style="flex: 1;">.rounded-4</div>
                                 <div class="border-example-box border rounded-5" style="flex: 1;">.rounded-5</div>
-                                <div class="border-example-box border rounded-circle" style="flex: 1; width: 80px; height: 80px; border-radius: 50%;">.rounded-circle</div>
-                                <div class="border-example-box border rounded-pill" style="flex: 1; width: 120px;">.rounded-pill</div>
+                                <div class="border-example-box border rounded-circle"
+                                    style="flex: 1; width: 80px; height: 80px; border-radius: 50%;">.rounded-circle
+                                </div>
+                                <div class="border-example-box border rounded-pill" style="flex: 1; width: 120px;">
+                                    .rounded-pill</div>
                             </div>
                         </div>
                         <div class="code-block">
@@ -479,8 +504,10 @@
                             <div class="example-row" style="display: flex; flex-wrap: wrap; gap: 1rem;">
                                 <div class="border-example-box border rounded-top" style="flex: 1;">.rounded-top</div>
                                 <div class="border-example-box border rounded-end" style="flex: 1;">.rounded-end</div>
-                                <div class="border-example-box border rounded-bottom" style="flex: 1;">.rounded-bottom</div>
-                                <div class="border-example-box border rounded-start" style="flex: 1;">.rounded-start</div>
+                                <div class="border-example-box border rounded-bottom" style="flex: 1;">.rounded-bottom
+                                </div>
+                                <div class="border-example-box border rounded-start" style="flex: 1;">.rounded-start
+                                </div>
                             </div>
                         </div>
                         <div class="code-block">
@@ -500,106 +527,133 @@
                             <i class="fas fa-eye"></i>
                             <h3>Display Properties</h3>
                         </div>
-                        <p>Control the <code>display</code> property of elements with these utilities. These classes can also be applied responsively using the <code>.d-{breakpoint}-{value}</code> format, and for print-specific layouts with <code>.d-print-{value}</code>.</p>
+                        <p>Control the <code>display</code> property of elements with these utilities. These classes can
+                            also be applied responsively using the <code>.d-{breakpoint}-{value}</code> format, and for
+                            print-specific layouts with <code>.d-print-{value}</code>.</p>
 
                         <h3><i class="fas fa-cog"></i> Basic Display Classes</h3>
                         <p>Apply fundamental display behaviors to any element.</p>
                         <div class="grid-example">
-    <p>Individual examples for each display property:</p>
+                            <p>Individual examples for each display property:</p>
 
-    <h4>.d-block</h4>
-    <div class="example-row" style="flex-direction: column; gap: 0.5rem; display: flex; flex-wrap: wrap;">
-        <div class="border-example-box d-block" style="flex: 1 1 100%;">Block Element 1</div>
-        <div class="border-example-box d-block" style="flex: 1 1 100%;">Block Element 2</div>
-        <p style="flex: 1 1 100%; margin-top: 1rem;">Block elements take up the full width available and stack vertically.</p>
-    </div>
+                            <h4>.d-block</h4>
+                            <div class="example-row"
+                                style="flex-direction: column; gap: 0.5rem; display: flex; flex-wrap: wrap;">
+                                <div class="border-example-box d-block" style="flex: 1 1 100%;">Block Element 1</div>
+                                <div class="border-example-box d-block" style="flex: 1 1 100%;">Block Element 2</div>
+                                <p style="flex: 1 1 100%; margin-top: 1rem;">Block elements take up the full width
+                                    available and stack vertically.</p>
+                            </div>
 
-    <h4>.d-inline</h4>
-    <div class="example-row" style="flex-direction: row; align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <span>This is</span> <span class="border-example-box d-inline">inline item 1</span> and <span class="border-example-box d-inline">inline item 2</span> in the same line.
-        <p style="flex: 1 1 100%; margin-top: 1rem;">Inline elements only take up as much width as their content and flow horizontally.</p>
-    </div>
+                            <h4>.d-inline</h4>
+                            <div class="example-row"
+                                style="flex-direction: row; align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span>This is</span> <span class="border-example-box d-inline">inline item 1</span> and
+                                <span class="border-example-box d-inline">inline item 2</span> in the same line.
+                                <p style="flex: 1 1 100%; margin-top: 1rem;">Inline elements only take up as much width
+                                    as their content and flow horizontally.</p>
+                            </div>
 
-    <h4>.d-inline-block</h4>
-    <div class="example-row" style="flex-direction: row; align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <div class="border-example-box d-inline-block" style="width: 150px; height: 50px;">Inline-Block 1</div>
-        <div class="border-example-box d-inline-block" style="width: 150px; height: 50px;">Inline-Block 2</div>
-        <p style="flex: 1 1 100%; margin-top: 1rem;">Inline-block elements behave like inline elements but can have a defined width and height.</p>
-    </div>
+                            <h4>.d-inline-block</h4>
+                            <div class="example-row"
+                                style="flex-direction: row; align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="border-example-box d-inline-block" style="width: 150px; height: 50px;">
+                                    Inline-Block 1</div>
+                                <div class="border-example-box d-inline-block" style="width: 150px; height: 50px;">
+                                    Inline-Block 2</div>
+                                <p style="flex: 1 1 100%; margin-top: 1rem;">Inline-block elements behave like inline
+                                    elements but can have a defined width and height.</p>
+                            </div>
 
-    <h4>.d-flex</h4>
-    <div class="example-row" style="display: flex; height: 100px; justify-content: space-around; align-items: center; background: var(--light-gray); gap: 0.5rem;">
-        <div class="example-col light" style="flex: none; width: 80px; margin: 0;">Item A</div>
-        <div class="example-col light" style="flex: none; width: 80px; margin: 0;">Item B</div>
-    </div>
-    <p><code>.d-flex</code> turns an element into a flex container, enabling powerful layout options for its direct children.</p>
+                            <h4>.d-flex</h4>
+                            <div class="example-row"
+                                style="display: flex; height: 100px; justify-content: space-around; align-items: center; background: var(--light-gray); gap: 0.5rem;">
+                                <div class="example-col light" style="width: 80px; margin: 0;">Item A</div>
+                                <div class="example-col light" style="width: 80px; margin: 0;">Item B</div>
+                            </div>
+                            <p><code>.d-flex</code> turns an element into a flex container, enabling powerful layout
+                                options for its direct children.</p>
 
-    <h4>.d-grid</h4>
-    <div class="example-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; height: 100px; background: var(--light-gray); margin: 0; padding: 1rem;">
-        <div class="example-col light" style="margin: 0;">Grid Cell 1</div>
-        <div class="example-col light" style="margin: 0;">Grid Cell 2</div>
-    </div>
-    <p><code>.d-grid</code> transforms an element into a grid container, allowing for two-dimensional layouts.</p>
+                            <h4>.d-grid</h4>
+                            <div class="example-row"
+                                style="display: grid; grid-template-columns: 2fr 1fr; gap: 10px; height: 300px; background: var(--light-gray); margin: 0; padding: 1rem;">
+                                <div class="example-col light" style="margin: 0;">Grid Cell 1</div>
+                                <div class="example-col light" style="margin: 0;">Grid Cell 2</div>
+                            </div>
+                            <p><code>.d-grid</code> transforms an element into a grid container, allowing for
+                                two-dimensional layouts.</p>
 
-    <h4>.d-none</h4>
-    <p>The following text contains a <code>.d-none</code> element. You should not see the word "HIDDEN".</p>
-    <p>Visible text. <span class="d-none">HIDDEN TEXT</span>. More visible text.</p>
-    <div class="d-none border-example-box">This entire box is hidden by .d-none.</div>
-    <p>Use <code>.d-none</code> to completely hide an element, visually and for screen readers.</p>
-</div>
+                            <h4>.d-none</h4>
+                            <p>The following text contains a <code>.d-none</code> element. You should not see the word
+                                "HIDDEN".</p>
+                            <p>Visible text. <span class="d-none">HIDDEN TEXT</span>. More visible text.</p>
+                            <div class="d-none border-example-box">This entire box is hidden by .d-none.</div>
+                            <p>Use <code>.d-none</code> to completely hide an element, visually and for screen readers.
+                            </p>
+                        </div>
 
-<div class="code-block">
-    <code>
-        <span class="comment">// .d-block example</span><br>
-        &lt;div class="d-block"&gt;Block Element 1&lt;/div&gt;<br>
-        &lt;div class="d-block"&gt;Block Element 2&lt;/div&gt;<br><br>
+                        <div class="code-block">
+                            <code>
+                                <span class="comment">// .d-block example</span><br>
+                                &lt;div class="d-block"&gt;Block Element 1&lt;/div&gt;<br>
+                                &lt;div class="d-block"&gt;Block Element 2&lt;/div&gt;<br><br>
 
-        <span class="comment">// .d-inline example</span><br>
-        &lt;span&gt;This is&lt;/span&gt; &lt;span class="d-inline"&gt;inline item 1&lt;/span&gt; and &lt;span class="d-inline"&gt;inline item 2&lt;/span&gt; in the same line.<br><br>
+                                <span class="comment">// .d-inline example</span><br>
+                                &lt;span&gt;This is&lt;/span&gt; &lt;span class="d-inline"&gt;inline item 1&lt;/span&gt;
+                                and &lt;span class="d-inline"&gt;inline item 2&lt;/span&gt; in the same line.<br><br>
 
-        <span class="comment">// .d-inline-block example</span><br>
-        &lt;div class="d-inline-block"&gt;Inline-Block 1&lt;/div&gt;<br>
-        &lt;div class="d-inline-block"&gt;Inline-Block 2&lt;/div&gt;<br><br>
+                                <span class="comment">// .d-inline-block example</span><br>
+                                &lt;div class="d-inline-block"&gt;Inline-Block 1&lt;/div&gt;<br>
+                                &lt;div class="d-inline-block"&gt;Inline-Block 2&lt;/div&gt;<br><br>
 
-        <span class="comment">// .d-flex example</span><br>
-        &lt;div class="d-flex"&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Flex Item 1&lt;/div&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Flex Item 2&lt;/div&gt;<br>
-        &lt;/div&gt;<br><br>
+                                <span class="comment">// .d-flex example</span><br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&lt;div&gt;Flex Item 1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div&gt;Flex Item 2&lt;/div&gt;<br>
+                                &lt;/div&gt;<br><br>
 
-        <span class="comment">// .d-grid example</span><br>
-        &lt;div class="d-grid"&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Grid Cell 1&lt;/div&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Grid Cell 2&lt;/div&gt;<br>
-        &lt;/div&gt;<br><br>
+                                <span class="comment">// .d-grid example</span><br>
+                                &lt;div class="d-grid"&gt;<br>
+                                &nbsp;&nbsp;&lt;div&gt;Grid Cell 1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div&gt;Grid Cell 2&lt;/div&gt;<br>
+                                &lt;/div&gt;<br><br>
 
-        <span class="comment">// .d-none example</span><br>
-        &lt;span class="d-none"&gt;HIDDEN TEXT&lt;/span&gt;<br>
-        &lt;div class="d-none"&gt;This entire box is hidden.&lt;/div&gt;
-    </code>
-</div>
+                                <span class="comment">// .d-none example</span><br>
+                                &lt;span class="d-none"&gt;HIDDEN TEXT&lt;/span&gt;<br>
+                                &lt;div class="d-none"&gt;This entire box is hidden.&lt;/div&gt;
+                            </code>
+                        </div>
 
                         <h3><i class="fas fa-cog"></i> Responsive Display</h3>
-                        <p>Apply display utilities responsively by using breakpoint prefixes. For example, <code>.d-md-block</code> will set the display to <code>block</code> on medium screens and up, while <code>.d-lg-none</code> will hide the element on large screens and up.</p>
+                        <p>Apply display utilities responsively by using breakpoint prefixes. For example,
+                            <code>.d-md-block</code> will set the display to <code>block</code> on medium screens and
+                            up, while <code>.d-lg-none</code> will hide the element on large screens and up.</p>
                         <div class="grid-example">
-                            <div class="example-row" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch;">
-                                <div class="border-example-box d-none d-sm-block" style="flex: 1;">Hidden on XXS/XS, Block on SM+</div>
-                                <div class="border-example-box d-block d-lg-none" style="flex: 1;">Block on XXS/XS/SM/MD, Hidden on LG+</div>
-                                <div class="border-example-box d-flex d-md-inline-flex" style="flex: 1;">Flex (XXS-MD), Inline-Flex (MD+)</div>
+                            <div class="example-row"
+                                style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch;">
+                                <div class="border-example-box d-none d-sm-block" style="flex: 1;">Hidden on XXS/XS,
+                                    Block on SM+</div>
+                                <div class="border-example-box d-block d-lg-none" style="flex: 1;">Block on
+                                    XXS/XS/SM/MD, Hidden on LG+</div>
+                                <div class="border-example-box d-flex d-md-inline-flex" style="flex: 1;">Flex (XXS-MD),
+                                    Inline-Flex (MD+)</div>
                             </div>
                         </div>
                         <div class="code-block">
                             <code>
                                 &lt;div class="d-none d-sm-block"&gt;Hidden on XXS/XS, Block on SM+&lt;/div&gt;<br>
-                                &lt;div class="d-block d-lg-none"&gt;Block on XXS/XS/SM/MD, Hidden on LG+&lt;/div&gt;<br>
+                                &lt;div class="d-block d-lg-none"&gt;Block on XXS/XS/SM/MD, Hidden on
+                                LG+&lt;/div&gt;<br>
                                 &lt;div class="d-flex d-md-inline-flex"&gt;Flex (XXS-MD), Inline-Flex (MD+)&lt;/div&gt;
                             </code>
                         </div>
 
                         <h3><i class="fas fa-cog"></i> Print Display</h3>
-                        <p>Control the display property specifically for print media. These classes are applied only when the page is printed.</p>
+                        <p>Control the display property specifically for print media. These classes are applied only
+                            when the page is printed.</p>
                         <div class="grid-example">
-                            <div class="example-row" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch;">
+                            <div class="example-row"
+                                style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch;">
                                 <div class="border-example-box d-print-none" style="flex: 1;">Hidden When Printing</div>
                                 <div class="border-example-box d-print-block" style="flex: 1;">Block When Printing</div>
                             </div>
@@ -607,7 +661,8 @@
                         <div class="code-block">
                             <code>
                                 &lt;div class="d-print-none"&gt;This content is hidden when printing&lt;/div&gt;<br>
-                                &lt;div class="d-print-block"&gt;This content is displayed as block when printing&lt;/div&gt;
+                                &lt;div class="d-print-block"&gt;This content is displayed as block when
+                                printing&lt;/div&gt;
                             </code>
                         </div>
                     </div>
@@ -619,15 +674,20 @@
                             <i class="fas fa-arrows-alt-h"></i>
                             <h3>Flexbox Utilities</h3>
                         </div>
-                        <p>Utilize these comprehensive flexbox utilities to control the layout, alignment, and responsiveness of content within a flex container. Remember to apply a <code>.d-flex</code> or <code>.d-inline-flex</code> class to the parent element to enable flexbox behavior.</p>
+                        <p>Utilize these comprehensive flexbox utilities to control the layout, alignment, and
+                            responsiveness of content within a flex container. Remember to apply a <code>.d-flex</code>
+                            or <code>.d-inline-flex</code> class to the parent element to enable flexbox behavior.</p>
 
-                        <p>Most flex utilities also support responsive variants (e.g., <code>.flex-md-row</code>, <code>.justify-content-lg-center</code>), allowing you to adapt layouts at different breakpoints.</p>
+                        <p>Most flex utilities also support responsive variants (e.g., <code>.flex-md-row</code>,
+                            <code>.justify-content-lg-center</code>), allowing you to adapt layouts at different
+                            breakpoints.</p>
 
                         <h3><i class="fas fa-arrows-alt"></i> Flex Direction</h3>
                         <p>Control the direction of flex items along the main axis within a flex container.</p>
 
                         <h4>.flex-row (default)</h4>
-                        <div class="example-row d-flex border-example-box" style="height: 100px; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex border-example-box"
+                            style="height: 100px; align-items: center; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0; height: 40px; width: 60px;">Item 1</div>
                             <div class="example-col light" style="margin: 0; height: 40px; width: 60px;">Item 2</div>
                             <div class="example-col light" style="margin: 0; height: 40px; width: 60px;">Item 3</div>
@@ -635,7 +695,8 @@
                         <p>Items are laid out in a row (left to right for LTR languages).</p>
 
                         <h4>.flex-row-reverse</h4>
-                        <div class="example-row d-flex flex-row-reverse border-example-box" style="height: 100px; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-row-reverse border-example-box"
+                            style="height: 100px; align-items: center; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0;">Item 1</div>
                             <div class="example-col light" style="margin: 0;">Item 2</div>
                             <div class="example-col light" style="margin: 0;">Item 3</div>
@@ -643,18 +704,20 @@
                         <p>Items are laid out in a row, but in reverse order.</p>
 
                         <h4>.flex-column</h4>
-                        <div class="example-row d-flex flex-column border-example-box" style="justify-content: center; align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; width: 100%; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; width: 100%; flex: none;">Item 2</div>
-                            <div class="example-col light" style="margin: 0; width: 100%; flex: none;">Item 3</div>
+                        <div class="example-row d-flex flex-column border-example-box"
+                            style="justify-content: center; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 1</div>
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 2</div>
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 3</div>
                         </div>
                         <p>Items are laid out in a column (top to bottom).</p>
 
                         <h4>.flex-column-reverse</h4>
-                        <div class="example-row d-flex flex-column-reverse border-example-box" style="justify-content: center; align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; width: 100%;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; width: 100%;">Item 2</div>
-                            <div class="example-col light" style="margin: 0; width: 100%;">Item 3</div>
+                        <div class="example-row d-flex flex-column-reverse border-example-box"
+                            style="justify-content: center; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 1</div>
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 2</div>
+                            <div class="example-col light" style="margin: 0; width: 60%;">Item 3</div>
                         </div>
                         <p>Items are laid out in a column, but in reverse order.</p>
 
@@ -671,7 +734,8 @@
                         <p>Control whether flex items wrap onto multiple lines or stay on a single line.</p>
 
                         <h4>.flex-wrap</h4>
-                        <div class="example-row d-flex flex-wrap border-example-box" style="gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-wrap border-example-box"
+                            style="gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="min-width: 500px; margin: 0;">Item 1</div>
                             <div class="example-col light" style="min-width: 80px; margin: 0;">Item 2</div>
                             <div class="example-col light" style="min-width: 80px; margin: 0;">Item 3</div>
@@ -681,7 +745,8 @@
                         <p>Items wrap onto multiple lines if space is insufficient.</p>
 
                         <h4>.flex-nowrap (default)</h4>
-                        <div class="example-row d-flex flex-nowrap border-example-box" style="height: 80px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-nowrap border-example-box"
+                            style="height: 80px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="width: 100px; margin: 0;">Item 1 (long)</div>
                             <div class="example-col light" style="width: 100px; margin: 0;">Item 2 (long)</div>
                             <div class="example-col light" style="width: 100px; margin: 0;">Item 3 (long)</div>
@@ -689,7 +754,8 @@
                         <p>Items stay on a single line, potentially overflowing the container.</p>
 
                         <h4>.flex-wrap-reverse</h4>
-                        <div class="example-row d-flex flex-wrap-reverse border-example-box" style="gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-wrap-reverse border-example-box"
+                            style="gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="min-width: 500px; margin: 0;">Item 1</div>
                             <div class="example-col light" style="min-width: 80px; margin: 0;">Item 2</div>
                             <div class="example-col light" style="min-width: 80px; margin: 0;">Item 3</div>
@@ -710,40 +776,46 @@
                         <p>Align flex items along the main axis of the container.</p>
 
                         <h4>.justify-content-start (default)</h4>
-                        <div class="example-row d-flex justify-content-start border-example-box" style="align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
+                        <div class="example-row d-flex justify-content-start border-example-box"
+                            style="align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
                         </div>
 
                         <h4>.justify-content-end</h4>
-                        <div class="example-row d-flex justify-content-end border-example-box" style="align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
+                        <div class="example-row d-flex justify-content-end border-example-box"
+                            style="align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
                         </div>
 
                         <h4>.justify-content-center</h4>
-                        <div class="example-row d-flex justify-content-center border-example-box" style="align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
+                        <div class="example-row d-flex justify-content-center border-example-box"
+                            style="align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
                         </div>
 
                         <h4>.justify-content-between</h4>
-                        <div class="example-row d-flex justify-content-between border-example-box" style="align-items: center; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
+                        <div class="example-row d-flex justify-content-between border-example-box"
+                            style="align-items: center; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
                         </div>
 
                         <h4>.justify-content-around</h4>
-                        <div class="example-row d-flex justify-content-around border-example-box" style="align-items: center; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
+                        <div class="example-row d-flex justify-content-around border-example-box"
+                            style="align-items: center; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
                         </div>
 
                         <h4>.justify-content-evenly</h4>
-                        <div class="example-row d-flex justify-content-evenly border-example-box" style="align-items: center; background: var(--light-black);">
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 2</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 3</div>
+                        <div class="example-row d-flex justify-content-evenly border-example-box"
+                            style="align-items: center; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 2</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 3</div>
                         </div>
 
                         <div class="code-block">
@@ -761,37 +833,42 @@
                         <p>Align flex items along the cross axis (perpendicular to the main axis) of the container.</p>
 
                         <h4>.align-items-start</h4>
-                        <div class="example-row d-flex align-items-start border-example-box" style="height: 120px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex align-items-start border-example-box"
+                            style="height: 120px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0;">Item 1</div>
                             <div class="example-col light" style="height: 80px; margin: 0;">Item 2</div>
                             <div class="example-col light" style="margin: 0;">Item 3</div>
                         </div>
 
                         <h4>.align-items-end</h4>
-                        <div class="example-row align-items-end border-example-box" style="height: 120px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row align-items-end border-example-box"
+                            style="height: 120px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0;">Item 1</div>
                             <div class="example-col light" style="height: 80px; margin: 0;">Item 2</div>
                             <div class="example-col light" style="margin: 0;">Item 3</div>
                         </div>
 
                         <h4>.align-items-center</h4>
-                        <div class="example-row align-items-center border-example-box" style="height: 120px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row align-items-center border-example-box"
+                            style="height: 120px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0;">Item 1</div>
                             <div class="example-col light" style="height: 80px; margin: 0;">Item 2</div>
                             <div class="example-col light" style="margin: 0;">Item 3</div>
                         </div>
 
                         <h4>.align-items-baseline</h4>
-                        <div class="example-row d-flex align-items-baseline border-example-box" style="height: 120px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex align-items-baseline border-example-box"
+                            style="height: 120px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="font-size: 1.5rem; margin: 0;">Item 1</div>
                             <div class="example-col light" style="margin: 0;">Item 2</div>
                             <div class="example-col light" style="font-size: 0.8rem; margin: 0;">Item 3</div>
                         </div>
 
                         <h4>.align-items-stretch (default)</h4>
-                        <div class="example-row d-flex align-items-stretch border-example-box" style="height: 120px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex align-items-stretch border-example-box"
+                            style="height: 120px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="margin: 0;">Item 1</div>
-                            <div class="example-col light" style="height: auto; margin: 0;">Item 2</div> 
+                            <div class="example-col light" style="height: auto; margin: 0;">Item 2</div>
                             <div class="example-col light" style="margin: 0;">Item 3</div>
                         </div>
 
@@ -806,10 +883,12 @@
                         </div>
 
                         <h3><i class="fas fa-grip-lines-vertical"></i> Align Content</h3>
-                        <p>Align lines of flex items when there's extra space in the cross axis and items are wrapped.</p>
+                        <p>Align lines of flex items when there's extra space in the cross axis and items are wrapped.
+                        </p>
 
                         <h4>.align-content-start</h4>
-                        <div class="example-row d-flex flex-wrap align-content-start border-example-box" style="height: 150px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-wrap align-content-start border-example-box"
+                            style="height: 150px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 1</div>
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 2</div>
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 3</div>
@@ -817,7 +896,8 @@
                         </div>
 
                         <h4>.align-content-end</h4>
-                        <div class="example-row d-flex flex-wrap align-content-end border-example-box" style="height: 150px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-wrap align-content-end border-example-box"
+                            style="height: 150px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 1</div>
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 2</div>
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 3</div>
@@ -825,7 +905,8 @@
                         </div>
 
                         <h4>.align-content-center</h4>
-                        <div class="example-row d-flex flex-wrap align-content-center border-example-box" style="height: 150px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex flex-wrap align-content-center border-example-box"
+                            style="height: 150px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light" style="width: 100%; margin: 0;">Item 1</div>
                             <div class="example-col light" style="width: 100%; margin: 0;">Item 2</div>
                             <div class="example-col light" style="width: 40%; margin: 0;">Item 3</div>
@@ -833,27 +914,30 @@
                         </div>
 
                         <h4>.align-content-between</h4>
-                        <div class="example-row d-flex flex-wrap align-content-between border-example-box" style="height: 250px; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 2</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 3</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 4</div>
+                        <div class="example-row d-flex flex-wrap align-content-between border-example-box"
+                            style="height: 250px; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 2</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 3</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 4</div>
                         </div>
 
                         <h4>.align-content-around</h4>
-                        <div class="example-row d-flex flex-wrap align-content-around border-example-box" style="height: 250px; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="width: 50%; margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="width: 30%; margin: 0; flex: none;">Item 2</div>
-                            <div class="example-col light" style="width: 50%; margin: 0; flex: none;">Item 3</div>
-                            <div class="example-col light" style="width: 30%; margin: 0; flex: none;">Item 4</div>
+                        <div class="example-row d-flex flex-wrap align-content-around border-example-box"
+                            style="height: 250px; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="width: 50%; margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="width: 30%; margin: 0;">Item 2</div>
+                            <div class="example-col-no-flex-1 light" style="width: 50%; margin: 0;">Item 3</div>
+                            <div class="example-col-no-flex-1 light" style="width: 30%; margin: 0;">Item 4</div>
                         </div>
 
                         <h4>.align-content-stretch (default)</h4>
-                        <div class="example-row d-flex flex-wrap align-content-stretch border-example-box" style="height: 250px; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 1</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 2</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 3</div>
-                            <div class="example-col light" style="width: 40%; margin: 0; flex: none;">Item 4</div>
+                        <div class="example-row d-flex flex-wrap align-content-stretch border-example-box"
+                            style="height: 250px; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 1</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 2</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 3</div>
+                            <div class="example-col-no-flex-1 light" style="width: 40%; margin: 0;">Item 4</div>
                         </div>
 
                         <div class="code-block">
@@ -868,15 +952,19 @@
                         </div>
 
                         <h3><i class="fas fa-arrows-alt-v"></i> Align Self</h3>
-                        <p>Align individual flex items along the cross axis, overriding the container's <code>align-items</code> setting.</p>
+                        <p>Align individual flex items along the cross axis, overriding the container's
+                            <code>align-items</code> setting.</p>
 
-                        <div class="example-row d-flex align-items-center border-example-box" style="height: 250px; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex align-items-center border-example-box"
+                            style="height: 250px; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light align-self-start" style="margin: 0;">Start</div>
                             <div class="example-col light align-self-end" style="margin: 0;">End</div>
                             <div class="example-col light align-self-center" style="margin: 0;">Center</div>
-                            <div class="example-col light align-self-baseline" style="font-size: 1.5rem; margin: 0;">Baseline</div>
+                            <div class="example-col light align-self-baseline" style="font-size: 1.5rem; margin: 0;">
+                                Baseline</div>
                             <div class="example-col light align-self-stretch" style="margin: 0;">Stretch</div>
-                            <div class="example-col light align-self-auto" style="height: 30px; margin: 0;">Auto (default)</div>
+                            <div class="example-col light align-self-auto" style="height: 30px; margin: 0;">Auto
+                                (default)</div>
                         </div>
 
                         <div class="code-block">
@@ -896,27 +984,34 @@
                         <p>Control how flex items grow or shrink to fill available space.</p>
 
                         <h4>.flex-fill</h4>
-                        <div class="example-row d-flex border-example-box" style="height: 110px; align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light flex-fill" style="margin: 0; flex: none;">Flex Fill 1</div>
-                            <div class="example-col light flex-fill" style="margin: 0; flex: none;">Flex Fill 2</div>
-                            <div class="example-col light" style="margin: 0; flex: none;">Item 3</div>
+                        <div class="example-row d-flex border-example-box"
+                            style="height: 110px; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col-no-flex-1 light flex-fill" style="margin: 0;">Flex Fill 1</div>
+                            <div class="example-col-no-flex-1 light flex-fill" style="margin: 0;">Flex Fill 2</div>
+                            <div class="example-col-no-flex-1 light" style="margin: 0;">Item 3</div>
                         </div>
                         <p>Items with <code>.flex-fill</code> will grow and shrink to fill available space equally.</p>
 
                         <h4>.flex-grow-1 vs .flex-grow-0</h4>
-                        <div class="example-row d-flex border-example-box" style="height: 110px; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                        <div class="example-row d-flex border-example-box"
+                            style="height: 110px; align-items: center; gap: 0.5rem; background: var(--light-black);">
                             <div class="example-col light flex-grow-1" style="margin: 0;">Grow 1</div>
                             <div class="example-col light flex-grow-0" style="margin: 0;">Grow 0</div>
                             <div class="example-col light" style="margin: 0;">Default</div>
                         </div>
-                        <p><code>.flex-grow-1</code> allows an item to grow, <code>.flex-grow-0</code> prevents it from growing.</p>
+                        <p><code>.flex-grow-1</code> allows an item to grow, <code>.flex-grow-0</code> prevents it from
+                            growing.</p>
 
                         <h4>.flex-shrink-1 vs .flex-shrink-0</h4>
-                        <div class="example-row d-flex border-example-box" style="width: 300px; height: 180px; align-items: center; gap: 0.5rem; background: var(--light-black);">
-                            <div class="example-col light flex-shrink-1" style="width: 150px; margin: 0;">Shrink 1 (will shrink)</div>
-                            <div class="example-col light flex-shrink-0" style="width: 150px; margin: 0;">Shrink 0 (won't shrink)</div>
+                        <div class="example-row d-flex border-example-box"
+                            style="width: 300px; height: 180px; align-items: center; gap: 0.5rem; background: var(--light-black);">
+                            <div class="example-col light flex-shrink-1" style="width: 150px; margin: 0;">Shrink 1 (will
+                                shrink)</div>
+                            <div class="example-col light flex-shrink-0" style="width: 150px; margin: 0;">Shrink 0
+                                (won't shrink)</div>
                         </div>
-                        <p><code>.flex-shrink-1</code> allows an item to shrink, <code>.flex-shrink-0</code> prevents it from shrinking.</p>
+                        <p><code>.flex-shrink-1</code> allows an item to shrink, <code>.flex-shrink-0</code> prevents it
+                            from shrinking.</p>
 
                         <div class="code-block">
                             <code>
@@ -945,17 +1040,26 @@
                             <i class="fas fa-grip-lines"></i>
                             <h3>Float Utilities</h3>
                         </div>
-                        <p>Float elements to the left or right of a container, or disable floating, with these utility classes. Floats affect the layout of surrounding content, causing text to wrap around the floated element.</p>
-                        <p>These utilities also include responsive variants (e.g., <code>.float-md-start</code>, <code>.float-lg-none</code>) to control float behavior at specific breakpoints.</p>
+                        <p>Float elements to the left or right of a container, or disable floating, with these utility
+                            classes. Floats affect the layout of surrounding content, causing text to wrap around the
+                            floated element.</p>
+                        <p>These utilities also include responsive variants (e.g., <code>.float-md-start</code>,
+                            <code>.float-lg-none</code>) to control float behavior at specific breakpoints.</p>
 
                         <h3><i class="fas fa-long-arrow-alt-left"></i> .float-start</h3>
                         <p>Floats an element to the left.</p>
                         <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
-                            <div class="float-start" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
+                            <div class="float-start"
+                                style="width: 100px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
                                 Floated Left
                             </div>
-                            <p>This text demonstrates how content will wrap around an element that is floated to the start (left) of its container. The floated item will take up space on the current line, and subsequent inline content will flow alongside it. This is useful for images within text blocks or aligning elements side-by-side without using flexbox or grid for simple layouts.</p>
-                            <div class="clearfix"></div> </div>
+                            <p>This text demonstrates how content will wrap around an element that is floated to the
+                                start (left) of its container. The floated item will take up space on the current line,
+                                and subsequent inline content will flow alongside it. This is useful for images within
+                                text blocks or aligning elements side-by-side without using flexbox or grid for simple
+                                layouts.</p>
+                            <div class="clearfix"></div>
+                        </div>
                         <div class="code-block">
                             <code>
                                 &lt;div class="float-start"&gt;...&lt;/div&gt;
@@ -965,10 +1069,14 @@
                         <h3><i class="fas fa-long-arrow-alt-right"></i> .float-end</h3>
                         <p>Floats an element to the right.</p>
                         <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
-                            <div class="float-end" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-left: 1rem; border-radius: var(--radius-sm);">
+                            <div class="float-end"
+                                style="width: 100px; background-color: var(--primary); color: white; padding: 0.5rem; margin-left: 1rem; border-radius: var(--radius-sm);">
                                 Floated Right
                             </div>
-                            <p>Here, the content will wrap around an element that is floated to the end (right) of its container. The principle is the same as <code>.float-start</code>, but the alignment is on the opposite side, allowing for flexible two-column or multi-column layouts primarily driven by content flow.</p>
+                            <p>Here, the content will wrap around an element that is floated to the end (right) of its
+                                container. The principle is the same as <code>.float-start</code>, but the alignment is
+                                on the opposite side, allowing for flexible two-column or multi-column layouts primarily
+                                driven by content flow.</p>
                             <div class="clearfix"></div>
                         </div>
                         <div class="code-block">
@@ -978,18 +1086,25 @@
                         </div>
 
                         <h3><i class="fas fa-times-circle"></i> .float-none</h3>
-                        <p>Disables floating on an element. Useful for resetting float behavior inherited from parent elements or previous responsive breakpoints.</p>
+                        <p>Disables floating on an element. Useful for resetting float behavior inherited from parent
+                            elements or previous responsive breakpoints.</p>
                         <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
-                            <div style="width: 100px; height: 60px; background-color: var(--secondary); color: var(--text); padding: 0.5rem; border-radius: var(--radius-sm); border: 1px dashed var(--gray); display: inline-block; vertical-align: top;">
+                            <div
+                                style="width: 100px; background-color: var(--secondary); color: var(--text); padding: 0.5rem; border-radius: var(--radius-sm); border: 1px dashed var(--gray); display: inline-block; vertical-align: top;">
                                 Original (no float)
                             </div>
-                            <div class="float-start" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
+                            <div class="float-start"
+                                style="width: 100px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
                                 Initially Floated
                             </div>
-                            <div class="float-none" style="width: 100%; height: 60px; background-color: var(--warning); color: var(--dark); padding: 0.5rem; border-radius: var(--radius-sm); margin-top: 1rem;">
+                            <div class="float-none"
+                                style="width: 100%; background-color: var(--warning); color: var(--dark); padding: 0.5rem; border-radius: var(--radius-sm); margin-top: 1rem;">
                                 .float-none (resets float)
                             </div>
-                            <p style="margin-top: 1rem;">Even though a previous element was floated, this element with <code>.float-none</code> does not float and occupies its own line, demonstrating the reset of float behavior. If this was also floated, it would appear next to the 'Initially Floated' box.</p>
+                            <p style="margin-top: 1rem;">Even though a previous element was floated, this element with
+                                <code>.float-none</code> does not float and occupies its own line, demonstrating the
+                                reset of float behavior. If this was also floated, it would appear next to the
+                                'Initially Floated' box.</p>
                             <div class="clearfix"></div>
                         </div>
                         <div class="code-block">
@@ -999,18 +1114,31 @@
                         </div>
 
                         <h3><i class="fas fa-cut"></i> Clearfix</h3>
-                        <p>The <code>.clearfix</code> utility can be applied to a parent element to clear (contain) its floated children. This prevents the parent from collapsing in height and ensures that subsequent content appears below the floated elements, not alongside them.</p>
-                        <div class="example-row border-example-box" style="padding: 1rem;">
+                        <p>The <code>.clearfix</code> utility can be applied to a parent element to clear (contain) its
+                            floated children. This prevents the parent from collapsing in height and ensures that
+                            subsequent content appears below the floated elements, not alongside them.</p>
+                        <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
                             <h4>Before Clearfix (Parent Collapses)</h4>
-                            <div style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--danger); margin-bottom: 1rem;">
-                                <div class="float-start" style="width: 80px; height: 50px; background-color: var(--danger); color: white; padding: 0.5rem; margin-right: 0.5rem;">Floated</div>
-                                <p style="color: var(--danger);">Parent container with a floated child. Notice how the red dashed border (parent) collapses around the floated element. This text is inside the parent, but the parent's height doesn't encompass the float.</p>
+                            <div
+                                style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--danger); margin-bottom: 1rem;">
+                                <div class="float-start"
+                                    style="width: 80px; background-color: var(--danger); color: white; padding: 0.5rem; margin-right: 0.5rem;">
+                                    Floated</div>
+                                <p style="color: var(--danger);">Parent container with a floated child. Notice how the
+                                    red dashed border (parent) collapses around the floated element. This text is inside
+                                    the parent, but the parent's height doesn't encompass the float.</p>
                             </div>
 
                             <h4>After Clearfix (Parent Contains Floats)</h4>
-                            <div class="clearfix" style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--success);">
-                                <div class="float-start" style="width: 80px; height: 50px; background-color: var(--success); color: white; padding: 0.5rem; margin-right: 0.5rem;">Floated</div>
-                                <p style="color: var(--success);">This parent container uses <code>.clearfix</code>. Notice how the green dashed border (parent) now correctly contains the floated element, preventing collapse. All content (including the floated item) is within the parent's boundaries.</p>
+                            <div class="clearfix"
+                                style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--success);">
+                                <div class="float-start"
+                                    style="width: 80px; background-color: var(--success); color: white; padding: 0.5rem; margin-right: 0.5rem;">
+                                    Floated</div>
+                                <p style="color: var(--success);">This parent container uses <code>.clearfix</code>.
+                                    Notice how the green dashed border (parent) now correctly contains the floated
+                                    element, preventing collapse. All content (including the floated item) is within the
+                                    parent's boundaries.</p>
                             </div>
                         </div>
                         <div class="code-block">
@@ -1023,11 +1151,12 @@
                         </div>
                     </div>
                 </section>
-                
+
                 <section id="examples">
                     <h2><i class="fas fa-code"></i> Examples</h2>
-                    <p>Explore practical implementation examples to see how the grid system works in real-world scenarios.</p>
-                    
+                    <p>Explore practical implementation examples to see how the grid system works in real-world
+                        scenarios.</p>
+
                     <h3><i class="fas fa-layout"></i> Responsive Layout</h3>
                     <div class="grid-example">
                         <div class="example-row">
@@ -1041,7 +1170,7 @@
                             <div class="example-col" style="flex: 0 0 100%;">Footer</div>
                         </div>
                     </div>
-                    
+
                     <div class="code-block">
                         <code>
                             &lt;Container&gt;<br>
@@ -1065,10 +1194,10 @@
                 <section id="customization">
                     <h2><i class="fas fa-cog"></i> Customization</h2>
                     <p>Learn how to customize the grid system to match your project's design requirements.</p>
-                    
+
                     <h3><i class="fas fa-sliders-h"></i> SCSS Variables</h3>
                     <p>The grid system can be customized by overriding these SCSS variables:</p>
-                    
+
                     <div class="code-block">
                         <code>
                             <span class="comment">// Breakpoint configuration</span><br>
@@ -1081,7 +1210,7 @@
                             &nbsp;&nbsp;xl: 1400px,<br>
                             &nbsp;&nbsp;xxl: 1600px<br>
                             );<br><br>
-                            
+
                             <span class="comment">// Container max-widths</span><br>
                             $container-max-widths: (<br>
                             &nbsp;&nbsp;xs: 540px,<br>
@@ -1091,16 +1220,17 @@
                             &nbsp;&nbsp;xl: 1320px,<br>
                             &nbsp;&nbsp;xxl: 1500px<br>
                             );<br><br>
-                            
+
                             <span class="comment">// Grid settings</span><br>
                             $grid-columns: 12;<br>
                             $grid-gutter-width: 1.5rem;
                         </code>
                     </div>
-                    
+
                     <h3><i class="fas fa-paint-roller"></i> Customizing in Your Project</h3>
-                    <p>To customize the grid, create a SCSS file with your overrides and import it before the grid system:</p>
-                    
+                    <p>To customize the grid, create a SCSS file with your overrides and import it before the grid
+                        system:</p>
+
                     <div class="code-block">
                         <code>
                             <span class="comment">// your-custom.scss</span><br>
@@ -1111,7 +1241,7 @@
                             &nbsp;&nbsp;lg: 1200px,<br>
                             &nbsp;&nbsp;xl: 1400px<br>
                             );<br><br>
-                            
+
                             <span class="comment">// Import the grid after your customizations</span><br>
                             @import 'path/to/responsive-grid';
                         </code>
@@ -1126,8 +1256,8 @@
             <p><strong>Responsive Grid System</strong> - Lightweight, flexible, and developer-friendly</p>
             <p>Created with ❤️ by Your Name | MIT License</p>
             <p style="margin-top: 1rem;">
-                <a href="#"><i class="fab fa-github"></i> GitHub</a> | 
-                <a href="#"><i class="fab fa-npm"></i> NPM</a> | 
+                <a href="#"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="#"><i class="fab fa-npm"></i> NPM</a> |
                 <a href="#"><i class="fas fa-book"></i> Documentation</a>
             </p>
         </div>
@@ -1136,11 +1266,11 @@
     <script>
         // Enhanced navigation with active section highlighting
         document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 30,
@@ -1152,7 +1282,7 @@
                         a.classList.remove('active');
                     });
                     this.classList.add('active');
-                    
+
                     // Update URL
                     history.pushState(null, null, targetId);
                 }
@@ -1175,7 +1305,7 @@
                     });
                 }
             });
-        }, { 
+        }, {
             threshold: 0.25,
             rootMargin: '-100px 0px -100px 0px'
         });
@@ -1185,7 +1315,7 @@
         });
 
         // Handle back/forward navigation
-        window.addEventListener('popstate', function() {
+        window.addEventListener('popstate', function () {
             const hash = window.location.hash;
             if (hash) {
                 const target = document.querySelector(hash);
@@ -1198,5 +1328,6 @@
             });
         });
     </script>
-</body>
+    </body>
+
 </html>
