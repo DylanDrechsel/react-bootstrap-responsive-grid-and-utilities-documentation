@@ -1,0 +1,314 @@
+/**
+ * GRID SYSTEM SCSS --> MY BOOTSTRAP-INSPIRED RESPONSIVE GRID
+ *
+ * This SCSS file creates a complete Responsive Grid System similar to Bootstrap.
+ * It uses flexbox for reliable cross-browser compatibility.
+ *
+ * The system is based on:
+ * - 12-column grid structure
+ * - 7 responsive breakpoints (xxs, xs, xm, md, lg, xl, xxl)
+ * - Flexbox for layout
+ * - Configurable gutters and container widths
+*/
+
+/**
+ * BREAKPOINT CONFIGURATION
+ * 
+ * These breakpoints define when the responsive behavior kicks in.
+ * Styles apply to the specified breakpoint and up.
+ * 
+ * xxs (0px): Base styles for all devices (portrait phones, less than 576px)
+ * xs (576px): Extra small devices like landscape phones and small tablets (landscape phones, 576px and up)
+ * sm (768px): Small devices like tablets (tablets, 768px and up)
+ * md (992px): Medium devices like small desktops (desktops, 992px and up)
+ * lg (1200px): Large devices like large desktops (large desktops, 1200px and up)
+ * xl (1400px): Extra large devices like wide screens (larger desktops, 1400px and up)
+ * xxl (1600px): Extra extra large devices like very wide screens (wide screens, 1600px and up)
+ */
+@use "sass:map";
+@use "sass:math";
+
+$grid-breakpoints: (
+    xxs: 0,
+    xs: 576px,
+    sm: 768px,
+    md: 992px, 
+    lg: 1200px, 
+    xl: 1400px,
+    xxl: 1600px
+);
+
+/**
+ * CONTAINER MAX-WIDTHS
+ *
+ * These values define the maximum width of containers at each breakpoint.
+ * Containers are centered and have responsive max-widths to prevent content
+ * from becoming too wide on a large screen maintaining responsiveness.
+ *
+ * Note: By default the Grid System will assume the user is on a Small Phone
+*/
+
+$container-max-widths: (
+    xs: 540px,    // Container max-width on extra small devices
+    sm: 720px,    // Container max-width on small devices  
+    md: 960px,    // Container max-width on medium devices
+    lg: 1140px,   // Container max-width on large devices
+    xl: 1320px,   // Container max-width on extra large devices
+    xxl: 1500px   // Container max-width on wide screen devices
+);
+
+/**
+ * GRID SYSTEM CONFIGURATION
+ *
+ * Core settings that define the grid behavior:
+ * - $grid-columns: total number of columns in the grid (12)
+ * - $grid-gutter-width: Horizontal spacing between columns
+*/
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+/**
+ * MEDIA QUERY UTILITY MIXIN
+ *
+ * This mixin simplifies creating responsive styles by automatically generating
+ * the appropriate media query for a given breakpoint name.
+ *
+ * Usage: @include media-breakpoint-up(md) { ... }
+ * Result: @media (min-width: 768px) { ... }
+ *
+ * Special handling for 'xxs' breakpoint (0px)
+ * xxs styles dont need a media query wrapper.
+*/
+
+@mixin media-breakpoint-up($name) {
+    $min: map.get($map: $grid-breakpoints ,$key: $name);
+    @if $min != 0 {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+/**
+ * CONTAINER STYLES
+ *
+ * Containers provide the foundational wrapper for the grid system.
+ * They center content horizontally and provide consistent padding. 
+ *
+ * .container: Has responsive max-width defined in $container-max-widths
+ * .container-fluid: Spans the full width of the viewport at all breakpoints
+ *
+ *  Both containers have:
+ *  - Horizontal padding equal to half the gutter width for alignment with columns
+ *  - Auto horizontal margins to center the container
+ *  - 100% width at the base (before max-width constraints)
+*/
+
+.container, .container-fluid {
+    width: 100%;
+    padding-right: $grid-gutter-width * 0.5;
+    padding-left: $grid-gutter-width * 0.5;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/**
+ * RESPONSIVE CONTAINER MAX-WIDTHS
+ *
+ * Regular containers (.container) get max-width constraints at each breakpoint
+ * to prevent content from becoming too wide on large screens.
+ * This loop applies each max-width at its corresponding breakpoints and up.
+*/
+
+.container { // $breakpoint = key & $container-max-width = value --> from object $container-max-widths
+    @each $breakpoint, $container-max-width in $container-max-widths {
+        @include media-breakpoint-up($breakpoint) {
+            max-width: $container-max-width;
+        }
+    }
+}
+
+/**
+ * ROW STYLES
+ *
+ * Rows create horizontal groups of columns using flexbox.
+ *
+ * Key Behaviors:
+ * - Negative margins offset column padding for edge alignment
+ * - display: flex creates the flexbox container
+ * - flex-wrap: wrap allows columns to wrap to new lines
+*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: $grid-gutter-width * -0.5;
+    margin-left: $grid-gutter-width * -0.5;
+}
+
+/**
+ * NO-GUTTERS MODIFIER
+ *
+ * The .no-gutters class removes spacing between columns by:
+ * - Removing the negative margins from the row
+ * - Removing padding from all child columns
+ *
+ * This creates a seamless layout where column content touches directly.
+*/
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    // Remove padding from all child columns
+    > .col,
+    > [class*='col-'] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/**
+ * BASE COLUMN STYLES
+ *
+ * The base .col class provides the foundation for all columns:
+ * - flex-basis: 0 allows columns to shrink smaller than their content
+ * - flex-grow: 1 makes columns expand to fill available space equally
+ * - max-width: 100% prevents columns from exceeding container width
+ * - Horizontal padding creates gutters between columns
+ *
+ * This creates equal-width columns when no specific size is specified.
+*/
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: $grid-gutter-width * 0.5;
+    padding-left: $grid-gutter-width * 0.5;
+}
+
+/**
+ * RESPONSIVE COLUMN CLASSES GENERATION
+ *
+ * This section generates all the responsive column classes using SCSS loops.
+ * For each breakpoint, it creates:
+ * 1. Auto-Width Columns (.col-{breakpoint}-auto)
+ * 2. Sized Columns (.col-{breakpoint}-1 through .col-{breakpoint}-12)
+ * 3. Offset Classes (.offset-{breakpoint}-0 through .offset-{breakpoint}-11)
+ *
+ * The classes are wrapped in media queries so they only apply at the appropriate screen sizes.
+*/
+
+@each $breakpoint in map.keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        
+      /**
+        * AUTO-WIDTH COLUMNS
+        *
+        * Auto-Width Columns (.col-{breakpoint}-auto) size themselves based on their content.
+        * - flex: 0 0 auto means no grow, no shrink, auto size
+        * - width: auto allows natural content sizing
+        * - max-width: 100% prevents overflow
+        */
+
+        .col-#{$breakpoint}-auto {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: 100%;
+        }
+
+      /**
+        * SIZED COLUMNS (1-12)
+        *
+        * Creates classes like .col-md-6, col-lg-4, etc...
+        * Each column spans a percentage of the container width based on the 12-column grid.
+        *
+        * Formula: percentage($i / $grid-columns)
+        * Examples:
+        * - col-md-6 = 6/12 = 50% width
+        * - col-md-4 = 4/12 = 33.333% width
+        * - col-md-12 = 12/12 = 100% width
+        */
+
+        @for $i from 1 through $grid-columns {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 math.percentage($number: math.div($i, $grid-columns));
+                max-width: math.percentage($number: math.div($i, $grid-columns));
+            }
+        }
+
+      /**
+        * OFFSET CLASSES (0-11)
+        *
+        * Offset classes add left margin to push columns to the right. 
+        *
+        * Examples:
+        * - offset-md-2 = 2/12 = 16.667% left margin
+        * - offset-lg-4 = 4/12 = 33.333% left margin
+        *
+        * Note: We skip offset-xxs-0 since it would add no margin anyway
+        */
+
+        @for $i from 0 through ($grid-columns - 1) {
+            @if not ($breakpoint == xxs and $i == 0) {
+                .offset-#{$breakpoint}-#{$i} {
+                    margin-left: math.percentage($number: math.div($i, $grid-columns));
+                }
+            }
+        }
+    }
+}
+
+/**
+ * BASE COLUMNS CLASSES (XXS BREAKPOINT)
+ *
+ * These classes work at all screen sizes since they have no media query wrapper.
+ * They are equivalent to the xxs breakpoint classes but with shorter names.
+*/
+
+/**
+ * .col-auto: Auto-width column for all screen sizes
+ * Equivalent to .col-xxs-auto
+*/
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+/**
+ * .col-1 through .col-12: Fixed-width columns all screen sizes
+ * These provide base column sizes that apply at all breakpoints
+ * Equivalent to .col-xxs-1, .col-xxs-2, etc...
+*/
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 math.percentage($number: math.div($i, $grid-columns));
+        max-width: math.percentage($number: math.div($i, $grid-columns));
+    }
+}
+
+/**
+ * UNIVERSAL COLUMN PADDING
+ *
+ * This rule ensures that all elements with column classes get the proper padding,
+ * regardless of how they are named. The [class*='col-'] selector matches any
+ * element whose class contains 'col-' anywhere in the string.
+ *
+ * This catches:
+ * - .col-md-6
+ * - .col-lg-auto
+ * - .col-12
+ * - etc...
+*/
+
+[class*='col-'] {
+  padding-right: $grid-gutter-width * 0.5;
+  padding-left: $grid-gutter-width * 0.5;
+}
