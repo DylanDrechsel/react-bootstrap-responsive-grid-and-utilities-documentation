@@ -40,6 +40,7 @@
                             <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
                             <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
                             <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
+                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i> Interactions</a></li>
                         </ul>
                     </li>
                     <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
@@ -1147,6 +1148,101 @@
                                 &nbsp;&nbsp;&lt;div class="float-start"&gt;...&lt;/div&gt;<br>
                                 &nbsp;&nbsp;&lt;!-- Other content --&gt;<br>
                                 &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="utility-classes">
+                    <div class="component-card" id="interactions">
+                        <div class="component-header">
+                            <i class="fas fa-hand-pointer"></i>
+                            <h3>Interaction Utilities</h3>
+                        </div>
+                        <p>Control user interaction with elements, including cursor styles and focus indicators, using these utility classes.</p>
+
+                        <h3><i class="fas fa-mouse-pointer"></i> Cursor Utilities</h3>
+                        <p>Change the appearance of the mouse cursor when hovering over an element. This is useful for providing visual feedback to the user about interactive elements or non-interactive areas.</p>
+                        <div class="example-row border-example-box" style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;">
+                            <div class="cursor-auto cursor-example-box">
+                                <span class="cursor-type">auto</span>
+                                <span class="cursor-description">Default (browser decides)</span>
+                            </div>
+                            <div class="cursor-default cursor-example-box">
+                                <span class="cursor-type">default</span>
+                                <span class="cursor-description">Default arrow</span>
+                            </div>
+                            <div class="cursor-pointer cursor-example-box">
+                                <span class="cursor-type">pointer</span>
+                                <span class="cursor-description">Hand (link)</span>
+                            </div>
+                            <div class="cursor-wait cursor-example-box">
+                                <span class="cursor-type">wait</span>
+                                <span class="cursor-description">Waiting/hourglass</span>
+                            </div>
+                            <div class="cursor-text cursor-example-box">
+                                <span class="cursor-type">text</span>
+                                <span class="cursor-description">Text selection</span>
+                            </div>
+                            <div class="cursor-move cursor-example-box">
+                                <span class="cursor-type">move</span>
+                                <span class="cursor-description">Move/cross</span>
+                            </div>
+                            <div class="cursor-help cursor-example-box">
+                                <span class="cursor-type">help</span>
+                                <span class="cursor-description">Help/question mark</span>
+                            </div>
+                            <div class="cursor-not-allowed cursor-example-box">
+                                <span class="cursor-type">not-allowed</span>
+                                <span class="cursor-description">Forbidden symbol</span>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;div class="cursor-pointer"&gt;...&lt;/div&gt;<br>
+                                &lt;div class="cursor-not-allowed"&gt;...&lt;/div&gt;
+                            </code>
+                        </div>
+                        <style>
+                            .cursor-example-box {
+                                background-color: var(--primary-light);
+                                color: white;
+                                padding: 0.75rem 1.25rem;
+                                border-radius: var(--radius-sm);
+                                text-align: center;
+                                min-width: 140px;
+                                flex-grow: 1;
+                                box-shadow: var(--shadow-sm);
+                                border: 1px solid var(--primary-dark);
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: auto; /* Fallback for the box itself */
+                            }
+                            .cursor-example-box .cursor-type {
+                                font-weight: bold;
+                                font-size: 1.1em;
+                            }
+                            .cursor-example-box .cursor-description {
+                                font-size: 0.85em;
+                                opacity: 0.8;
+                            }
+                        </style>
+
+                        <h3><i class="fas fa-dot-circle"></i> Focus Utilities</h3>
+                        <p>The <code>.focus-ring</code> utility provides a custom, consistent visual indicator when an interactive element receives keyboard focus (e.g., by tabbing through elements) or is clicked. It overrides the browser's default outline with a styled <code>box-shadow</code>, improving accessibility and visual consistency.</p>
+                        <div class="example-row border-example-box" style="padding: 1rem;">
+                            <p style="margin-bottom: 1rem;">Try tabbing to or clicking the button and input field below to see the focus ring in action.</p>
+                            <button class="btn focus-ring" style="background-color: var(--primary); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius-sm); cursor: pointer; margin-right: 1rem;">
+                                Focusable Button
+                            </button>
+                            <input type="text" class="form-control focus-ring" placeholder="Focusable Input" style="padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); width: 200px;">
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;button class="focus-ring"&gt;...&lt;/button&gt;<br>
+                                &lt;input type="text" class="focus-ring"&gt;
                             </code>
                         </div>
                     </div>
