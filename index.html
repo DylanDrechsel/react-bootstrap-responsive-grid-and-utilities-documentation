@@ -36,6 +36,7 @@
                             <li><a href="#borders">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i> Borders</a></li>
                             <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
                             <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
+                            <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
                         </ul>
                     </li>
                     <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
@@ -932,6 +933,91 @@
                                 &lt;div class="d-flex"&gt;<br>
                                 &nbsp;&nbsp;&lt;div class="flex-shrink-1"&gt;...&lt;/div&gt;<br>
                                 &nbsp;&nbsp;&lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="utility-classes">
+                    <div class="component-card" id="float">
+                        <div class="component-header">
+                            <i class="fas fa-grip-lines"></i>
+                            <h3>Float Utilities</h3>
+                        </div>
+                        <p>Float elements to the left or right of a container, or disable floating, with these utility classes. Floats affect the layout of surrounding content, causing text to wrap around the floated element.</p>
+                        <p>These utilities also include responsive variants (e.g., <code>.float-md-start</code>, <code>.float-lg-none</code>) to control float behavior at specific breakpoints.</p>
+
+                        <h3><i class="fas fa-long-arrow-alt-left"></i> .float-start</h3>
+                        <p>Floats an element to the left.</p>
+                        <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
+                            <div class="float-start" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
+                                Floated Left
+                            </div>
+                            <p>This text demonstrates how content will wrap around an element that is floated to the start (left) of its container. The floated item will take up space on the current line, and subsequent inline content will flow alongside it. This is useful for images within text blocks or aligning elements side-by-side without using flexbox or grid for simple layouts.</p>
+                            <div class="clearfix"></div> </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;div class="float-start"&gt;...&lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h3><i class="fas fa-long-arrow-alt-right"></i> .float-end</h3>
+                        <p>Floats an element to the right.</p>
+                        <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
+                            <div class="float-end" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-left: 1rem; border-radius: var(--radius-sm);">
+                                Floated Right
+                            </div>
+                            <p>Here, the content will wrap around an element that is floated to the end (right) of its container. The principle is the same as <code>.float-start</code>, but the alignment is on the opposite side, allowing for flexible two-column or multi-column layouts primarily driven by content flow.</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;div class="float-end"&gt;...&lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h3><i class="fas fa-times-circle"></i> .float-none</h3>
+                        <p>Disables floating on an element. Useful for resetting float behavior inherited from parent elements or previous responsive breakpoints.</p>
+                        <div class="example-row-no-flex border-example-box-no-flex" style="padding: 1rem;">
+                            <div style="width: 100px; height: 60px; background-color: var(--secondary); color: var(--text); padding: 0.5rem; border-radius: var(--radius-sm); border: 1px dashed var(--gray); display: inline-block; vertical-align: top;">
+                                Original (no float)
+                            </div>
+                            <div class="float-start" style="width: 100px; height: 60px; background-color: var(--primary); color: white; padding: 0.5rem; margin-right: 1rem; border-radius: var(--radius-sm);">
+                                Initially Floated
+                            </div>
+                            <div class="float-none" style="width: 100%; height: 60px; background-color: var(--warning); color: var(--dark); padding: 0.5rem; border-radius: var(--radius-sm); margin-top: 1rem;">
+                                .float-none (resets float)
+                            </div>
+                            <p style="margin-top: 1rem;">Even though a previous element was floated, this element with <code>.float-none</code> does not float and occupies its own line, demonstrating the reset of float behavior. If this was also floated, it would appear next to the 'Initially Floated' box.</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;div class="float-none"&gt;...&lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h3><i class="fas fa-cut"></i> Clearfix</h3>
+                        <p>The <code>.clearfix</code> utility can be applied to a parent element to clear (contain) its floated children. This prevents the parent from collapsing in height and ensures that subsequent content appears below the floated elements, not alongside them.</p>
+                        <div class="example-row border-example-box" style="padding: 1rem;">
+                            <h4>Before Clearfix (Parent Collapses)</h4>
+                            <div style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--danger); margin-bottom: 1rem;">
+                                <div class="float-start" style="width: 80px; height: 50px; background-color: var(--danger); color: white; padding: 0.5rem; margin-right: 0.5rem;">Floated</div>
+                                <p style="color: var(--danger);">Parent container with a floated child. Notice how the red dashed border (parent) collapses around the floated element. This text is inside the parent, but the parent's height doesn't encompass the float.</p>
+                            </div>
+
+                            <h4>After Clearfix (Parent Contains Floats)</h4>
+                            <div class="clearfix" style="background-color: var(--light-gray); padding: 0.5rem; border: 1px dashed var(--success);">
+                                <div class="float-start" style="width: 80px; height: 50px; background-color: var(--success); color: white; padding: 0.5rem; margin-right: 0.5rem;">Floated</div>
+                                <p style="color: var(--success);">This parent container uses <code>.clearfix</code>. Notice how the green dashed border (parent) now correctly contains the floated element, preventing collapse. All content (including the floated item) is within the parent's boundaries.</p>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                &lt;div class="clearfix"&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="float-start"&gt;...&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;!-- Other content --&gt;<br>
                                 &lt;/div&gt;
                             </code>
                         </div>
