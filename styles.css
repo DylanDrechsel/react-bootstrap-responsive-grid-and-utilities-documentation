@@ -107,6 +107,22 @@ nav {
     overflow: hidden;
     z-index: 10;
     border: 1px solid var(--border);
+    max-height: 95vh;
+    overflow-y: auto;
+}
+nav::-webkit-scrollbar {
+    width: 4px;
+}
+nav::-webkit-scrollbar-track {
+    background: var(--light-gray); /* Light gray track */
+    border-radius: 4px;
+}
+nav::-webkit-scrollbar-thumb {
+    background: var(--primary-light); /* Matches your primary color */
+    border-radius: 4px;
+}
+nav::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark); /* Darker primary on hover */
 }
 nav ul {
     list-style: none;
