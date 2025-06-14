@@ -36,15 +36,16 @@
                     </li>
                     <li><a href="#utility-classes"><i class="fas fa-toolbox"></i> Utility Classes</a>
                         <ul>
-                            <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i> Borders</a></li>
-                            <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
-                            <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
-                            <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
+                            <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i>Borders</a></li>
+                            <li><a href="#display-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Display</a></li>
+                            <li><a href="#flex-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i>Flex</a></li>
+                            <li><a href="#order-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-sort-numeric-down"></i>Order</a></li>
+                            <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Float</a></li>
                             <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>Interactions</a></li>
-                            <li><a href="#opacity">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i> Opacity</a></li>
-                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i> Overflow</a></li>
-                            <li><a href="#position">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i> Position</a></li>
-                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i> Shadows</a></li>
+                            <li><a href="#opacity">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i>Opacity</a></li>
+                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Overflow</a></li>
+                            <li><a href="#position">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i>Position</a></li>
+                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i>Shadows</a></li>
                             <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i>Sizing</a></li>
                             <li><a href="#spacing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Spacing</a></li>
                             <li><a href="#text-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-font"></i>Text</a></li>
@@ -780,7 +781,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="display-utilities">
                     <div class="component-card" id="display">
                         <div class="component-header">
                             <i class="fas fa-eye"></i>
@@ -924,10 +925,202 @@
                                 printing&lt;/div&gt;
                             </code>
                         </div>
+
+                        <h4>Display Class Selector Reference</h4>
+                        <p>The following patterns outline all available display utility classes.</p>
+                        <h4>General Display Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: none !important;</code> Hides the element and removes it from the document flow.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-inline</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: inline !important;</code> Element flows with text, width/height ignored.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-inline-block</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: inline-block !important;</code> Element flows inline but respects width/height and vertical margins.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-block</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: block !important;</code> Element takes full width and starts on a new line.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-grid</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: grid !important;</code> Establishes a block-level grid container.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-table</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: table !important;</code> Behaves like an HTML <code>&lt;table&gt;</code> element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-table-cell</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: table-cell !important;</code> Behaves like an HTML <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-table-row</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: table-row !important;</code> Behaves like an HTML <code>&lt;tr&gt;</code> element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-flex</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: flex !important;</code> Establishes a block-level flex container.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-inline-flex</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: inline-flex !important;</code> Establishes an inline-level flex container.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.d-block</code>, <code>.d-flex</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Responsive Display Classes:</h4>
+                        <p>Apply display utilities responsively by appending the breakpoint abbreviation to the class name. For example, <code>.d-sm-none</code> to hide on small screens and up, or <code>.d-lg-block</code> to make an element block-level on large screens and up.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: {value} !important;</code> starting from the specified breakpoint and up. The utility applies to the indicated breakpoint and all larger breakpoints unless overridden by another display utility.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>xxs</code> (Extra Extra Small, default / no min-width)<br>
+                                        <code>xs</code> (Extra Small, e.g., <code>@media (min-width: 576px)</code>)<br>
+                                        <code>sm</code> (Small, e.g., <code>@media (min-width: 768px)</code>)<br>
+                                        <code>md</code> (Medium, e.g., <code>@media (min-width: 992px)</code>)<br>
+                                        <code>lg</code> (Large, e.g., <code>@media (min-width: 1200px)</code>)<br>
+                                        <code>xl</code> (Extra Large, e.g., <code>@media (min-width: 1400px)</code>)<br>
+                                        <code>xxl</code> (Extra Extra Large, e.g., <code>@media (min-width: 1600px)</code>)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Values:
+                                    <span class="list-type-column">Display Values</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>none</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>grid</code>, <code>table</code>, <code>table-cell</code>, <code>table-row</code>, <code>flex</code>, <code>inline-flex</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.d-none .d-md-block</code> (hidden by default, block on md and up)</p>
+                                    <p><code>.d-lg-flex</code> (flexbox on large and up)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Print Display Classes:</h4>
+                        <p>Control the display property of elements specifically for print using the <code>.d-print-{value}</code> classes.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.d-print-{value}</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>display: {value} !important;</code> only when the page is being printed.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Values:
+                                    <span class="list-type-column">Display Values</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>none</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>grid</code>, <code>table</code>, <code>table-cell</code>, <code>table-row</code>, <code>flex</code>, <code>inline-flex</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.d-print-none</code> (hide element when printing)</p>
+                                    <p><code>.d-print-block</code> (make inline element block-level when printing)</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="flex-utilities">
                     <div class="component-card" id="flex">
                         <div class="component-header">
                             <i class="fas fa-arrows-alt-h"></i>
@@ -1289,6 +1482,218 @@
                                 &nbsp;&nbsp;&lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;<br>
                                 &lt;/div&gt;
                             </code>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="order-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-sort-numeric-down"></i>
+                            <h3>Order Utilities</h3>
+                        </div>
+                        <p>Control the visual order of flex items with these utility classes. These classes apply the
+                            <code>order</code> CSS property, allowing you to reorder items within a flex container
+                            regardless of their source order in the HTML.</p>
+
+                        <h4>How it Works</h4>
+                        <p>Order utility classes are used on **flex items** (direct children of a flex container, i.e.,
+                            an element with `display: flex` or `display: inline-flex`). The base classes follow the
+                            pattern <code>.order-{value}</code>, where <code>{value}</code> typically ranges from
+                            <code>0</code> to <code>5</code>. Additionally, special classes like
+                            <code>.order-first</code> and <code>.order-last</code> are available to quickly position
+                            items at the beginning or end of the flex line, respectively.</p>
+                        <p>Order utilities also support responsive variations using standard breakpoints (e.g.,
+                            <code>.order-md-2</code>, <code>.order-lg-first</code>), allowing for different visual
+                            orders on various screen sizes.</p>
+
+                        <h4>Examples</h4>
+                        <p>Demonstrations of how order utilities reorder flex items:</p>
+                        <div class="example-row border-example-box example-flex-column gap-3">
+                            <div class="example-box">
+                                <h5 class="mb-3">Default Order</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue">1</div>
+                                    <div class="p-2 border-example-box bg-light-blue">2</div>
+                                    <div class="p-2 border-example-box bg-light-blue">3</div>
+                                </div>
+                                <p class="mt-3 mb-0">Items are displayed in their source order (default `order: 0`).</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Using <code>.order-first</code> and <code>.order-last</code></h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue">1</div>
+                                    <div class="p-2 border-example-box bg-light-green order-last">2 (Last)</div>
+                                    <div class="p-2 border-example-box bg-light-blue">3</div>
+                                    <div class="p-2 border-example-box bg-light-red order-first">4 (First)</div>
+                                    <div class="p-2 border-example-box bg-light-blue">5</div>
+                                </div>
+                                <p class="mt-3 mb-0"><code>.order-first</code> sets <code>order: -1</code>, and
+                                    <code>.order-last</code> sets a high order value (e.g., `order: 6`).</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Numbered Order</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue order-3">Item A (order 3)</div>
+                                    <div class="p-2 border-example-box bg-light-green order-1">Item B (order 1)</div>
+                                    <div class="p-2 border-example-box bg-light-blue order-2">Item C (order 2)</div>
+                                    <div class="p-2 border-example-box bg-light-red order-0">Item D (order 0)</div>
+                                </div>
+                                <p class="mt-3 mb-0">Items are arranged by their `order` value, with lower values
+                                    appearing first.</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Responsive Order (Resize your browser to see effect)</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue order-md-last">Item A (md-last)
+                                    </div>
+                                    <div class="p-2 border-example-box bg-light-green">Item B (default)</div>
+                                    <div class="p-2 border-example-box bg-light-red order-md-first">Item C (md-first)
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0">By default, A, B, C. On medium screens and up, C will be first, B
+                                    in middle, A last.</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+                            <code>
+                                &lt;!-- Default Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;2&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;3&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Using .order-first and .order-last --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-last"&gt;Item 2 (Last)&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-first"&gt;Item 4 (First)&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Numbered Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-3"&gt;Item A&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-1"&gt;Item B&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-2"&gt;Item C&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-0"&gt;Item D&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Responsive Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-last"&gt;Item A&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item B&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-first"&gt;Item C&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h4>Order Class Selector Reference</h4>
+                        <p>The following patterns outline all available order utility classes.</p>
+                        <h4>Default Order Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the <code>order</code> of a flex item. <code>{value}</code> can be
+                                        <code>0</code> through <code>5</code>. Items with lower order values appear
+                                        first.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-first</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>order: -1 !important;</code>, ensuring the item appears first in the
+                                        visual order.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-last</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>),
+                                        ensuring the item appears last in the visual order.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.order-1</code>, <code>.order-last</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Responsive Order Classes:</h4>
+                        <p>Apply order utilities responsively by appending the breakpoint abbreviation to the class
+                            name. This allows for different visual orders based on screen size.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the <code>order</code> from the specified breakpoint and up.
+                                        <code>{value}</code> can be <code>0</code> through <code>5</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-first</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>order: -1 !important;</code> from the specified breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-last</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>)
+                                        from the specified breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>,
+                                        <code>lg</code>, <code>xl</code>, <code>xxl</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.order-sm-2</code>, <code>.order-lg-first</code></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
