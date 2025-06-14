@@ -40,23 +40,16 @@
                             <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
                             <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
                             <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
-                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>
-                                    Interactions</a></li>
+                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>Interactions</a></li>
                             <li><a href="#opacity">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i> Opacity</a></li>
-                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i> Overflow</a>
-                            </li>
+                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i> Overflow</a></li>
                             <li><a href="#position">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i> Position</a></li>
-                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i> Shadows</a>
-                            </li>
-                            <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i>
-                                    Sizing</a></li>
-                            <li><a href="#spacing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>
-                                    Spacing</a></li>
-                            <li><a href="#text-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-font"></i>
-                                    Text</a></li>
-                            <li><a href="#vertical-alignment-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-v "></i>
-                                    Vertical</a></li>
-                                    
+                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i> Shadows</a></li>
+                            <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i>Sizing</a></li>
+                            <li><a href="#spacing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Spacing</a></li>
+                            <li><a href="#text-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-font"></i>Text</a></li>
+                            <li><a href="#vertical-alignment-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-v"></i>Vertical</a></li>
+                            <li><a href="#visibility-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Visibility</a></li>
                         </ul>
                     </li>
                     <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
@@ -3009,6 +3002,106 @@
                             </div>
                             <div class="list-details">
                                 <p><code>.align-middle</code>, <code>.align-top</code></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="visibility-utilities">
+                <div class="component-card">
+                    <div class="component-header">
+                        <i class="fas fa-eye"></i> <h3>Visibility Utilities</h3>
+                    </div>
+                    <p>Control the visibility of elements without affecting their layout in the document flow. Elements with these utilities will still occupy their designated space even when hidden.</p>
+
+                    <h4>How it Works</h4>
+                    <p>Visibility utility classes are straightforward, directly applying the <code>visibility</code> CSS property. The <code>.visible</code> class makes an element visible, while the <code>.invisible</code> class hides it. Importantly, unlike <code>display: none</code>, hidden elements still consume layout space.</p>
+
+                    <h4>Examples</h4>
+                    <p>Demonstrations of visibility utility classes and their effect on layout:</p>
+
+                    <div class="example-row border-example-box example-flex-column gap-3">
+                        <div class="example-box">
+                            <h5 class="mb-3">Element Visibility</h5>
+                            <div class="example-box-item bg-light-gray">
+                                <p class="visible mb-0 p-2 border-example-box"><code>.visible</code> - This text is visible.</p>
+                            </div>
+                            <div class="example-box-item bg-light-gray">
+                                <p class="invisible mb-0 p-2 border-example-box" style="background-color: var(--light-blue); /* Visual hint for space */"><code>.invisible</code> - This text is invisible, but still occupies space.</p>
+                            </div>
+                            <div class="example-box-item bg-light-gray">
+                                <p class="visible mb-0 p-2 border-example-box">This is a follow-up paragraph, demonstrating that the invisible element above still takes up its space.</p>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Comparison with Display Utilities</h5>
+                            <p>Observe how <code>.invisible</code> differs from <code>.d-none</code> (display: none):</p>
+                            <div class="example-box-item bg-light-gray d-flex gap-2 p-2">
+                                <div class="p-2 border-example-box bg-light-green">Box 1 (Visible)</div>
+                                <div class="p-2 border-example-box bg-light-red invisible">Box 2 (Invisible)</div>
+                                <div class="p-2 border-example-box bg-light-green">Box 3 (Visible)</div>
+                            </div>
+                            <div class="example-box-item bg-light-gray d-flex gap-2 p-2 mt-3">
+                                <div class="p-2 border-example-box bg-light-green">Box 1 (Visible)</div>
+                                <div class="p-2 border-example-box bg-light-red d-none">Box 2 (Display None)</div>
+                                <div class="p-2 border-example-box bg-light-green">Box 3 (Visible)</div>
+                            </div>
+                            <p class="mt-3"><strong>Note:</strong> In the first row, "Box 2 (Invisible)" occupies its space, leading to a gap. In the second row, "Box 2 (Display None)" is completely removed from the document flow, so "Box 3" immediately follows "Box 1".</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block">
+                        <code>
+                            &lt;!-- Visible Element --&gt;<br>
+                            &lt;div class="visible"&gt;This element is visible.&lt;/div&gt;<br>
+                            <br>
+                            &lt;!-- Invisible Element --&gt;<br>
+                            &lt;div class="invisible"&gt;This element is invisible but takes up space.&lt;/div&gt;<br>
+                            <br>
+                            &lt;!-- Comparison --&gt;<br>
+                            &lt;span&gt;Hello&lt;/span&gt;<br>
+                            &lt;span class="invisible"&gt;Invisible Text&lt;/span&gt;<br>
+                            &lt;span&gt;World&lt;/span&gt;<br>
+                            <br>
+                            &lt;!-- Versus display: none --&gt;<br>
+                            &lt;span&gt;Hello&lt;/span&gt;<br>
+                            &lt;span class="d-none"&gt;Display None Text&lt;/span&gt;<br>
+                            &lt;span&gt;World&lt;/span&gt;
+                        </code>
+                    </div>
+
+                    <h4>Complete Class Selector Reference</h4>
+                    <p>The following patterns outline all available visibility utility classes.</p>
+
+                    <h4>Visibility:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.visible</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets <code>visibility: visible !important;</code> The element is visible.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.invisible</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets <code>visibility: hidden !important;</code> The element is hidden but still occupies layout space.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.visible</code>, <code>.invisible</code></p>
                             </div>
                         </div>
                     </div>
