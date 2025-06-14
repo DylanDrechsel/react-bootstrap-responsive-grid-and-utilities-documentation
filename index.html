@@ -2286,740 +2286,629 @@
                 </section>
 
                 <section id="text-utilities">
-                    <div class="component-card">
-                        <div class="component-header">
-                            <i class="fas fa-font"></i>
-                            <h3>Text Utilities</h3>
-                        </div>
-                        <p>Control the appearance and behavior of text content with a comprehensive set of utility
-                            classes for alignment, transformation, weight, style, decoration, line height, font size,
-                            user selection, and pointer events.</p>
+    <div class="component-card">
+        <div class="component-header">
+            <i class="fas fa-font"></i>
+            <h3>Text Utilities</h3>
+        </div>
+        <p>Control the appearance and behavior of text content with a comprehensive set of utility classes for alignment, transformation, weight, style, decoration, line height, font size, user selection, and pointer events.</p>
 
-                        <h4>How it Works</h4>
-                        <p>Text utility classes are primarily named using descriptive patterns such as
-                            <code>.text-{value}</code> for alignment, <code>.fw-{value}</code> for font weight, or
-                            <code>.fs-{value}</code> for font size. Many text alignment classes also support responsive
-                            variations using standard breakpoints (<code>sm</code>, <code>md</code>, <code>lg</code>,
-                            <code>xl</code>, <code>xxl</code>), following the pattern
-                            <code>.text-{breakpoint}-{align}</code>.</p>
+        <h4>How it Works</h4>
+        <p>Text utility classes are primarily named using descriptive patterns such as <code>.text-{value}</code> for alignment, <code>.fw-{value}</code> for font weight, or <code>.fs-{value}</code> for font size. Many text alignment classes also support responsive variations using standard breakpoints (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>), following the pattern <code>.text-{breakpoint}-{align}</code>.</p>
 
-                        <h5>Responsive Text Alignment</h5>
-                        <p>Text alignment can be applied responsively to different screen sizes. For example, applying
-                            <code>.text-center</code> will center text on all screen sizes, whereas
-                            <code>.text-md-start</code> will align text to the start (left in LTR) only on medium
-                            (<code>md</code>) screens and up, overriding any smaller breakpoint alignment.</p>
+        <h5>Responsive Text Alignment</h5>
+        <p>Text alignment can be applied responsively to different screen sizes. For example, applying <code>.text-center</code> will center text on all screen sizes, whereas <code>.text-md-start</code> will align text to the start (left in LTR) only on medium (<code>md</code>) screens and up, overriding any smaller breakpoint alignment.</p>
 
-                        <h4>Examples</h4>
-                        <p>Demonstrations of various text utility classes:</p>
+        <h4>Examples</h4>
+        <p>Demonstrations of various text utility classes:</p>
 
-                        <div class="example-row border-example-box"
-                            style="padding: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Text Alignment</h5>
-                                <div
-                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-start mb-0"><code>.text-start</code> - Lorem ipsum dolor sit amet.
-                                    </p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-center mb-0"><code>.text-center</code> - Lorem ipsum dolor sit amet.
-                                    </p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-end mb-0"><code>.text-end</code> - Lorem ipsum dolor sit amet.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-justify mb-0"><code>.text-justify</code> - Lorem ipsum dolor sit
-                                        amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-blue); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-start text-md-center mb-0"><code>.text-start .text-md-center</code> -
-                                        Aligned start by default, centered on medium screens and up.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Text Transformation</h5>
-                                <div
-                                    style="background-color: var(--light-gray); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-lowercase mb-0"><code>.text-lowercase</code> - This text is
-                                        lowercase.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-gray); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-uppercase mb-0"><code>.text-uppercase</code> - This text is
-                                        uppercase.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-gray); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="text-capitalize mb-0"><code>.text-capitalize</code> - this text is
-                                        capitalized.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Text Wrapping & Overflow</h5>
-                                <div
-                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; border-radius: var(--radius-sm);">
-                                    <div class="text-wrap"><code>.text-wrap</code> - This is a very long line of text
-                                        that should wrap within its container.</div>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; overflow: hidden; border-radius: var(--radius-sm);">
-                                    <div class="text-nowrap"><code>.text-nowrap</code> - This is a very long line of
-                                        text that will not wrap and will be clipped.</div>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; border-radius: var(--radius-sm);">
-                                    <div class="text-break"><code>.text-break</code> -
-                                        ThisIsAVeryLongWordWithoutSpacesThatShouldBreakToFitTheContainer.</div>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-green); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <div class="text-truncate"><code>.text-truncate</code> - This is a very long line of
-                                        text that should be truncated with an ellipsis.</div>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Font Weight</h5>
-                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
-                                    <p class="fw-light mb-0"><code>.fw-light</code> - This text has a light font weight
-                                        (300).</p>
-                                    <p class="fw-lighter mb-0"><code>.fw-lighter</code> - This text has a lighter font
-                                        weight.</p>
-                                    <p class="fw-normal mb-0"><code>.fw-normal</code> - This text has a normal font
-                                        weight (400).</p>
-                                    <p class="fw-bold mb-0"><code>.fw-bold</code> - This text has a bold font weight
-                                        (700).</p>
-                                    <p class="fw-bolder mb-0"><code>.fw-bolder</code> - This text has a bolder font
-                                        weight.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Font Style</h5>
-                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
-                                    <p class="fst-italic mb-0"><code>.fst-italic</code> - This text is italic.</p>
-                                    <p class="fst-normal mb-0"><code>.fst-normal</code> - This text is normal style.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Text Decoration</h5>
-                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
-                                    <p class="text-decoration-none mb-0"><a href="#"
-                                            class="text-decoration-none"><code>.text-decoration-none</code> - No
-                                            underline on this link.</a></p>
-                                    <p class="text-decoration-underline mb-0"><code>.text-decoration-underline</code> -
-                                        This text is underlined.</p>
-                                    <p class="text-decoration-line-through mb-0">
-                                        <code>.text-decoration-line-through</code> - This text has a line through it.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Line Height</h5>
-                                <div
-                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="lh-1 mb-0"><code>.lh-1</code> - This text has a line height of 1. <br>This
-                                        is another line to show spacing.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="lh-sm mb-0"><code>.lh-sm</code> - This text has a line height of 1.25.
-                                        <br>This is another line to show spacing.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="lh-base mb-0"><code>.lh-base</code> - This text has a line height of 1.5
-                                        (default). <br>This is another line to show spacing.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-yellow); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="lh-lg mb-0"><code>.lh-lg</code> - This text has a line height of 2.
-                                        <br>This is another line to show spacing.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Font Size</h5>
-                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
-                                    <p class="fs-1 mb-0"><code>.fs-1</code> - Font Size 1 (2.5rem)</p>
-                                    <p class="fs-2 mb-0"><code>.fs-2</code> - Font Size 2 (2rem)</p>
-                                    <p class="fs-3 mb-0"><code>.fs-3</code> - Font Size 3 (1.75rem)</p>
-                                    <p class="fs-4 mb-0"><code>.fs-4</code> - Font Size 4 (1.5rem)</p>
-                                    <p class="fs-5 mb-0"><code>.fs-5</code> - Font Size 5 (1.25rem)</p>
-                                    <p class="fs-6 mb-0"><code>.fs-6</code> - Font Size 6 (1rem)</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">User Selection</h5>
-                                <div
-                                    style="background-color: var(--light-purple); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="user-select-all mb-0"><code>.user-select-all</code> - This text will be
-                                        entirely selected when you click on it.</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-purple); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="user-select-auto mb-0"><code>.user-select-auto</code> - This text has
-                                        default user-select behavior (you can select parts of it).</p>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-purple); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <p class="user-select-none mb-0"><code>.user-select-none</code> - You cannot select
-                                        this text.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
-                                <h5 class="mb-3">Pointer Events</h5>
-                                <div
-                                    style="background-color: var(--light-orange); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
-                                    <a href="#unclickable" class="pe-none"
-                                        style="display: block; color: inherit; text-decoration: none;"><code>.pe-none</code>
-                                        (on link) - This entire link is unclickable.</a>
-                                </div>
-                                <div
-                                    style="background-color: var(--light-orange); padding: 0.5rem; border-radius: var(--radius-sm);">
-                                    <div class="pe-none"><code>.pe-none</code> (on parent), <code>.pe-auto</code> (on
-                                        child) - This parent div is unclickable, but <a href="#clickable"
-                                            class="pe-auto">this link inside it is clickable.</a></div>
-                                </div>
-                                <p style="margin-top: 1rem;"><strong>Note:</strong> <code>.pe-none</code> prevents all
-                                    pointer events, effectively making an element "unclickable". <code>.pe-auto</code>
-                                    re-enables them, which is useful for selectively making child elements interactive
-                                    within a <code>.pe-none</code> parent.</p>
-                            </div>
-                        </div>
-
-                        <div class="code-block">
-                            <code>
-                                &lt;!-- Text Alignment --&gt;<br>
-                                &lt;p class=&quot;text-start&quot;&gt;This text aligns to the start.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-end&quot;&gt;This text aligns to the end.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-center&quot;&gt;This text is centered.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-justify&quot;&gt;This is a longer paragraph of text that will be
-                                justified...&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-start text-md-center&quot;&gt;This text starts aligned, but
-                                centers on medium screens and above.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-lg-end&quot;&gt;This text aligns to the end on large screens and
-                                above.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Text Transformation --&gt;<br>
-                                &lt;p class=&quot;text-lowercase&quot;&gt;This text will be all lowercase.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-uppercase&quot;&gt;This text will be all uppercase.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-capitalize&quot;&gt;this text will have each word
-                                capitalized.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Text Wrapping &amp; Overflow --&gt;<br>
-                                &lt;div class=&quot;text-wrap&quot; style=&quot;width: 150px; border: 1px solid
-                                #ccc;&quot;&gt;This is a very long line of text that should wrap...&lt;/div&gt;<br>
-                                &lt;div class=&quot;text-nowrap&quot; style=&quot;width: 150px; border: 1px solid #ccc;
-                                overflow: hidden;&quot;&gt;This is a very long line of text that will not
-                                wrap...&lt;/div&gt;<br>
-                                &lt;div class=&quot;text-break&quot; style=&quot;width: 150px; border: 1px solid
-                                #ccc;&quot;&gt;ThisIsAVeryLongWordWithoutSpacesThatShouldBreak...&lt;/div&gt;<br>
-                                &lt;div class=&quot;text-truncate&quot; style=&quot;width: 200px; border: 1px solid
-                                #ccc;&quot;&gt;This is a very long line of text that should be
-                                truncated...&lt;/div&gt;<br>
-                                <br>
-                                &lt;!-- Font Weight --&gt;<br>
-                                &lt;p class=&quot;fw-light&quot;&gt;This text has a light font weight.&lt;/p&gt;<br>
-                                &lt;p class=&quot;fw-lighter&quot;&gt;This text has a lighter font weight.&lt;/p&gt;<br>
-                                &lt;p class=&quot;fw-normal&quot;&gt;This text has a normal font weight.&lt;/p&gt;<br>
-                                &lt;p class=&quot;fw-bold&quot;&gt;This text has a bold font weight.&lt;/p&gt;<br>
-                                &lt;p class=&quot;fw-bolder&quot;&gt;This text has a bolder font weight.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Font Style --&gt;<br>
-                                &lt;p class=&quot;fst-italic&quot;&gt;This text is italic.&lt;/p&gt;<br>
-                                &lt;p class=&quot;fst-normal&quot;&gt;This text is normal style.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Text Decoration --&gt;<br>
-                                &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;This link has no
-                                underline.&lt;/a&gt;<br>
-                                &lt;p class=&quot;text-decoration-underline&quot;&gt;This text is
-                                underlined.&lt;/p&gt;<br>
-                                &lt;p class=&quot;text-decoration-line-through&quot;&gt;This text has a line through
-                                it.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Line Height --&gt;<br>
-                                &lt;p class=&quot;lh-1&quot;&gt;This text has a line height of 1.&lt;br&gt;This is
-                                another line to show tight spacing.&lt;/p&gt;<br>
-                                &lt;p class=&quot;lh-sm&quot;&gt;This text has a small line height.&lt;br&gt;This is
-                                another line to show spacing.&lt;/p&gt;<br>
-                                &lt;p class=&quot;lh-base&quot;&gt;This text has a base line height.&lt;br&gt;This is
-                                another line to show spacing.&lt;/p&gt;<br>
-                                &lt;p class=&quot;lh-lg&quot;&gt;This text has a large line height.&lt;br&gt;This is
-                                another line to show wide spacing.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Font Size --&gt;<br>
-                                &lt;p class=&quot;fs-1&quot;&gt;Font Size 1&lt;/p&gt;<br>
-                                &lt;p class=&quot;fs-2&quot;&gt;Font Size 2&lt;/p&gt;<br>
-                                &lt;p class=&quot;fs-3&quot;&gt;Font Size 3&lt;/p&gt;<br>
-                                &lt;p class=&quot;fs-4&quot;&gt;Font Size 4&lt;/p&gt;<br>
-                                &lt;p class=&quot;fs-5&quot;&gt;Font Size 5&lt;/p&gt;<br>
-                                &lt;p class=&quot;fs-6&quot;&gt;Font Size 6&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- User Selection --&gt;<br>
-                                &lt;p class=&quot;user-select-all&quot;&gt;This text will be entirely selected when you
-                                click on it.&lt;/p&gt;<br>
-                                &lt;p class=&quot;user-select-auto&quot;&gt;This text has default user-select
-                                behavior.&lt;/p&gt;<br>
-                                &lt;p class=&quot;user-select-none&quot;&gt;You cannot select this text.&lt;/p&gt;<br>
-                                <br>
-                                &lt;!-- Pointer Events --&gt;<br>
-                                &lt;a href=&quot;#unclickable&quot; class=&quot;pe-none&quot; style=&quot;display:
-                                block; background-color: #fdd; padding: 10px;&quot;&gt;This entire link is
-                                unclickable.&lt;/a&gt;<br>
-                                &lt;div class=&quot;pe-none&quot; style=&quot;background-color: #fde; padding:
-                                10px;&quot;&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;This parent div is unclickable, but &lt;a
-                                href=&quot;#clickable&quot; class=&quot;pe-auto&quot;&gt;this link inside it is
-                                clickable.&lt;/a&gt;<br>
-                                &lt;/div&gt;
-                            </code>
-                        </div>
-
-                        <h4>Complete Class Selector Reference</h4>
-                        <p>The following patterns outline all available text utility classes. Responsive variants are
-                            primarily available for text alignment.</p>
-                        <h4>Text Alignment:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-start</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Aligns text to the start (left in LTR, right in RTL).</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-end</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Aligns text to the end (right in LTR, left in RTL).</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-center</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Centers text.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-justify</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Justifies text.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-{breakpoint}-start</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Aligns text to start from a specific breakpoint and up (e.g.,
-                                        <code>.text-md-start</code>).
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-{breakpoint}-end</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Aligns text to end from a specific breakpoint and up.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-{breakpoint}-center</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Centers text from a specific breakpoint and up.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-{breakpoint}-justify</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Justifies text from a specific breakpoint and up.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    Example:
-                                    <span class="list-type-column">Usage Example</span>
-                                </div>
-                                <div class="list-details">
-                                    <p><code>.text-sm-center</code>, <code>.text-lg-end</code></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Text Transformation:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-lowercase</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Transforms text to lowercase.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-uppercase</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Transforms text to uppercase.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-capitalize</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Capitalizes the first letter of each word.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Text Wrapping & Overflow:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-wrap</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Allows text to wrap normally.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-nowrap</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Prevents text from wrapping onto a new line.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-break</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Forces words to break to prevent overflow, applying <code>word-wrap:
-                                            break-word</code> and <code>word-break: break-word</code>.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-truncate</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Truncates text with an ellipsis. This class applies <code>overflow:
-                                            hidden;</code>, <code>text-overflow: ellipsis;</code>, and
-                                        <code>white-space: nowrap;</code>. It typically requires a defined
-                                        <code>width</code> or <code>max-width</code> on the element to be effective.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Font Weight:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fw-light</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font weight to 300.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fw-lighter</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font weight to a lighter value relative to the parent.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fw-normal</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font weight to 400.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fw-bold</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font weight to 700.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fw-bolder</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font weight to a bolder value relative to the parent.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Font Style:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fst-italic</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font style to italic.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fst-normal</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font style to normal.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Text Decoration:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-decoration-none</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Removes text decoration (e.g., underlines from links).</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-decoration-underline</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Adds an underline to text.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.text-decoration-line-through</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Adds a line-through to text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Line Height:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.lh-1</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets line height to 1.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.lh-sm</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets line height to 1.25.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.lh-base</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets line height to 1.5 (default).</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.lh-lg</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets line height to 2.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Font Size:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-1</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 2.5rem.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-2</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 2rem.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-3</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 1.75rem.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-4</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 1.5rem.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-5</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 1.25rem.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.fs-6</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets font size to 1rem.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>User Selection:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.user-select-all</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Allows the user to select all content with a single click within the element.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.user-select-auto</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Default browser behavior for user selection.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.user-select-none</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Prevents text and element selection.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Pointer Events:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.pe-none</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Prevents all pointer events (like clicks, hovers, scroll) on the element.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.pe-auto</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Re-enables pointer events on the element (useful for overriding
-                                        <code>.pe-none</code> applied to a parent).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="example-row border-example-box example-flex-column gap-3">
+            <div class="example-box">
+                <h5 class="mb-3">Text Alignment</h5>
+                <div class="example-box-item bg-light-blue">
+                    <p class="text-start mb-0"><code>.text-start</code> - Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="example-box-item bg-light-blue">
+                    <p class="text-center mb-0"><code>.text-center</code> - Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="example-box-item bg-light-blue">
+                    <p class="text-end mb-0"><code>.text-end</code> - Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="example-box-item bg-light-blue">
+                    <p class="text-justify mb-0"><code>.text-justify</code> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="example-box-item bg-light-blue">
+                    <p class="text-start text-md-center mb-0"><code>.text-start.text-md-center</code> - Aligned start by default, centered on medium screens and up.</p>
+                </div>
             </div>
-            </section>
+
+            <div class="example-box">
+                <h5 class="mb-3">Text Transformation</h5>
+                <div class="example-box-item bg-light-gray">
+                    <p class="text-lowercase mb-0"><code>.text-lowercase</code> - This text is lowercase.</p>
+                </div>
+                <div class="example-box-item bg-light-gray">
+                    <p class="text-uppercase mb-0"><code>.text-uppercase</code> - This text is uppercase.</p>
+                </div>
+                <div class="example-box-item bg-light-gray">
+                    <p class="text-capitalize mb-0"><code>.text-capitalize</code> - this text is capitalized.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Text Wrapping & Overflow</h5>
+                <div class="example-box-item bg-light-green example-width-150 mb-2">
+                    <div class="text-wrap"><code>.text-wrap</code> - This is a very long line of text that should wrap within its container.</div>
+                </div>
+                <div class="example-box-item bg-light-green example-width-150 example-overflow-hidden mb-2">
+                    <div class="text-nowrap"><code>.text-nowrap</code> - This is a very long line of text that will not wrap and will be clipped.</div>
+                </div>
+                <div class="example-box-item bg-light-green example-width-150 mb-2">
+                    <div class="text-break"><code>.text-break</code> - ThisIsAVeryLongWordWithoutSpacesThatShouldBreakToFitTheContainer.</div>
+                </div>
+                <div class="example-box-item bg-light-green">
+                    <div class="text-truncate example-width-full"><code>.text-truncate</code> - This is a very long line of text that should be truncated with an ellipsis.</div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Font Weight</h5>
+                <div class="example-box-item-no-bg">
+                    <p class="fw-light mb-0"><code>.fw-light</code> - This text has a light font weight (300).</p>
+                    <p class="fw-lighter mb-0"><code>.fw-lighter</code> - This text has a lighter font weight.</p>
+                    <p class="fw-normal mb-0"><code>.fw-normal</code> - This text has a normal font weight (400).</p>
+                    <p class="fw-bold mb-0"><code>.fw-bold</code> - This text has a bold font weight (700).</p>
+                    <p class="fw-bolder mb-0"><code>.fw-bolder</code> - This text has a bolder font weight.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Font Style</h5>
+                <div class="example-box-item-no-bg">
+                    <p class="fst-italic mb-0"><code>.fst-italic</code> - This text is italic.</p>
+                    <p class="fst-normal mb-0"><code>.fst-normal</code> - This text is normal style.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Text Decoration</h5>
+                <div class="example-box-item-no-bg">
+                    <p class="text-decoration-none mb-0"><a href="#" class="text-decoration-none"><code>.text-decoration-none</code> - No underline on this link.</a></p>
+                    <p class="text-decoration-underline mb-0"><code>.text-decoration-underline</code> - This text is underlined.</p>
+                    <p class="text-decoration-line-through mb-0"><code>.text-decoration-line-through</code> - This text has a line through it.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Line Height</h5>
+                <div class="example-box-item bg-light-yellow">
+                    <p class="lh-1 mb-0"><code>.lh-1</code> - This text has a line height of 1.<br>This is another line to show spacing.</p>
+                </div>
+                <div class="example-box-item bg-light-yellow">
+                    <p class="lh-sm mb-0"><code>.lh-sm</code> - This text has a line height of 1.25.<br>This is another line to show spacing.</p>
+                </div>
+                <div class="example-box-item bg-light-yellow">
+                    <p class="lh-base mb-0"><code>.lh-base</code> - This text has a line height of 1.5 (default).<br>This is another line to show spacing.</p>
+                </div>
+                <div class="example-box-item bg-light-yellow">
+                    <p class="lh-lg mb-0"><code>.lh-lg</code> - This text has a line height of 2.<br>This is another line to show spacing.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Font Size</h5>
+                <div class="example-box-item-no-bg">
+                    <p class="fs-1 mb-0"><code>.fs-1</code> - Font Size 1 (2.5rem)</p>
+                    <p class="fs-2 mb-0"><code>.fs-2</code> - Font Size 2 (2rem)</p>
+                    <p class="fs-3 mb-0"><code>.fs-3</code> - Font Size 3 (1.75rem)</p>
+                    <p class="fs-4 mb-0"><code>.fs-4</code> - Font Size 4 (1.5rem)</p>
+                    <p class="fs-5 mb-0"><code>.fs-5</code> - Font Size 5 (1.25rem)</p>
+                    <p class="fs-6 mb-0"><code>.fs-6</code> - Font Size 6 (1rem)</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">User Selection</h5>
+                <div class="example-box-item bg-light-purple">
+                    <p class="user-select-all mb-0"><code>.user-select-all</code> - This text will be entirely selected when you click on it.</p>
+                </div>
+                <div class="example-box-item bg-light-purple">
+                    <p class="user-select-auto mb-0"><code>.user-select-auto</code> - This text has default user-select behavior (you can select parts of it).</p>
+                </div>
+                <div class="example-box-item bg-light-purple">
+                    <p class="user-select-none mb-0"><code>.user-select-none</code> - You cannot select this text.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5 class="mb-3">Pointer Events</h5>
+                <div class="example-box-item bg-light-orange">
+                    <a href="#unclickable" class="pe-none d-block text-inherit text-decoration-none"><code>.pe-none</code> (on link) - This entire link is unclickable.</a>
+                </div>
+                <div class="example-box-item bg-light-orange">
+                    <div class="pe-none"><code>.pe-none</code> (on parent), <code>.pe-auto</code> (on child) - This parent div is unclickable, but <a href="#clickable" class="pe-auto">this link inside it is clickable.</a></div>
+                </div>
+                <p class="mt-3"><strong>Note:</strong> <code>.pe-none</code> prevents all pointer events, effectively making an element "unclickable". <code>.pe-auto</code> re-enables them, which is useful for selectively making child elements interactive within a <code>.pe-none</code> parent.</p>
+            </div>
+        </div>
+
+        <div class="code-block">
+            <code>
+                &lt;!-- Text Alignment --&gt;<br>
+                &lt;p class="text-start"&gt;This text aligns to the start.&lt;/p&gt;<br>
+                &lt;p class="text-end"&gt;This text aligns to the end.&lt;/p&gt;<br>
+                &lt;p class="text-center"&gt;This text is centered.&lt;/p&gt;<br>
+                &lt;p class="text-justify"&gt;This is a longer paragraph of text that will be justified...&lt;/p&gt;<br>
+                &lt;p class="text-start text-md-center"&gt;This text starts aligned, but centers on medium screens and above.&lt;/p&gt;<br>
+                &lt;p class="text-lg-end"&gt;This text aligns to the end on large screens and above.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Text Transformation --&gt;<br>
+                &lt;p class="text-lowercase"&gt;This text will be all lowercase.&lt;/p&gt;<br>
+                &lt;p class="text-uppercase"&gt;This text will be all uppercase.&lt;/p&gt;<br>
+                &lt;p class="text-capitalize"&gt;this text will have each word capitalized.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Text Wrapping &amp; Overflow --&gt;<br>
+                &lt;div class="text-wrap example-width-150 example-border"&gt;This is a very long line of text that should wrap...&lt;/div&gt;<br>
+                &lt;div class="text-nowrap example-width-150 example-border example-overflow-hidden"&gt;This is a very long line of text that will not wrap...&lt;/div&gt;<br>
+                &lt;div class="text-break example-width-150 example-border"&gt;ThisIsAVeryLongWordWithoutSpacesThatShouldBreak...&lt;/div&gt;<br>
+                &lt;div class="text-truncate example-width-200 example-border"&gt;This is a very long line of text that should be truncated...&lt;/div&gt;<br>
+                <br>
+                &lt;!-- Font Weight --&gt;<br>
+                &lt;p class="fw-light"&gt;This text has a light font weight.&lt;/p&gt;<br>
+                &lt;p class="fw-lighter"&gt;This text has a lighter font weight.&lt;/p&gt;<br>
+                &lt;p class="fw-normal"&gt;This text has a normal font weight.&lt;/p&gt;<br>
+                &lt;p class="fw-bold"&gt;This text has a bold font weight.&lt;/p&gt;<br>
+                &lt;p class="fw-bolder"&gt;This text has a bolder font weight.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Font Style --&gt;<br>
+                &lt;p class="fst-italic"&gt;This text is italic.&lt;/p&gt;<br>
+                &lt;p class="fst-normal"&gt;This text is normal style.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Text Decoration --&gt;<br>
+                &lt;a href="#" class="text-decoration-none"&gt;This link has no underline.&lt;/a&gt;<br>
+                &lt;p class="text-decoration-underline"&gt;This text is underlined.&lt;/p&gt;<br>
+                &lt;p class="text-decoration-line-through"&gt;This text has a line through it.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Line Height --&gt;<br>
+                &lt;p class="lh-1"&gt;This text has a line height of 1.&lt;br&gt;This is another line to show tight spacing.&lt;/p&gt;<br>
+                &lt;p class="lh-sm"&gt;This text has a small line height.&lt;br&gt;This is another line to show spacing.&lt;/p&gt;<br>
+                &lt;p class="lh-base"&gt;This text has a baseline height.&lt;br&gt;This is another line to show spacing.&lt;/p&gt;<br>
+                &lt;p class="lh-lg"&gt;This text has a large line height.&lt;br&gt;This is another line to show wide spacing.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Font Size --&gt;<br>
+                &lt;p class="fs-1"&gt;Font Size 1&lt;/p&gt;<br>
+                &lt;p class="fs-2"&gt;Font Size 2&lt;/p&gt;<br>
+                &lt;p class="fs-3"&gt;Font Size 3&lt;/p&gt;<br>
+                &lt;p class="fs-4"&gt;Font Size 4&lt;/p&gt;<br>
+                &lt;p class="fs-5"&gt;Font Size 5&lt;/p&gt;<br>
+                &lt;p class="fs-6"&gt;Font Size 6&lt;/p&gt;<br>
+                <br>
+                &lt;!-- User Selection --&gt;<br>
+                &lt;p class="user-select-all"&gt;This text will be entirely selected when you click on it.&lt;/p&gt;<br>
+                &lt;p class="user-select-auto"&gt;This text has default user-select behavior.&lt;/p&gt;<br>
+                &lt;p class="user-select-none"&gt;You cannot select this text.&lt;/p&gt;<br>
+                <br>
+                &lt;!-- Pointer Events --&gt;<br>
+                &lt;a href="#unclickable" class="pe-none d-block bg-light-orange p-2"&gt;This entire link is unclickable.&lt;/a&gt;<br>
+                &lt;div class="pe-none bg-light-orange p-2"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;This parent div is unclickable, but&lt;a href="#clickable" class="pe-auto"&gt;this link inside it is clickable.&lt;/a&gt;<br>
+                &lt;/div&gt;
+            </code>
+        </div>
+
+        <h4>Complete Class Selector Reference</h4>
+        <p>The following patterns outline all available text utility classes. Responsive variants are primarily available for text alignment.</p>
+
+        <h4>Text Alignment:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-start</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Aligns text to the start (left in LTR, right in RTL).</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-end</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Aligns text to the end (right in LTR, left in RTL).</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-center</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Centers text.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-justify</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Justifies text.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-{breakpoint}-start</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Aligns text to start from a specific breakpoint and up (e.g., <code>.text-md-start</code>).</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-{breakpoint}-end</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Aligns text to end from a specific breakpoint and up.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-{breakpoint}-center</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Centers text from a specific breakpoint and up.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-{breakpoint}-justify</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Justifies text from a specific breakpoint and up.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    Example:
+                    <span class="list-type-column">Usage Example</span>
+                </div>
+                <div class="list-details">
+                    <p><code>.text-sm-center</code>, <code>.text-lg-end</code></p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Text Transformation:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-lowercase</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Transforms text to lowercase.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-uppercase</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Transforms text to uppercase.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-capitalize</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Capitalizes the first letter of each word.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Text Wrapping & Overflow:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-wrap</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Allows text to wrap normally.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-nowrap</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Prevents text from wrapping onto a new line.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-break</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Forces words to break to prevent overflow, applying <code>word-wrap:break-word</code> and <code>word-break:break-word</code>.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-truncate</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Truncates text with an ellipsis. This class applies <code>overflow:hidden;</code>, <code>text-overflow:ellipsis;</code>, and <code>white-space:nowrap;</code>. It typically requires a defined <code>width</code> or <code>max-width</code> on the element to be effective.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Font Weight:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fw-light</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font weight to 300.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fw-lighter</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font weight to a lighter value relative to the parent.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fw-normal</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font weight to 400.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fw-bold</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font weight to 700.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fw-bolder</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font weight to a bolder value relative to the parent.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Font Style:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fst-italic</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font style to italic.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fst-normal</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font style to normal.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Text Decoration:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-decoration-none</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Removes text decoration (e.g., underlines from links).</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-decoration-underline</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Adds an underline to text.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.text-decoration-line-through</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Adds a line-through to text.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Line Height:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.lh-1</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets line height to 1.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.lh-sm</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets line height to 1.25.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.lh-base</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets line height to 1.5 (default).</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.lh-lg</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets line height to 2.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Font Size:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-1</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 2.5rem.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-2</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 2rem.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-3</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 1.75rem.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-4</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 1.5rem.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-5</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 1.25rem.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.fs-6</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Sets font size to 1rem.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>User Selection:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.user-select-all</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Allows the user to select all content with a single click within the element.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.user-select-auto</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Default browser behavior for user selection.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.user-select-none</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Prevents text and element selection.</p>
+                </div>
+            </div>
+        </div>
+
+        <h4>Pointer Events:</h4>
+        <div class="list-box-no-flex">
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.pe-none</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Prevents all pointer events (like clicks, hovers, scroll) on the element.</p>
+                </div>
+            </div>
+            <div class="list-row-column">
+                <div class="list-name-column">
+                    <code>.pe-auto</code>
+                    <span class="list-type-column">Utility Class</span>
+                </div>
+                <div class="list-details">
+                    <p>Re-enables pointer events on the element (useful for overriding <code>.pe-none</code> applied to a parent).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <section id="examples">
                 <h2><i class="fas fa-code"></i> Examples</h2>
