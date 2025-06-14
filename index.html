@@ -40,12 +40,20 @@
                             <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
                             <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
                             <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
-                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i> Interactions</a></li>
+                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>
+                                    Interactions</a></li>
                             <li><a href="#opacity">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i> Opacity</a></li>
-                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i> Overflow</a></li>
+                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i> Overflow</a>
+                            </li>
                             <li><a href="#position">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i> Position</a></li>
-                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i> Shadows</a></li>
-                            <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i> Sizing</a></li>
+                            <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i> Shadows</a>
+                            </li>
+                            <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i>
+                                    Sizing</a></li>
+                            <li><a href="#spacing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-v"></i>
+                                    Spacing</a></li>
+                            <li><a href="#text-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-font"></i>
+                                    Text</a></li>
                         </ul>
                     </li>
                     <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
@@ -1164,11 +1172,15 @@
                             <i class="fas fa-hand-pointer"></i>
                             <h3>Interaction Utilities</h3>
                         </div>
-                        <p>Control user interaction with elements, including cursor styles and focus indicators, using these utility classes.</p>
+                        <p>Control user interaction with elements, including cursor styles and focus indicators, using
+                            these utility classes.</p>
 
                         <h3><i class="fas fa-mouse-pointer"></i> Cursor Utilities</h3>
-                        <p>Change the appearance of the mouse cursor when hovering over an element. This is useful for providing visual feedback to the user about interactive elements or non-interactive areas.</p>
-                        <div class="example-row border-example-box" style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;">
+                        <p>Change the appearance of the mouse cursor when hovering over an element. This is useful for
+                            providing visual feedback to the user about interactive elements or non-interactive areas.
+                        </p>
+                        <div class="example-row border-example-box"
+                            style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;">
                             <div class="cursor-auto cursor-example-box">
                                 <span class="cursor-type">auto</span>
                                 <span class="cursor-description">Default (browser decides)</span>
@@ -1210,13 +1222,19 @@
                         </div>
 
                         <h3><i class="fas fa-dot-circle"></i> Focus Utilities</h3>
-                        <p>The <code>.focus-ring</code> utility provides a custom, consistent visual indicator when an interactive element receives keyboard focus (e.g., by tabbing through elements) or is clicked. It overrides the browser's default outline with a styled <code>box-shadow</code>, improving accessibility and visual consistency.</p>
+                        <p>The <code>.focus-ring</code> utility provides a custom, consistent visual indicator when an
+                            interactive element receives keyboard focus (e.g., by tabbing through elements) or is
+                            clicked. It overrides the browser's default outline with a styled <code>box-shadow</code>,
+                            improving accessibility and visual consistency.</p>
                         <div class="example-row border-example-box" style="padding: 1rem;">
-                            <p style="margin-bottom: 1rem;">Try tabbing to or clicking the button and input field below to see the focus ring in action.</p>
-                            <button class="btn focus-ring" style="background-color: var(--primary); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius-sm); cursor: pointer; margin-right: 1rem;">
+                            <p style="margin-bottom: 1rem;">Try tabbing to or clicking the button and input field below
+                                to see the focus ring in action.</p>
+                            <button class="btn focus-ring"
+                                style="background-color: var(--primary); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius-sm); cursor: pointer; margin-right: 1rem;">
                                 Focusable Button
                             </button>
-                            <input type="text" class="form-control focus-ring" placeholder="Focusable Input" style="padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); width: 200px;">
+                            <input type="text" class="form-control focus-ring" placeholder="Focusable Input"
+                                style="padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); width: 200px;">
                         </div>
                         <div class="code-block">
                             <code>
@@ -1233,10 +1251,13 @@
                             <i class="fas fa-adjust"></i>
                             <h3>Opacity Utilities</h3>
                         </div>
-                        <p>Control the opacity (transparency) of elements with these utility classes. Opacity values range from `0` (fully transparent) to `100` (fully opaque), affecting the visibility of the element itself and its content.</p>
+                        <p>Control the opacity (transparency) of elements with these utility classes. Opacity values
+                            range from `0` (fully transparent) to `100` (fully opaque), affecting the visibility of the
+                            element itself and its content.</p>
 
                         <h4>Examples</h4>
-                        <div class="example-row border-example-box" style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem; background-color: var(--light-gray);">
+                        <div class="example-row border-example-box"
+                            style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem; background-color: var(--light-gray);">
                             <div class="opacity-box opacity-0">
                                 <span class="opacity-value">.opacity-0</span>
                                 <span class="opacity-level">(0% visible)</span>
@@ -1276,53 +1297,76 @@
                             <i class="fas fa-arrows-alt"></i>
                             <h3>Overflow Utilities</h3>
                         </div>
-                        <p>Control how content that overflows an element's box is handled. These utilities apply the CSS <code>overflow</code>, <code>overflow-x</code>, and <code>overflow-y</code> properties.</p>
+                        <p>Control how content that overflows an element's box is handled. These utilities apply the CSS
+                            <code>overflow</code>, <code>overflow-x</code>, and <code>overflow-y</code> properties.</p>
 
                         <h4>Common Overflow Values</h4>
-                        <p>Apply these classes to control overflow on both horizontal and vertical axes simultaneously.</p>
-                        <div class="example-row d-flex justify-content-around border-example-box" style="padding: 1rem; padding-bottom: 7rem;">
+                        <p>Apply these classes to control overflow on both horizontal and vertical axes simultaneously.
+                        </p>
+                        <div class="example-row d-flex justify-content-around border-example-box"
+                            style="padding: 1rem; padding-bottom: 7rem;">
                             <div class="overflow-example-box overflow-auto">
                                 <span class="overflow-example-content-long">
-                                    This content is purposefully long to demonstrate the 'auto' overflow behavior. If the content exceeds the box's dimensions, scrollbars will appear as needed for the overflowing axis. This content is purposefully long to demonstrate the 'auto' overflow behavior.
+                                    This content is purposefully long to demonstrate the 'auto' overflow behavior. If
+                                    the content exceeds the box's dimensions, scrollbars will appear as needed for the
+                                    overflowing axis. This content is purposefully long to demonstrate the 'auto'
+                                    overflow behavior.
                                 </span>
                             </div>
                             <div class="overflow-example-box overflow-hidden">
                                 <span class="overflow-example-content-long" style="font-size: 10px;">
-                                    This content is purposefully long to demonstrate the 'hidden' overflow behavior. Any content that exceeds the box's dimensions will be clipped and not visible. There will be no scrollbars. This content is purposefully long to demonstrate the 'hidden' overflow behavior.
+                                    This content is purposefully long to demonstrate the 'hidden' overflow behavior. Any
+                                    content that exceeds the box's dimensions will be clipped and not visible. There
+                                    will be no scrollbars. This content is purposefully long to demonstrate the 'hidden'
+                                    overflow behavior.
                                 </span>
                             </div>
                             <div class="overflow-example-box overflow-visible">
                                 <span class="overflow-example-content-long">
-                                    This content is purposefully long to demonstrate the 'visible' overflow behavior. Content will render outside the box's dimensions if it overflows. This is the default behavior. There will be no scrollbars. This content is purposefully long to demonstrate the 'visible' overflow behavior.
+                                    This content is purposefully long to demonstrate the 'visible' overflow behavior.
+                                    Content will render outside the box's dimensions if it overflows. This is the
+                                    default behavior. There will be no scrollbars. This content is purposefully long to
+                                    demonstrate the 'visible' overflow behavior.
                                 </span>
                             </div>
                             <div class="overflow-example-box overflow-scroll">
                                 <span class="overflow-example-content-long">
-                                    This content is purposefully long to demonstrate the 'scroll' overflow behavior. Scrollbars will always appear for both axes, even if the content does not overflow on one or both axes. This provides a consistent user experience. This content is purposefully long to demonstrate the 'scroll' overflow behavior.
+                                    This content is purposefully long to demonstrate the 'scroll' overflow behavior.
+                                    Scrollbars will always appear for both axes, even if the content does not overflow
+                                    on one or both axes. This provides a consistent user experience. This content is
+                                    purposefully long to demonstrate the 'scroll' overflow behavior.
                                 </span>
                             </div>
                         </div>
 
                         <h4>Horizontal Overflow (<code>overflow-x</code>)</h4>
-                        <p>Control horizontal content overflow behavior only, while vertical overflow remains at its default or defined value (e.g., `visible`).</p>
-                        <div class="example-row d-flex justify-content-around border-example-box" style="padding: 1rem;">
+                        <p>Control horizontal content overflow behavior only, while vertical overflow remains at its
+                            default or defined value (e.g., `visible`).</p>
+                        <div class="example-row d-flex justify-content-around border-example-box"
+                            style="padding: 1rem;">
                             <div class="overflow-example-box horizontal overflow-x-auto" style="width: 250px;">
-                                <span class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
+                                <span
+                                    class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
                             </div>
                             <div class="overflow-example-box horizontal overflow-x-hidden" style="width: 250px;">
-                                <span class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
+                                <span
+                                    class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
                             </div>
                             <div class="overflow-example-box horizontal overflow-x-visible" style="width: 250px;">
-                                <span class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
+                                <span
+                                    class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
                             </div>
                             <div class="overflow-example-box horizontal overflow-x-scroll" style="width: 250px;">
-                                <span class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
+                                <span
+                                    class="overflow-example-content-long">ThisIsAVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongStringOfTextThatWillCauseHorizontalOverflowIfItDoesNotWrap.</span>
                             </div>
                         </div>
 
                         <h4>Vertical Overflow (<code>overflow-y</code>)</h4>
-                        <p>Control vertical content overflow behavior only, while horizontal overflow remains at its default or defined value (e.g., `visible`).</p>
-                        <div class="example-row d-flex justify-content-around border-example-box" style="padding: 1rem; padding-bottom: 6rem;">
+                        <p>Control vertical content overflow behavior only, while horizontal overflow remains at its
+                            default or defined value (e.g., `visible`).</p>
+                        <div class="example-row d-flex justify-content-around border-example-box"
+                            style="padding: 1rem; padding-bottom: 6rem;">
                             <div class="overflow-example-box overflow-y-auto" style="height: 100px;">
                                 <span class="overflow-example-content-long">
                                     This content is purposefully long to demonstrate vertical overflow-y-auto.
@@ -1376,45 +1420,63 @@
                             <i class="fas fa-thumbtack"></i>
                             <h3>Position Utilities</h3>
                         </div>
-                        <p>Control the positioning method and exact placement of elements using these utility classes.</p>
+                        <p>Control the positioning method and exact placement of elements using these utility classes.
+                        </p>
 
                         <h4>Position Types</h4>
-                        <p>Apply these classes to change the <code>position</code> property of an element, affecting how it is positioned in the document flow.</p>
+                        <p>Apply these classes to change the <code>position</code> property of an element, affecting how
+                            it is positioned in the document flow.</p>
                         <div class="example-row border-example-box" style="padding: 1rem; display: block;">
                             <div class="position-type-example-section">
                                 <h5><code>.position-static</code> (Default)</h5>
-                                <p>Elements are positioned according to the normal flow of the document. `top`, `bottom`, `left`, `right`, and `z-index` properties have no effect.</p>
-                                <div class="position-child-box position-static" style="margin-bottom: 1rem;">Static</div>
+                                <p>Elements are positioned according to the normal flow of the document. `top`,
+                                    `bottom`, `left`, `right`, and `z-index` properties have no effect.</p>
+                                <div class="position-child-box position-static" style="margin-bottom: 1rem;">Static
+                                </div>
                             </div>
 
                             <div class="position-type-example-section">
                                 <h5><code>.position-relative</code></h5>
-                                <p>Elements are positioned relative to their normal position. `top`, `bottom`, `left`, `right` properties will offset them from that normal position. Crucially, a relative element establishes a new positioning context for its children, meaning any `position-absolute` children will be positioned relative to this element.</p>
+                                <p>Elements are positioned relative to their normal position. `top`, `bottom`, `left`,
+                                    `right` properties will offset them from that normal position. Crucially, a relative
+                                    element establishes a new positioning context for its children, meaning any
+                                    `position-absolute` children will be positioned relative to this element.</p>
                                 <div class="position-parent-box" style="height: 100px;">
-                                    <div class="position-child-box position-relative" style="top: 20px; left: 20px;">Relative</div>
+                                    <div class="position-child-box position-relative" style="top: 20px; left: 20px;">
+                                        Relative</div>
                                 </div>
                             </div>
 
                             <div class="position-type-example-section">
                                 <h5><code>.position-absolute</code></h5>
-                                <p>Elements are removed from the normal document flow and positioned relative to their *nearest positioned ancestor* (an ancestor with `position: relative`, `absolute`, `fixed`, or `sticky`). If no such ancestor exists, they are positioned relative to the initial containing block (usually the `html` element).</p>
+                                <p>Elements are removed from the normal document flow and positioned relative to their
+                                    *nearest positioned ancestor* (an ancestor with `position: relative`, `absolute`,
+                                    `fixed`, or `sticky`). If no such ancestor exists, they are positioned relative to
+                                    the initial containing block (usually the `html` element).</p>
                                 <div class="position-parent-box">
-                                    <div class="position-child-box position-absolute" style="top: 10px; right: 10px;">Absolute</div>
+                                    <div class="position-child-box position-absolute" style="top: 10px; right: 10px;">
+                                        Absolute</div>
                                 </div>
                             </div>
 
                             <div class="position-type-example-section">
                                 <h5><code>.position-fixed</code></h5>
-                                <p>Elements are removed from the normal document flow and positioned relative to the *viewport*. They remain in the same position even when the page is scrolled, useful for fixed headers, footers, or sidebars.</p>
+                                <p>Elements are removed from the normal document flow and positioned relative to the
+                                    *viewport*. They remain in the same position even when the page is scrolled, useful
+                                    for fixed headers, footers, or sidebars.</p>
                                 <div class="position-fixed-example">Fixed</div>
-                                <p style="margin-top: 20px;">(Scroll down to see the fixed element stick to the viewport)</p>
+                                <p style="margin-top: 20px;">(Scroll down to see the fixed element stick to the
+                                    viewport)</p>
                             </div>
 
                             <div class="code-block" style="text-align: left;">
                                 <code>
-                                    &lt;!-- In the live documentation, the 'Fixed' element's position styling is commented out to allow scrolling. --&gt;<br>
-                                    &lt;!-- If the 'position: fixed;', 'bottom', 'right', and 'z-index' properties below were uncommented, --&gt;<br>
-                                    &lt;!-- the green 'Fixed' element would remain locked to the bottom right of the screen during scroll. --&gt;<br>
+                                    &lt;!-- In the live documentation, the 'Fixed' element's position styling is
+                                    commented out to allow scrolling. --&gt;<br>
+                                    &lt;!-- If the 'position: fixed;', 'bottom', 'right', and 'z-index' properties below
+                                    were uncommented, --&gt;<br>
+                                    &lt;!-- the green 'Fixed' element would remain locked to the bottom right of the
+                                    screen during scroll. --&gt;<br>
                                     .position-fixed-example {<br>
                                     &nbsp;&nbsp;/* position: fixed; */<br>
                                     &nbsp;&nbsp;/* bottom: 20px; */<br>
@@ -1430,33 +1492,54 @@
 
                             <div class="position-type-example-section">
                                 <h5><code>.position-sticky</code></h5>
-                                <p>Elements are positioned based on the user's scroll position. A sticky element is treated as `relative` until a specified offset position is met in the viewport (e.g., `top: 0`), at which point it becomes `fixed` and sticks. It reverts to `relative` if it scrolls past the bottom of its parent.</p>
+                                <p>Elements are positioned based on the user's scroll position. A sticky element is
+                                    treated as `relative` until a specified offset position is met in the viewport
+                                    (e.g., `top: 0`), at which point it becomes `fixed` and sticks. It reverts to
+                                    `relative` if it scrolls past the bottom of its parent.</p>
                                 <div class="scroll-area-for-sticky border-example-box">
                                     <div class="position-sticky-example position-sticky">Sticky Header</div>
                                     <div class="scroll-content">
-                                        <p>Scroll down this box to see the "Sticky Header" element stick to the top of its parent scrollable area when it reaches the top offset (which is `top: 0` in this case).</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                                        <p>This section ensures there is enough scrollable content to demonstrate the sticky behavior effectively.</p>
+                                        <p>Scroll down this box to see the "Sticky Header" element stick to the top of
+                                            its parent scrollable area when it reaches the top offset (which is `top: 0`
+                                            in this case).</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.</p>
+                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                            nesciunt.</p>
+                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.</p>
+                                        <p>This section ensures there is enough scrollable content to demonstrate the
+                                            sticky behavior effectively.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <h4>Top, Bottom, Start, End Positioning</h4>
-                        <p>Use these utilities (e.g., `top-0`, `start-50`, `bottom-100`) to precisely place positioned elements (like
-                            `position-absolute` or `position-fixed`) relative to their containing block or the viewport.</p>
+                        <p>Use these utilities (e.g., `top-0`, `start-50`, `bottom-100`) to precisely place positioned
+                            elements (like
+                            `position-absolute` or `position-fixed`) relative to their containing block or the viewport.
+                        </p>
                         <div class="example-row border-example-box" style="padding: 1rem;">
                             <div class="position-parent-box" style="height: 250px;  width: 100%;">
                                 <div class="position-child-box position-absolute top-0 start-0">top-0 start-0</div>
                                 <div class="position-child-box position-absolute top-0 end-0">top-0 end-0</div>
-                                <div class="position-child-box position-absolute top-50 start-50">top-50 start-50</div>
-                                <div class="position-child-box position-absolute bottom-0 start-0">bottom-0 start-0</div>
+                                <div class="position-child-box position-absolute top-50 start-50" style="transform: translate(-50%, -50%);">top-50 start-50</div>
+                                <div class="position-child-box position-absolute bottom-0 start-0">bottom-0 start-0
+                                </div>
                                 <div class="position-child-box position-absolute bottom-0 end-0">bottom-0 end-0</div>
-                                <div class="position-child-box position-absolute top-100 start-100" style="transform: translate(-100%, -100%);">top-100 start-100</div>
+                                <div class="position-child-box position-absolute top-100 start-100"
+                                    style="transform: translate(-100%, -100%);">top-100 start-100</div>
                             </div>
                         </div>
 
@@ -1550,7 +1633,8 @@
                                 <div class="list-name"><code>.translate-middle</code></div>
                                 <div class="list-details">
                                     <span class="list-type">Utility Class</span>
-                                    <p>Applies `transform: translate(-50%, -50%)`, useful for centering an element based on its own size relative to
+                                    <p>Applies `transform: translate(-50%, -50%)`, useful for centering an element based
+                                        on its own size relative to
                                         its positioned parent.</p>
                                 </div>
                             </div>
@@ -1558,7 +1642,8 @@
                                 <div class="list-name"><code>.translate-middle-x</code></div>
                                 <div class="list-details">
                                     <span class="list-type">Utility Class</span>
-                                    <p>Applies `transform: translateX(-50%)`, useful for horizontally centering an element relative to its
+                                    <p>Applies `transform: translateX(-50%)`, useful for horizontally centering an
+                                        element relative to its
                                         positioned parent.</p>
                                 </div>
                             </div>
@@ -1566,26 +1651,32 @@
                                 <div class="list-name"><code>.translate-middle-y</code></div>
                                 <div class="list-details">
                                     <span class="list-type">Utility Class</span>
-                                    <p>Applies `transform: translateY(-50%)`, useful for vertically centering an element relative to its positioned
+                                    <p>Applies `transform: translateY(-50%)`, useful for vertically centering an element
+                                        relative to its positioned
                                         parent.</p>
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <h4>Translate for Centering</h4>
-                        <p>Conveniently center an absolutely positioned element (both horizontally and vertically) within its parent by combining `top-50`, `start-50`, and the `translate-middle` utility.</p>
-                        <div class="example-row border-example-box" style="padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <p>Conveniently center an absolutely positioned element (both horizontally and vertically)
+                            within its parent by combining `top-50`, `start-50`, and the `translate-middle` utility.</p>
+                        <div class="example-row border-example-box"
+                            style="padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem;">
                             <div class="position-parent-box" style="height: 150px; flex: 1 1 48%; margin-bottom: 0px;">
-                                <div class="position-child-box position-absolute top-50 start-50 translate-middle">Centered</div>
+                                <div class="position-child-box position-absolute top-50 start-50 translate-middle">
+                                    Centered</div>
                             </div>
                             <div class="position-parent-box" style="height: 150px; flex: 1 1 48%; margin-bottom: 0px;">
-                                <div class="position-child-box position-absolute top-0 start-50 translate-middle-x">Centered X</div>
-                                <div class="position-child-box position-absolute top-50 end-0 translate-middle-y">Centered Y</div>
+                                <div class="position-child-box position-absolute top-0 start-50 translate-middle-x">
+                                    Centered X</div>
+                                <div class="position-child-box position-absolute top-50 end-0 translate-middle-y">
+                                    Centered Y</div>
                             </div>
                             <p style="margin-bottom: 0px; margin-top: 0px;">You can also center along a single axis:</p>
                         </div>
-                        
+
                         <div class="code-block">
                             <code>
                                 &lt;!-- General Position Classes --&gt;<br>
@@ -1599,14 +1690,18 @@
                                 &lt;!-- Placement Utilities --&gt;<br>
                                 &lt;div class="position-relative"&gt;<br>
                                 &nbsp;&nbsp;&lt;div class="position-absolute top-0 start-0"&gt;Top Left&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&lt;div class="position-absolute bottom-50 end-100"&gt;Bottom 50% Right 100%&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="position-absolute bottom-50 end-100"&gt;Bottom 50% Right
+                                100%&lt;/div&gt;<br>
                                 &lt;/div&gt;<br><br>
 
                                 &lt;!-- Centering Utilities --&gt;<br>
                                 &lt;div class="position-relative"&gt;<br>
-                                &nbsp;&nbsp;&lt;div class="position-absolute top-50 start-50 translate-middle"&gt;Fully Centered&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&lt;div class="position-absolute top-0 start-50 translate-middle-x"&gt;Centered Horizontally&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&lt;div class="position-absolute top-50 end-0 translate-middle-y"&gt;Centered Vertically&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="position-absolute top-50 start-50 translate-middle"&gt;Fully
+                                Centered&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="position-absolute top-0 start-50
+                                translate-middle-x"&gt;Centered Horizontally&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="position-absolute top-50 end-0
+                                translate-middle-y"&gt;Centered Vertically&lt;/div&gt;<br>
                                 &lt;/div&gt;
                             </code>
                         </div>
@@ -1619,7 +1714,8 @@
                             <i class="fas fa-cube"></i>
                             <h3>Shadow Utilities</h3>
                         </div>
-                        <p>Apply various box shadows to elements for depth and visual elevation using these utility classes.</p>
+                        <p>Apply various box shadows to elements for depth and visual elevation using these utility
+                            classes.</p>
 
                         <h3><i class="fas fa-code"></i> Shadow Class Reference</h3>
                         <div class="example-row list-box" style="padding: 1rem;">
@@ -1654,17 +1750,22 @@
                         </div>
 
                         <h4>Examples</h4>
-                        <div class="example-row border-example-box" style="display: flex; gap: 1rem; padding: 1rem; justify-content: space-around; flex-wrap: wrap;">
-                            <div class="shadow-box shadow-none" style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+                        <div class="example-row border-example-box"
+                            style="display: flex; gap: 1rem; padding: 1rem; justify-content: space-around; flex-wrap: wrap;">
+                            <div class="shadow-box shadow-none"
+                                style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
                                 .shadow-none
                             </div>
-                            <div class="shadow-box shadow-sm" style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
+                            <div class="shadow-box shadow-sm"
+                                style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
                                 .shadow-sm
                             </div>
-                            <div class="shadow-box shadow" style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
+                            <div class="shadow-box shadow"
+                                style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
                                 .shadow
                             </div>
-                            <div class="shadow-box shadow-lg" style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
+                            <div class="shadow-box shadow-lg"
+                                style="width: 120px; height: 80px; display: flex; align-items: center; justify-content: center; background-color: var(--light);">
                                 .shadow-lg
                             </div>
                         </div>
@@ -1686,146 +1787,153 @@
                             <i class="fas fa-expand-arrows-alt"></i>
                             <h3>Sizing Utilities</h3>
                         </div>
-                        <p>Set the width and height of elements quickly and responsively using these concise utility classes, supporting percentage and viewport units.</p>
+                        <p>Set the width and height of elements quickly and responsively using these concise utility
+                            classes, supporting percentage and viewport units.</p>
 
                         <h4>Width Utilities</h4>
-                            <div class="example-row list-box">
-                                <div class="list-row">
-                                    <div class="list-name"><code>.w-25</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `25%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.w-50</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `50%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.w-75</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `75%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.w-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `100%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.w-auto</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `auto`.</p>
-                                    </div>
+                        <div class="example-row list-box">
+                            <div class="list-row">
+                                <div class="list-name"><code>.w-25</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `25%`.</p>
                                 </div>
                             </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.w-50</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `50%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.w-75</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `75%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.w-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `100%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.w-auto</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `auto`.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                            <h4>Height Utilities</h4>
-                            <div class="example-row list-box">
-                                <div class="list-row">
-                                    <div class="list-name"><code>.h-25</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `25%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.h-50</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `50%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.h-75</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `75%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.h-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `100%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.h-auto</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `auto`.</p>
-                                    </div>
+                        <h4>Height Utilities</h4>
+                        <div class="example-row list-box">
+                            <div class="list-row">
+                                <div class="list-name"><code>.h-25</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `25%`.</p>
                                 </div>
                             </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.h-50</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `50%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.h-75</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `75%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.h-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `100%`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.h-auto</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `auto`.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                            <h4>Max-Width & Max-Height</h4>
-                            <div class="example-row list-box">
-                                <div class="list-row">
-                                    <div class="list-name"><code>.mw-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `max-width` to `100%`.</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.mh-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `max-height` to `100%`.</p>
-                                    </div>
+                        <h4>Max-Width & Max-Height</h4>
+                        <div class="example-row list-box">
+                            <div class="list-row">
+                                <div class="list-name"><code>.mw-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `max-width` to `100%`.</p>
                                 </div>
                             </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.mh-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `max-height` to `100%`.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                            <h4>Min-Viewport & Viewport Sizing</h4>
-                            <div class="example-row list-box">
-                                <div class="list-row">
-                                    <div class="list-name"><code>.min-vw-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `min-width` to `100vw` (100% of viewport width).</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.min-vh-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `min-height` to `100vh` (100% of viewport height).</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.vw-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `width` to `100vw` (100% of viewport width).</p>
-                                    </div>
-                                </div>
-                                <div class="list-row">
-                                    <div class="list-name"><code>.vh-100</code></div>
-                                    <div class="list-details">
-                                        <span class="list-type">Utility Class</span>
-                                        <p>Sets the element's `height` to `100vh` (100% of viewport height).</p>
-                                    </div>
+                        <h4>Min-Viewport & Viewport Sizing</h4>
+                        <div class="example-row list-box">
+                            <div class="list-row">
+                                <div class="list-name"><code>.min-vw-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `min-width` to `100vw` (100% of viewport width).</p>
                                 </div>
                             </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.min-vh-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `min-height` to `100vh` (100% of viewport height).</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.vw-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `width` to `100vw` (100% of viewport width).</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>.vh-100</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Utility Class</span>
+                                    <p>Sets the element's `height` to `100vh` (100% of viewport height).</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <h4>Examples</h4>
-                        <div class="example-row border-example-box" style="padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
-                            <div style="background-color: var(--primary-light); color: var(--light); padding: 0.5rem; text-align: center; font-size: 0.9rem;" class="w-50 h-25">Width 50%, Height 25%</div>
-                            <div style="background-color: var(--success); color: var(--light); padding: 0.5rem; text-align: center; font-size: 0.9rem;" class="w-75 h-50">Width 75%, Height 50%</div>
-                            <div style="background-color: var(--warning); color: var(--dark); padding: 0.5rem; text-align: center; font-size: 0.9rem; position: relative;"  class="w-100 h-auto">
+                        <div class="example-row border-example-box"
+                            style="padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
+                            <div style="background-color: var(--primary-light); color: var(--light); padding: 0.5rem; text-align: center; font-size: 0.9rem;"
+                                class="w-50 h-25">Width 50%, Height 25%</div>
+                            <div style="background-color: var(--success); color: var(--light); padding: 0.5rem; text-align: center; font-size: 0.9rem;"
+                                class="w-75 h-50">Width 75%, Height 50%</div>
+                            <div style="background-color: var(--warning); color: var(--dark); padding: 0.5rem; text-align: center; font-size: 0.9rem; position: relative;"
+                                class="w-100 h-auto">
                                 Width 100%, Height Auto (content-driven)
                                 <div style="height: 50px;"></div>
                             </div>
                         </div>
-                        <p style="margin-top: 1rem;"><strong>Note:</strong> To see `vh-100` or `vw-100` in action, you'd typically apply them to a top-level element or test in a separate context to observe full viewport coverage.</p>
+                        <p style="margin-top: 1rem;"><strong>Note:</strong> To see `vh-100` or `vw-100` in action, you'd
+                            typically apply them to a top-level element or test in a separate context to observe full
+                            viewport coverage.</p>
                         <div class="code-block">
                             <code>
                                 &lt;div class="w-50 h-25"&gt;Width 50%, Height 25%&lt;/div&gt;<br>
@@ -1840,102 +1948,1175 @@
                     </div>
                 </section>
 
-                <section id="examples">
-                    <h2><i class="fas fa-code"></i> Examples</h2>
-                    <p>Explore practical implementation examples to see how the grid system works in real-world
-                        scenarios.</p>
+                <section id="spacing-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-arrows-alt"></i>
+                            <h3>Spacing Utilities</h3>
+                        </div>
+                        <p>Control the margin and padding of elements with a comprehensive set of responsive spacing
+                            utility classes. These classes are built on a consistent spacing scale, allowing for precise
+                            control over element positioning and layout.</p>
 
-                    <h3><i class="fas fa-layout"></i> Responsive Layout</h3>
-                    <div class="grid-example">
-                        <div class="example-row">
-                            <div class="example-col" style="flex: 0 0 100%;">Header</div>
-                        </div>
-                        <div class="example-row">
-                            <div class="example-col" style="flex: 0 0 25%;">Sidebar</div>
-                            <div class="example-col" style="flex: 0 0 75%;">Main Content</div>
-                        </div>
-                        <div class="example-row">
-                            <div class="example-col" style="flex: 0 0 100%;">Footer</div>
-                        </div>
-                    </div>
+                        <h4>How it Works</h4>
+                        <p>Spacing classes are named using the format <code>.{property}{sides}-{size}</code> for fixed
+                            spacing, <code>.{property}{sides}-{breakpoint}-{size}</code> for responsive spacing, and
+                            <code>.m{sides}-n{size}</code> for negative margins.</p>
 
-                    <div class="code-block">
-                        <code>
-                            &lt;Container&gt;<br>
-                            &nbsp;&nbsp;&lt;Row&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12}&gt;Header&lt;/Col&gt;<br>
-                            &nbsp;&nbsp;&lt;/Row&gt;<br>
-                            <br>
-                            &nbsp;&nbsp;&lt;Row&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12} md={3}&gt;Sidebar&lt;/Col&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12} md={9}&gt;Main Content&lt;/Col&gt;<br>
-                            &nbsp;&nbsp;&lt;/Row&gt;<br>
-                            <br>
-                            &nbsp;&nbsp;&lt;Row&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12}&gt;Footer&lt;/Col&gt;<br>
-                            &nbsp;&nbsp;&lt;/Row&gt;<br>
-                            &lt;/Container&gt;
-                        </code>
-                    </div>
+                        <div class="example-row list-box">
+                            <div class="list-row">
+                                <div class="list-name"><code>{property}</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Identifier</span>
+                                    <p style="margin-bottom: 0px;"><code>m</code> for `margin`</p>
+                                    <p style="margin-bottom: 0px;"><code>p</code> for `padding`</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>{sides}</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Identifier (optional)</span>
+                                    <p style="margin-bottom: 0px;">(empty): Applies to all 4 sides</p>
+                                    <p style="margin-bottom: 0px;"><code>t</code>: Applies to `*-top`</p>
+                                    <p style="margin-bottom: 0px;"><code>b</code>: Applies to `*-bottom`</p>
+                                    <p style="margin-bottom: 0px;"><code>s</code>: Applies to `*-left` (start in LTR)
+                                    </p>
+                                    <p style="margin-bottom: 0px;"><code>e</code>: Applies to `*-right` (end in LTR)</p>
+                                    <p style="margin-bottom: 0px;"><code>x</code>: Applies to horizontal sides (`*-left`
+                                        and `*-right`)</p>
+                                    <p style="margin-bottom: 0px;"><code>y</code>: Applies to vertical sides (`*-top`
+                                        and `*-bottom`)</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>{size}</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Value</span>
+                                    <p style="margin-bottom: 0px;"><code>0</code> through <code>8</code> from the
+                                        spacing scale.</p>
+                                    <p style="margin-bottom: 0px;"><code>auto</code> (only for margins) for `margin:
+                                        auto;`.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>{breakpoint}</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Value (optional)</span>
+                                    <p style="margin-bottom: 0px;">Standard breakpoints: <code>xxs</code>,
+                                        <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>,
+                                        <code>xl</code>, <code>xxl</code>. Applied from this breakpoint size and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-name"><code>n{size}</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Value (for negative margin)</span>
+                                    <p style="margin-bottom: 0px;"><code>n</code> followed by a size (e.g.,
+                                        <code>n1</code> for negative <code>0.25rem</code>).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Spacing Scale Values</h4>
+                        <p>The spacing scale is based on a default <code>$spacer</code> of <code>1rem</code> (typically
+                            16px). The sizes correspond to:</p>
+                        <div class="example-row list-box">
+                            <div class="list-row" style="width: 100%;">
+                                <div class="list-name" style="width: 25px"><code>0</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>0rem</code> (0px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>1</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>0.25rem</code> (4px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>2</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>0.5rem</code> (8px)</p>
+                                </div>
+                            </div>
+
+                            <div class="list-row" style="width: 100%;">
+                                <div class="list-name" style="width: 25px"><code>3</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>0.75rem</code> (12px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>4</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>1rem</code> (16px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>5</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>1.5rem</code> (24px)</p>
+                                </div>
+                            </div>
+
+                            <div class="list-row" style="width: 100%;">
+                                <div class="list-name" style="width: 25px"><code>6</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>2.25rem</code> (36px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>7</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>3rem</code> (48px)</p>
+                                </div>
+
+                                <div class="list-name" style="width: 25px"><code>8</code></div>
+                                <div class="list-details">
+                                    <span class="list-type">Size Value</span>
+                                    <p><code>4rem</code> (64px)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Examples</h4>
+                        <p>Here are some practical examples of using spacing utilities:</p>
+                        <div class="example-row border-example-box" style="padding: 1rem;">
+                            <div style="background-color: var(--primary-light); color: var(--light); padding: 0.5rem; text-align: center; margin-bottom: 1rem;"
+                                class="p-4">
+                                <code>.p-4</code> (16px padding all sides)
+                            </div>
+                            <div style="background-color: var(--success); color: var(--light); padding: 0.5rem; text-align: center; margin-bottom: 1rem;"
+                                class="mt-5 pb-3">
+                                <code>.mt-5</code> (24px top margin) <code>.pb-3</code> (12px bottom padding)
+                            </div>
+                            <div style="background-color: var(--warning); color: var(--dark); padding: 0.5rem; text-align: center; margin-bottom: 1rem; width: 50%;"
+                                class="mx-auto">
+                                <code>.mx-auto</code> (Horizontally centered element)
+                            </div>
+                            <div style="background-color: var(--primary); color: var(--light); padding: 0.5rem; text-align: center; margin-bottom: 1rem;"
+                                class="p-sm-2 p-md-5">
+                                <code>.p-sm-2</code> (8px padding on small screens) <br><code>.p-md-5</code> (24px
+                                padding on medium screens and up)
+                            </div>
+                            <div style="background-color: var(--danger); color: var(--light); padding: 0.5rem; text-align: center; margin-left: 20px;"
+                                class="ms-n3">
+                                <code>.ms-n3</code> (-12px left margin, causing overlap)
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+                            <code>
+                                &lt;!-- Element with padding on all sides (16px) --&gt;<br>
+                                &lt;div class=&quot;p-4 border&quot;&gt;<br>
+                                This div has padding.<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Element with margin-top (24px) and padding-bottom (12px) --&gt;<br>
+                                &lt;div class=&quot;mt-5 pb-3 bg-light&quot;&gt;<br>
+                                Margin Top, Padding Bottom.<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Horizontally centered block element --&gt;<br>
+                                &lt;div class=&quot;mx-auto w-50 border&quot;&gt;<br>
+                                Centered Element.<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Responsive padding: 8px on small screens, 24px on medium screens and up
+                                --&gt;<br>
+                                &lt;div class=&quot;p-sm-2 p-md-5 bg-info-light&quot;&gt;<br>
+                                Responsive Padding.<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Element with negative margin on the left for overlap --&gt;<br>
+                                &lt;div class=&quot;ms-n3 bg-warning-light&quot;&gt;<br>
+                                Negative Margin Left.<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h4>Complete Class Selector Reference</h4>
+                        <p>The following patterns outline all available spacing utility classes. Breakpoints
+                            (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>) can
+                            be inserted before the size for responsive variants.</p>
+
+                        <h4>Margin Classes (<code>m</code>):</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>margin</code> to all sides. Sizes: <code>0</code>-<code>8</code>,
+                                        <code>auto</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m{side}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>margin</code> to specific sides (e.g., <code>mt-</code>,
+                                        <code>mb-</code>, <code>ms-</code>, <code>me-</code>, <code>mx-</code>,
+                                        <code>my-</code>). Sizes: <code>0</code>-<code>8</code>, <code>auto</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m-{breakpoint}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive `margin` to all sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m{side}-{breakpoint}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive `margin` to specific sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m-n{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Negative `margin` to all sides. Sizes: <code>1</code>-<code>8</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m{side}-n{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Negative `margin` to specific sides. Sizes: <code>1</code>-<code>8</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m-{breakpoint}-n{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive negative `margin` to all sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.m{side}-{breakpoint}-n{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive negative `margin` to specific sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.m-3</code>, <code>.mt-auto</code>, <code>.mx-lg-5</code>,
+                                        <code>.m-n2</code>, <code>.mb-xl-n4</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Padding Classes (<code>p</code>):</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.p-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>padding</code> to all sides. Sizes: <code>0</code>-<code>8</code>.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.p{side}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>padding</code> to specific sides (e.g., <code>pt-</code>,
+                                        <code>pb-</code>, <code>ps-</code>, <code>pe-</code>, <code>px-</code>,
+                                        <code>py-</code>). Sizes: <code>0</code>-<code>8</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.p-{breakpoint}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive `padding` to all sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.p{side}-{breakpoint}-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Responsive `padding` to specific sides.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.p-4</code>, <code>.py-2</code>, <code>.ps-md-0</code></p>
+                                </div>
+                            </div>
+                        </div>
                 </section>
 
-                <section id="customization">
-                    <h2><i class="fas fa-cog"></i> Customization</h2>
-                    <p>Learn how to customize the grid system to match your project's design requirements.</p>
+                <section id="text-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-font"></i>
+                            <h3>Text Utilities</h3>
+                        </div>
+                        <p>Control the appearance and behavior of text content with a comprehensive set of utility
+                            classes for alignment, transformation, weight, style, decoration, line height, font size,
+                            user selection, and pointer events.</p>
 
-                    <h3><i class="fas fa-sliders-h"></i> SCSS Variables</h3>
-                    <p>The grid system can be customized by overriding these SCSS variables:</p>
+                        <h4>How it Works</h4>
+                        <p>Text utility classes are primarily named using descriptive patterns such as
+                            <code>.text-{value}</code> for alignment, <code>.fw-{value}</code> for font weight, or
+                            <code>.fs-{value}</code> for font size. Many text alignment classes also support responsive
+                            variations using standard breakpoints (<code>sm</code>, <code>md</code>, <code>lg</code>,
+                            <code>xl</code>, <code>xxl</code>), following the pattern
+                            <code>.text-{breakpoint}-{align}</code>.</p>
 
-                    <div class="code-block">
-                        <code>
-                            <span class="comment">// Breakpoint configuration</span><br>
-                            $grid-breakpoints: (<br>
-                            &nbsp;&nbsp;xxs: 0,<br>
-                            &nbsp;&nbsp;xs: 576px,<br>
-                            &nbsp;&nbsp;sm: 768px,<br>
-                            &nbsp;&nbsp;md: 992px,<br>
-                            &nbsp;&nbsp;lg: 1200px,<br>
-                            &nbsp;&nbsp;xl: 1400px,<br>
-                            &nbsp;&nbsp;xxl: 1600px<br>
-                            );<br><br>
+                        <h5>Responsive Text Alignment</h5>
+                        <p>Text alignment can be applied responsively to different screen sizes. For example, applying
+                            <code>.text-center</code> will center text on all screen sizes, whereas
+                            <code>.text-md-start</code> will align text to the start (left in LTR) only on medium
+                            (<code>md</code>) screens and up, overriding any smaller breakpoint alignment.</p>
 
-                            <span class="comment">// Container max-widths</span><br>
-                            $container-max-widths: (<br>
-                            &nbsp;&nbsp;xs: 540px,<br>
-                            &nbsp;&nbsp;sm: 720px,<br>
-                            &nbsp;&nbsp;md: 960px,<br>
-                            &nbsp;&nbsp;lg: 1140px,<br>
-                            &nbsp;&nbsp;xl: 1320px,<br>
-                            &nbsp;&nbsp;xxl: 1500px<br>
-                            );<br><br>
+                        <h4>Examples</h4>
+                        <p>Demonstrations of various text utility classes:</p>
 
-                            <span class="comment">// Grid settings</span><br>
-                            $grid-columns: 12;<br>
-                            $grid-gutter-width: 1.5rem;
-                        </code>
+                        <div class="example-row border-example-box"
+                            style="padding: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Text Alignment</h5>
+                                <div
+                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-start mb-0"><code>.text-start</code> - Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-center mb-0"><code>.text-center</code> - Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-end mb-0"><code>.text-end</code> - Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-blue); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-justify mb-0"><code>.text-justify</code> - Lorem ipsum dolor sit
+                                        amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-blue); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-start text-md-center mb-0"><code>.text-start .text-md-center</code> -
+                                        Aligned start by default, centered on medium screens and up.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Text Transformation</h5>
+                                <div
+                                    style="background-color: var(--light-gray); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-lowercase mb-0"><code>.text-lowercase</code> - This text is
+                                        lowercase.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-gray); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-uppercase mb-0"><code>.text-uppercase</code> - This text is
+                                        uppercase.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-gray); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="text-capitalize mb-0"><code>.text-capitalize</code> - this text is
+                                        capitalized.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Text Wrapping & Overflow</h5>
+                                <div
+                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; border-radius: var(--radius-sm);">
+                                    <div class="text-wrap"><code>.text-wrap</code> - This is a very long line of text
+                                        that should wrap within its container.</div>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; overflow: hidden; border-radius: var(--radius-sm);">
+                                    <div class="text-nowrap"><code>.text-nowrap</code> - This is a very long line of
+                                        text that will not wrap and will be clipped.</div>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-green); padding: 0.5rem; margin-bottom: 0.5rem; width: 150px; border-radius: var(--radius-sm);">
+                                    <div class="text-break"><code>.text-break</code> -
+                                        ThisIsAVeryLongWordWithoutSpacesThatShouldBreakToFitTheContainer.</div>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-green); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <div class="text-truncate"><code>.text-truncate</code> - This is a very long line of
+                                        text that should be truncated with an ellipsis.</div>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Font Weight</h5>
+                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
+                                    <p class="fw-light mb-0"><code>.fw-light</code> - This text has a light font weight
+                                        (300).</p>
+                                    <p class="fw-lighter mb-0"><code>.fw-lighter</code> - This text has a lighter font
+                                        weight.</p>
+                                    <p class="fw-normal mb-0"><code>.fw-normal</code> - This text has a normal font
+                                        weight (400).</p>
+                                    <p class="fw-bold mb-0"><code>.fw-bold</code> - This text has a bold font weight
+                                        (700).</p>
+                                    <p class="fw-bolder mb-0"><code>.fw-bolder</code> - This text has a bolder font
+                                        weight.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Font Style</h5>
+                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
+                                    <p class="fst-italic mb-0"><code>.fst-italic</code> - This text is italic.</p>
+                                    <p class="fst-normal mb-0"><code>.fst-normal</code> - This text is normal style.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Text Decoration</h5>
+                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
+                                    <p class="text-decoration-none mb-0"><a href="#"
+                                            class="text-decoration-none"><code>.text-decoration-none</code> - No
+                                            underline on this link.</a></p>
+                                    <p class="text-decoration-underline mb-0"><code>.text-decoration-underline</code> -
+                                        This text is underlined.</p>
+                                    <p class="text-decoration-line-through mb-0">
+                                        <code>.text-decoration-line-through</code> - This text has a line through it.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Line Height</h5>
+                                <div
+                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="lh-1 mb-0"><code>.lh-1</code> - This text has a line height of 1. <br>This
+                                        is another line to show spacing.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="lh-sm mb-0"><code>.lh-sm</code> - This text has a line height of 1.25.
+                                        <br>This is another line to show spacing.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-yellow); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="lh-base mb-0"><code>.lh-base</code> - This text has a line height of 1.5
+                                        (default). <br>This is another line to show spacing.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-yellow); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="lh-lg mb-0"><code>.lh-lg</code> - This text has a line height of 2.
+                                        <br>This is another line to show spacing.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Font Size</h5>
+                                <div style="padding: 0.5rem; margin-bottom: 0.5rem;">
+                                    <p class="fs-1 mb-0"><code>.fs-1</code> - Font Size 1 (2.5rem)</p>
+                                    <p class="fs-2 mb-0"><code>.fs-2</code> - Font Size 2 (2rem)</p>
+                                    <p class="fs-3 mb-0"><code>.fs-3</code> - Font Size 3 (1.75rem)</p>
+                                    <p class="fs-4 mb-0"><code>.fs-4</code> - Font Size 4 (1.5rem)</p>
+                                    <p class="fs-5 mb-0"><code>.fs-5</code> - Font Size 5 (1.25rem)</p>
+                                    <p class="fs-6 mb-0"><code>.fs-6</code> - Font Size 6 (1rem)</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">User Selection</h5>
+                                <div
+                                    style="background-color: var(--light-purple); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="user-select-all mb-0"><code>.user-select-all</code> - This text will be
+                                        entirely selected when you click on it.</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-purple); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="user-select-auto mb-0"><code>.user-select-auto</code> - This text has
+                                        default user-select behavior (you can select parts of it).</p>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-purple); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <p class="user-select-none mb-0"><code>.user-select-none</code> - You cannot select
+                                        this text.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm);">
+                                <h5 class="mb-3">Pointer Events</h5>
+                                <div
+                                    style="background-color: var(--light-orange); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: var(--radius-sm);">
+                                    <a href="#unclickable" class="pe-none"
+                                        style="display: block; color: inherit; text-decoration: none;"><code>.pe-none</code>
+                                        (on link) - This entire link is unclickable.</a>
+                                </div>
+                                <div
+                                    style="background-color: var(--light-orange); padding: 0.5rem; border-radius: var(--radius-sm);">
+                                    <div class="pe-none"><code>.pe-none</code> (on parent), <code>.pe-auto</code> (on
+                                        child) - This parent div is unclickable, but <a href="#clickable"
+                                            class="pe-auto">this link inside it is clickable.</a></div>
+                                </div>
+                                <p style="margin-top: 1rem;"><strong>Note:</strong> <code>.pe-none</code> prevents all
+                                    pointer events, effectively making an element "unclickable". <code>.pe-auto</code>
+                                    re-enables them, which is useful for selectively making child elements interactive
+                                    within a <code>.pe-none</code> parent.</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+                            <code>
+                                &lt;!-- Text Alignment --&gt;<br>
+                                &lt;p class=&quot;text-start&quot;&gt;This text aligns to the start.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-end&quot;&gt;This text aligns to the end.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-center&quot;&gt;This text is centered.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-justify&quot;&gt;This is a longer paragraph of text that will be
+                                justified...&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-start text-md-center&quot;&gt;This text starts aligned, but
+                                centers on medium screens and above.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-lg-end&quot;&gt;This text aligns to the end on large screens and
+                                above.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Text Transformation --&gt;<br>
+                                &lt;p class=&quot;text-lowercase&quot;&gt;This text will be all lowercase.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-uppercase&quot;&gt;This text will be all uppercase.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-capitalize&quot;&gt;this text will have each word
+                                capitalized.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Text Wrapping &amp; Overflow --&gt;<br>
+                                &lt;div class=&quot;text-wrap&quot; style=&quot;width: 150px; border: 1px solid
+                                #ccc;&quot;&gt;This is a very long line of text that should wrap...&lt;/div&gt;<br>
+                                &lt;div class=&quot;text-nowrap&quot; style=&quot;width: 150px; border: 1px solid #ccc;
+                                overflow: hidden;&quot;&gt;This is a very long line of text that will not
+                                wrap...&lt;/div&gt;<br>
+                                &lt;div class=&quot;text-break&quot; style=&quot;width: 150px; border: 1px solid
+                                #ccc;&quot;&gt;ThisIsAVeryLongWordWithoutSpacesThatShouldBreak...&lt;/div&gt;<br>
+                                &lt;div class=&quot;text-truncate&quot; style=&quot;width: 200px; border: 1px solid
+                                #ccc;&quot;&gt;This is a very long line of text that should be
+                                truncated...&lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Font Weight --&gt;<br>
+                                &lt;p class=&quot;fw-light&quot;&gt;This text has a light font weight.&lt;/p&gt;<br>
+                                &lt;p class=&quot;fw-lighter&quot;&gt;This text has a lighter font weight.&lt;/p&gt;<br>
+                                &lt;p class=&quot;fw-normal&quot;&gt;This text has a normal font weight.&lt;/p&gt;<br>
+                                &lt;p class=&quot;fw-bold&quot;&gt;This text has a bold font weight.&lt;/p&gt;<br>
+                                &lt;p class=&quot;fw-bolder&quot;&gt;This text has a bolder font weight.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Font Style --&gt;<br>
+                                &lt;p class=&quot;fst-italic&quot;&gt;This text is italic.&lt;/p&gt;<br>
+                                &lt;p class=&quot;fst-normal&quot;&gt;This text is normal style.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Text Decoration --&gt;<br>
+                                &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;This link has no
+                                underline.&lt;/a&gt;<br>
+                                &lt;p class=&quot;text-decoration-underline&quot;&gt;This text is
+                                underlined.&lt;/p&gt;<br>
+                                &lt;p class=&quot;text-decoration-line-through&quot;&gt;This text has a line through
+                                it.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Line Height --&gt;<br>
+                                &lt;p class=&quot;lh-1&quot;&gt;This text has a line height of 1.&lt;br&gt;This is
+                                another line to show tight spacing.&lt;/p&gt;<br>
+                                &lt;p class=&quot;lh-sm&quot;&gt;This text has a small line height.&lt;br&gt;This is
+                                another line to show spacing.&lt;/p&gt;<br>
+                                &lt;p class=&quot;lh-base&quot;&gt;This text has a base line height.&lt;br&gt;This is
+                                another line to show spacing.&lt;/p&gt;<br>
+                                &lt;p class=&quot;lh-lg&quot;&gt;This text has a large line height.&lt;br&gt;This is
+                                another line to show wide spacing.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Font Size --&gt;<br>
+                                &lt;p class=&quot;fs-1&quot;&gt;Font Size 1&lt;/p&gt;<br>
+                                &lt;p class=&quot;fs-2&quot;&gt;Font Size 2&lt;/p&gt;<br>
+                                &lt;p class=&quot;fs-3&quot;&gt;Font Size 3&lt;/p&gt;<br>
+                                &lt;p class=&quot;fs-4&quot;&gt;Font Size 4&lt;/p&gt;<br>
+                                &lt;p class=&quot;fs-5&quot;&gt;Font Size 5&lt;/p&gt;<br>
+                                &lt;p class=&quot;fs-6&quot;&gt;Font Size 6&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- User Selection --&gt;<br>
+                                &lt;p class=&quot;user-select-all&quot;&gt;This text will be entirely selected when you
+                                click on it.&lt;/p&gt;<br>
+                                &lt;p class=&quot;user-select-auto&quot;&gt;This text has default user-select
+                                behavior.&lt;/p&gt;<br>
+                                &lt;p class=&quot;user-select-none&quot;&gt;You cannot select this text.&lt;/p&gt;<br>
+                                <br>
+                                &lt;!-- Pointer Events --&gt;<br>
+                                &lt;a href=&quot;#unclickable&quot; class=&quot;pe-none&quot; style=&quot;display:
+                                block; background-color: #fdd; padding: 10px;&quot;&gt;This entire link is
+                                unclickable.&lt;/a&gt;<br>
+                                &lt;div class=&quot;pe-none&quot; style=&quot;background-color: #fde; padding:
+                                10px;&quot;&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;This parent div is unclickable, but &lt;a
+                                href=&quot;#clickable&quot; class=&quot;pe-auto&quot;&gt;this link inside it is
+                                clickable.&lt;/a&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h4>Complete Class Selector Reference</h4>
+                        <p>The following patterns outline all available text utility classes. Responsive variants are
+                            primarily available for text alignment.</p>
+                        <h4>Text Alignment:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Aligns text to the start (left in LTR, right in RTL).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Aligns text to the end (right in LTR, left in RTL).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Centers text.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-justify</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Justifies text.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-{breakpoint}-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Aligns text to start from a specific breakpoint and up (e.g.,
+                                        <code>.text-md-start</code>).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-{breakpoint}-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Aligns text to end from a specific breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-{breakpoint}-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Centers text from a specific breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-{breakpoint}-justify</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Justifies text from a specific breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.text-sm-center</code>, <code>.text-lg-end</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Text Transformation:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-lowercase</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Transforms text to lowercase.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-uppercase</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Transforms text to uppercase.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-capitalize</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Capitalizes the first letter of each word.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Text Wrapping & Overflow:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-wrap</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Allows text to wrap normally.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-nowrap</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Prevents text from wrapping onto a new line.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-break</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Forces words to break to prevent overflow, applying <code>word-wrap:
+                                            break-word</code> and <code>word-break: break-word</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-truncate</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Truncates text with an ellipsis. This class applies <code>overflow:
+                                            hidden;</code>, <code>text-overflow: ellipsis;</code>, and
+                                        <code>white-space: nowrap;</code>. It typically requires a defined
+                                        <code>width</code> or <code>max-width</code> on the element to be effective.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Font Weight:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fw-light</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font weight to 300.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fw-lighter</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font weight to a lighter value relative to the parent.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fw-normal</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font weight to 400.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fw-bold</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font weight to 700.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fw-bolder</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font weight to a bolder value relative to the parent.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Font Style:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fst-italic</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font style to italic.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fst-normal</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font style to normal.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Text Decoration:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-decoration-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes text decoration (e.g., underlines from links).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-decoration-underline</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds an underline to text.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.text-decoration-line-through</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a line-through to text.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Line Height:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.lh-1</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets line height to 1.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.lh-sm</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets line height to 1.25.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.lh-base</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets line height to 1.5 (default).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.lh-lg</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets line height to 2.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Font Size:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-1</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 2.5rem.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-2</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 2rem.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-3</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 1.75rem.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-4</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 1.5rem.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-5</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 1.25rem.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.fs-6</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets font size to 1rem.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>User Selection:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.user-select-all</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Allows the user to select all content with a single click within the element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.user-select-auto</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Default browser behavior for user selection.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.user-select-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Prevents text and element selection.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Pointer Events:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.pe-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Prevents all pointer events (like clicks, hovers, scroll) on the element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.pe-auto</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Re-enables pointer events on the element (useful for overriding
+                                        <code>.pe-none</code> applied to a parent).</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <h3><i class="fas fa-paint-roller"></i> Customizing in Your Project</h3>
-                    <p>To customize the grid, create a SCSS file with your overrides and import it before the grid
-                        system:</p>
-
-                    <div class="code-block">
-                        <code>
-                            <span class="comment">// your-custom.scss</span><br>
-                            $grid-columns: 24; <span class="comment">// Use 24-column grid</span><br>
-                            $grid-gutter-width: 2rem; <span class="comment">// Increase gutter size</span><br>
-                            $container-max-widths: (<br>
-                            &nbsp;&nbsp;md: 1000px,<br>
-                            &nbsp;&nbsp;lg: 1200px,<br>
-                            &nbsp;&nbsp;xl: 1400px<br>
-                            );<br><br>
-
-                            <span class="comment">// Import the grid after your customizations</span><br>
-                            @import 'path/to/responsive-grid';
-                        </code>
-                    </div>
-                </section>
             </div>
+            </section>
+
+            <section id="examples">
+                <h2><i class="fas fa-code"></i> Examples</h2>
+                <p>Explore practical implementation examples to see how the grid system works in real-world
+                    scenarios.</p>
+
+                <h3><i class="fas fa-layout"></i> Responsive Layout</h3>
+                <div class="grid-example">
+                    <div class="example-row">
+                        <div class="example-col" style="flex: 0 0 100%;">Header</div>
+                    </div>
+                    <div class="example-row">
+                        <div class="example-col" style="flex: 0 0 25%;">Sidebar</div>
+                        <div class="example-col" style="flex: 0 0 75%;">Main Content</div>
+                    </div>
+                    <div class="example-row">
+                        <div class="example-col" style="flex: 0 0 100%;">Footer</div>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <code>
+                        &lt;Container&gt;<br>
+                        &nbsp;&nbsp;&lt;Row&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12}&gt;Header&lt;/Col&gt;<br>
+                        &nbsp;&nbsp;&lt;/Row&gt;<br>
+                        <br>
+                        &nbsp;&nbsp;&lt;Row&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12} md={3}&gt;Sidebar&lt;/Col&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12} md={9}&gt;Main Content&lt;/Col&gt;<br>
+                        &nbsp;&nbsp;&lt;/Row&gt;<br>
+                        <br>
+                        &nbsp;&nbsp;&lt;Row&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Col xs={12}&gt;Footer&lt;/Col&gt;<br>
+                        &nbsp;&nbsp;&lt;/Row&gt;<br>
+                        &lt;/Container&gt;
+                    </code>
+                </div>
+            </section>
+
+            <section id="customization">
+                <h2><i class="fas fa-cog"></i> Customization</h2>
+                <p>Learn how to customize the grid system to match your project's design requirements.</p>
+
+                <h3><i class="fas fa-sliders-h"></i> SCSS Variables</h3>
+                <p>The grid system can be customized by overriding these SCSS variables:</p>
+
+                <div class="code-block">
+                    <code>
+                        <span class="comment">// Breakpoint configuration</span><br>
+                        $grid-breakpoints: (<br>
+                        &nbsp;&nbsp;xxs: 0,<br>
+                        &nbsp;&nbsp;xs: 576px,<br>
+                        &nbsp;&nbsp;sm: 768px,<br>
+                        &nbsp;&nbsp;md: 992px,<br>
+                        &nbsp;&nbsp;lg: 1200px,<br>
+                        &nbsp;&nbsp;xl: 1400px,<br>
+                        &nbsp;&nbsp;xxl: 1600px<br>
+                        );<br><br>
+
+                        <span class="comment">// Container max-widths</span><br>
+                        $container-max-widths: (<br>
+                        &nbsp;&nbsp;xs: 540px,<br>
+                        &nbsp;&nbsp;sm: 720px,<br>
+                        &nbsp;&nbsp;md: 960px,<br>
+                        &nbsp;&nbsp;lg: 1140px,<br>
+                        &nbsp;&nbsp;xl: 1320px,<br>
+                        &nbsp;&nbsp;xxl: 1500px<br>
+                        );<br><br>
+
+                        <span class="comment">// Grid settings</span><br>
+                        $grid-columns: 12;<br>
+                        $grid-gutter-width: 1.5rem;
+                    </code>
+                </div>
+
+                <h3><i class="fas fa-paint-roller"></i> Customizing in Your Project</h3>
+                <p>To customize the grid, create a SCSS file with your overrides and import it before the grid
+                    system:</p>
+
+                <div class="code-block">
+                    <code>
+                        <span class="comment">// your-custom.scss</span><br>
+                        $grid-columns: 24; <span class="comment">// Use 24-column grid</span><br>
+                        $grid-gutter-width: 2rem; <span class="comment">// Increase gutter size</span><br>
+                        $container-max-widths: (<br>
+                        &nbsp;&nbsp;md: 1000px,<br>
+                        &nbsp;&nbsp;lg: 1200px,<br>
+                        &nbsp;&nbsp;xl: 1400px<br>
+                        );<br><br>
+
+                        <span class="comment">// Import the grid after your customizations</span><br>
+                        @import 'path/to/responsive-grid';
+                    </code>
+                </div>
+            </section>
+        </div>
         </div>
     </main>
 

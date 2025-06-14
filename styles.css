@@ -294,6 +294,9 @@ p {
 .example-col-no-flex-1 {
     background: var(--primary-dark);
 }
+/* p code {
+    font-size: 16px;
+} */
 .code-block {
     background: var(--code-bg);
     color: #e2e8f0;
@@ -568,10 +571,24 @@ p {
     display: flex;
     box-shadow: var(--shadow-sm);
 }
+.list-box-no-flex {
+    background: var(--light);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    min-height: 80px;
+    box-shadow: var(--shadow-sm);
+}
 .list-row {
     display: flex;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border);
+}
+.list-row-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+    width: 100%;
     border-bottom: 1px dashed var(--border);
 }
 .list-name {
@@ -579,6 +596,17 @@ p {
     width: 120px;
     flex-shrink: 0;
     color: var(--primary);
+}
+.list-name-column {
+    font-weight: 600;
+    width: 100%;
+    flex-shrink: 0;
+    color: var(--primary);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .list-details {
     flex: 1;
@@ -591,6 +619,15 @@ p {
     font-size: 0.85rem;
     font-family: monospace;
     margin-right: 0.5rem;
+}
+.list-type-column {
+    background: rgba(44,93,170,0.1);
+    color: var(--primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: monospace;
+    font-weight: 100;
 }
 .list-default {
     background: rgba(108,117,125,0.1);
