@@ -36,7 +36,7 @@
                     </li>
                     <li><a href="#utility-classes"><i class="fas fa-toolbox"></i> Utility Classes</a>
                         <ul>
-                            <li><a href="#borders">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i> Borders</a></li>
+                            <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i> Borders</a></li>
                             <li><a href="#display">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i> Display</a></li>
                             <li><a href="#flex">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i> Flex</a></li>
                             <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Float</a></li>
@@ -397,11 +397,13 @@
                     <h2><i class="fas fa-toolbox"></i> Utility Classes</h2>
                     <p>Utility classes provide single-purpose, immutable styles to quickly build and modify components.
                     </p>
+                </section>
 
+                <section id="border-utilities">
                     <div class="component-card" id="borders">
                         <div class="component-header">
                             <i class="fas fa-border-all"></i>
-                            <h3>Borders</h3>
+                            <h3>Borders Utilities</h3>
                         </div>
                         <p>Control borders with these utility classes. You can add or remove borders from all sides or
                             individual sides, adjust border width, and apply various border radius styles.</p>
@@ -527,6 +529,253 @@
                                 &lt;div class="rounded-bottom"&gt;...&lt;/div&gt;<br>
                                 &lt;div class="rounded-start"&gt;...&lt;/div&gt;
                             </code>
+                        </div>
+
+                        <h4>Border Class Selector Reference</h4>
+                        <p>The following patterns outline all available border utility classes.</p>
+                        <h4>Additive Borders:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a default border to all sides (<code>1px solid var(--border-color)</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-top</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a border to the top side.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a border to the right side (end in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-bottom</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a border to the bottom side.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a border to the left side (start in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.border</code>, <code>.border-top</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Subtractive Borders:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes all borders from an element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-top-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes the border from the top side.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-end-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes the border from the right side (end in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-bottom-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes the border from the bottom side.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-start-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes the border from the left side (start in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.border-0</code>, <code>.border-bottom-0</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Border Width:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.border-{width}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the border width (e.g., <code>.border-1</code> for <code>1px</code>). Available widths: <code>1</code>-<code>5</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.border-1</code>, <code>.border-5</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Border Radius:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies a default border-radius (<code>0.375rem</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Removes border-radius (<code>0</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-{size}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies specific border-radius sizes (e.g., <code>.rounded-1</code> for <code>0.25rem</code>). Sizes: <code>1</code>-<code>5</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-circle</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies a circular border-radius (<code>50%</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-pill</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies a pill-shaped border-radius (<code>50rem</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.rounded-3</code>, <code>.rounded-circle</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Border Radius by Side:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-top</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies border-radius to the top-left and top-right corners.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies border-radius to the top-right and bottom-right corners (end in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-bottom</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies border-radius to the bottom-left and bottom-right corners.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.rounded-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies border-radius to the top-left and bottom-left corners (start in LTR).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.rounded-top</code>, <code>.rounded-end</code></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -3228,7 +3477,7 @@
 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 30,
+                        top: targetElement.offsetTop + 450,
                         behavior: 'smooth'
                     });
 
@@ -3272,7 +3521,7 @@
                 const target = document.querySelector(hash);
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 30,
+                        top: target.offsetTop + 450,
                         behavior: 'smooth'
                     });
                 }
