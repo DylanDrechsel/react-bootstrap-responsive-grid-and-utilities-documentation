@@ -658,6 +658,14 @@ p {
     justify-content: center;
     box-shadow: var(--shadow-sm);
 }
+.border-example-box-no-faj {
+    background: var(--light);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 80px;
+    box-shadow: var(--shadow-sm);
+}
 .form-control {
     display: inline-block;
     vertical-align: middle;
@@ -819,6 +827,66 @@ p {
     padding: 1rem;
     font-size: 0.9em;
     line-height: 1.6;
+}
+.example-box {
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+}
+.example-box-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius-sm);
+}
+.example-box-item-no-bg {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.bg-light-blue {
+    background-color: var(--light-blue);
+}
+.bg-light-gray {
+    background-color: var(--light-gray);
+}
+.bg-light-green {
+    background-color: var(--light-green);
+}
+.bg-light-yellow {
+    background-color: var(--light-yellow);
+}
+.bg-light-purple {
+    background-color: var(--light-purple);
+}
+.bg-light-orange {
+    background-color: var(--light-orange);
+}
+.example-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.example-border {
+    border: 1px solid #ccc;
+}
+.example-padding {
+    padding: 10px;
+}
+.gap-3 {
+    gap: 1.5rem; 
+}
+.example-width-150 {
+    width: 150px;
+}
+.example-width-full {
+    width: 100%;
+}
+.example-overflow-hidden {
+    overflow: hidden;
+}
+.d-block {
+    display: block;
+}
+.text-inherit {
+    color: inherit;
 }
 @media (max-width: 992px) {
     .grid {
