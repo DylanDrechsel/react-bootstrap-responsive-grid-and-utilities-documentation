@@ -2537,6 +2537,123 @@
                                 &lt;input type="text" class="focus-ring"&gt;
                             </code>
                         </div>
+
+                        <h4>Interaction Class Selector Reference</h4>
+                        <p>The following patterns outline all available interaction utility classes.</p>
+                        <h4>Cursor Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-auto</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: auto !important;</code>. The browser determines the cursor type based on the context.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-default</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: default !important;</code>. The standard arrow cursor.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-pointer</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: pointer !important;</code>. A hand icon, typically indicating a clickable element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-wait</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: wait !important;</code>. An hourglass or spinning icon, indicating the program is busy.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-text</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: text !important;</code>. A text input I-beam, indicating text can be selected.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-move</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: move !important;</code>. A four-pointed arrow, indicating an element can be moved.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-help</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: help !important;</code>. An arrow with a question mark, indicating help is available.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.cursor-not-allowed</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>cursor: not-allowed !important;</code>. A circle with a diagonal line, indicating an action is forbidden.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.cursor-pointer</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Focus Ring Class:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.focus-ring</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies a consistent <code>box-shadow</code> as a visual focus indicator when the element receives keyboard focus (<code>:focus</code> state). It also removes the default <code>outline</code>.</p>
+                                    <p>CSS Applied:
+                                        <div><pre><code>
+    .focus-ring:focus {
+        outline: 0 !important;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+        }
+                                        </code></pre></div>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>&lt;button class="focus-ring"&gt;...&lt;/button&gt;</code></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
