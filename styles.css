@@ -164,7 +164,7 @@ nav li a.active {
 section {
     background: var(--light);
     border-radius: var(--radius);
-    padding: 2.5rem;
+    padding: 1.5rem;
     margin-bottom: 2.5rem;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border);
@@ -534,10 +534,9 @@ p {
 .component-card {
     background: white;
     border-radius: var(--radius-sm);
-    padding: 2rem;
+    padding: 0 .5rem .5rem .5rem;
     margin: 1.8rem 0;
     box-shadow: var(--shadow-sm);
-    /* border-left: 4px solid var(--primary); */
 }
 .component-header {
     display: flex;

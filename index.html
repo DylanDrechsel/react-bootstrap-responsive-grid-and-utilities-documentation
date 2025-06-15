@@ -127,7 +127,7 @@
                                 <span class="badge badge-primary">xxs</span>
                                 XX-Small
                             </div>
-                            <div class="bp-size">Base for all devices <code>0px +</code></div>
+                            <div class="bp-size"><code>0px +</code><br>Base for all devices </div>
                             <div class="bp-container">No container constraint</div>
                         </div>
                         <div class="breakpoint-card">
@@ -532,7 +532,7 @@
                             </code>
                         </div>
 
-                        <h3><i class="fas fa-code"></i> Shadow Class Selector Reference</h3>
+                        <h3><i class="fas fa-code"></i> Border Class Selector Reference</h3>
                         <p>The following patterns outline all available border utility classes.</p>
                         <h4>Additive Borders:</h4>
                         <div class="list-box-no-flex">
@@ -4938,6 +4938,7 @@
         });
 
         const sections = document.querySelectorAll('section');
+        const divs = document.querySelectorAll('div');
         const navLinks = document.querySelectorAll('nav a');
 
         const sectionObserver = new IntersectionObserver((entries) => {
@@ -4959,6 +4960,10 @@
 
         sections.forEach(section => {
             sectionObserver.observe(section);
+        });
+
+        divs.forEach(div => {
+            sectionObserver.observe(div);
         });
 
         window.addEventListener('popstate', function () {
