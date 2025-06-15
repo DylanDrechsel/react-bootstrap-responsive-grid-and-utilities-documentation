@@ -36,13 +36,16 @@
                     </li>
                     <li><a href="#utility-classes"><i class="fas fa-toolbox"></i> Utility Classes</a>
                         <ul>
+                            <li><a href="#aspect-ratio-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand"></i>Aspect Ratio</a></li>
                             <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i>Borders</a></li>
                             <li><a href="#display-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Display</a></li>
                             <li><a href="#flex-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i>Flex</a></li>
-                            <li><a href="#order-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-sort-numeric-down"></i>Order</a></li>
                             <li><a href="#float-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Float</a></li>
+                            <li><a href="#gap-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-horizontal"></i>Gap</a></li>
                             <li><a href="#interactions-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>Interactions</a></li>
+                            <li><a href="#object-fit-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-crop-alt"></i>Object Fit</a></li>
                             <li><a href="#opacity-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i>Opacity</a></li>
+                            <li><a href="#order-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-sort-numeric-down"></i>Order</a></li>
                             <li><a href="#overflow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Overflow</a></li>
                             <li><a href="#position-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i>Position</a></li>
                             <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i>Shadows</a></li>
@@ -51,6 +54,7 @@
                             <li><a href="#text-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-font"></i>Text</a></li>
                             <li><a href="#vertical-alignment-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-v"></i>Vertical</a></li>
                             <li><a href="#visibility-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Visibility</a></li>
+                            <li><a href="#z-index-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-layer-group"></i>Z-Index</a></li>
                         </ul>
                     </li>
                     <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
@@ -398,6 +402,80 @@
                     <h2><i class="fas fa-toolbox"></i> Utility Classes</h2>
                     <p>Utility classes provide single-purpose, immutable styles to quickly build and modify components.
                     </p>
+                </section>
+
+                <section id="aspect-ratio-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-expand"></i> <h3>Aspect Ratio Properties</h3>
+                        </div>
+
+                        <p>Control the aspect ratio of elements, ensuring that they maintain a consistent width-to-height proportion regardless of their content or container width. This is particularly useful for embedding responsive videos, iframes, or images where a specific aspect ratio must be preserved.</p>
+                        <h4>How it Works</h4>
+                        <p>These utilities leverage a common CSS technique that uses a `padding-top` percentage, which is relative to the element's width, to create a fixed aspect ratio container. The base class, `.ratio`, sets up the necessary positioning context (`position: relative; width: 100%;`) and applies the `padding-top` via a CSS variable (`--bs-aspect-ratio`).</p>
+                        <p>Child elements within the `.ratio` container are then absolutely positioned to `top: 0; left: 0; width: 100%; height: 100%;`, allowing them to fill the space created by the padding hack while maintaining the desired aspect ratio of the parent. This method ensures responsiveness by scaling the height proportionally with the width.</p>
+
+                        <h3>Aspect Ratio Class Selector Reference</h3>
+                        <p>The following patterns outline all available aspect ratio utility classes. These classes are applied to the *parent* container of the content you want to maintain an aspect ratio for.</p>
+
+                        <h4>Aspect Ratio Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.ratio</code>
+                                    <span class="list-type-column">Base Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies the base styles for the aspect ratio container: <code>position: relative; width: 100%;</code> and a `::before` pseudo-element with `padding-top: var(--bs-aspect-ratio);` to define the ratio. All direct children will be absolutely positioned to fill this ratio.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.ratio-1x1</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the aspect ratio to 1:1 (square). Internally, sets <code>--bs-aspect-ratio: 100%;</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.ratio-4x3</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the aspect ratio to 4:3. Internally, sets <code>--bs-aspect-ratio: 75%;</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.ratio-16x9</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the aspect ratio to 16:9 (common widescreen video). Internally, sets <code>--bs-aspect-ratio: 56.25%;</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.ratio-21x9</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the aspect ratio to 21:9 (ultrawide video). Internally, sets <code>--bs-aspect-ratio: 42.857143%;</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>&lt;div class="ratio ratio-16x9"&gt;&lt;iframe src="..."&gt;&lt;/iframe&gt;&lt;/div&gt;</code></p>
+                                    <p><code>&lt;div class="ratio ratio-1x1"&gt;&lt;img src="..." alt="..."&gt;&lt;/div&gt;</code></p>
+                                </div>
+                            </div>
+                        </div>
                 </section>
 
                 <section id="border-utilities">
@@ -2023,218 +2101,6 @@
                     </div>
                 </section>
 
-
-                <section id="order-utilities">
-                    <div class="component-card">
-                        <div class="component-header">
-                            <i class="fas fa-sort-numeric-down"></i>
-                            <h3>Order Properties</h3>
-                        </div>
-                        <p>Control the visual order of flex items with these utility classes. These classes apply the
-                            <code>order</code> CSS property, allowing you to reorder items within a flex container
-                            regardless of their source order in the HTML.</p>
-
-                        <h4>How it Works</h4>
-                        <p>Order utility classes are used on **flex items** (direct children of a flex container, i.e.,
-                            an element with `display: flex` or `display: inline-flex`). The base classes follow the
-                            pattern <code>.order-{value}</code>, where <code>{value}</code> typically ranges from
-                            <code>0</code> to <code>5</code>. Additionally, special classes like
-                            <code>.order-first</code> and <code>.order-last</code> are available to quickly position
-                            items at the beginning or end of the flex line, respectively.</p>
-                        <p>Order utilities also support responsive variations using standard breakpoints (e.g.,
-                            <code>.order-md-2</code>, <code>.order-lg-first</code>), allowing for different visual
-                            orders on various screen sizes.</p>
-
-                        <h4>Examples</h4>
-                        <p>Demonstrations of how order utilities reorder flex items:</p>
-                        <div class="example-row border-example-box example-flex-column gap-3">
-                            <div class="example-box">
-                                <h5 class="mb-3">Default Order</h5>
-                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
-                                    <div class="p-2 border-example-box bg-light-blue">1</div>
-                                    <div class="p-2 border-example-box bg-light-blue">2</div>
-                                    <div class="p-2 border-example-box bg-light-blue">3</div>
-                                </div>
-                                <p class="mt-3 mb-0">Items are displayed in their source order (default `order: 0`).</p>
-                            </div>
-
-                            <div class="example-box">
-                                <h5 class="mb-3">Using <code>.order-first</code> and <code>.order-last</code></h5>
-                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
-                                    <div class="p-2 border-example-box bg-light-blue">1</div>
-                                    <div class="p-2 border-example-box bg-light-green order-last">2 (Last)</div>
-                                    <div class="p-2 border-example-box bg-light-blue">3</div>
-                                    <div class="p-2 border-example-box bg-light-red order-first">4 (First)</div>
-                                    <div class="p-2 border-example-box bg-light-blue">5</div>
-                                </div>
-                                <p class="mt-3 mb-0"><code>.order-first</code> sets <code>order: -1</code>, and
-                                    <code>.order-last</code> sets a high order value (e.g., `order: 6`).</p>
-                            </div>
-
-                            <div class="example-box">
-                                <h5 class="mb-3">Numbered Order</h5>
-                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
-                                    <div class="p-2 border-example-box bg-light-blue order-3">Item A (order 3)</div>
-                                    <div class="p-2 border-example-box bg-light-green order-1">Item B (order 1)</div>
-                                    <div class="p-2 border-example-box bg-light-blue order-2">Item C (order 2)</div>
-                                    <div class="p-2 border-example-box bg-light-red order-0">Item D (order 0)</div>
-                                </div>
-                                <p class="mt-3 mb-0">Items are arranged by their `order` value, with lower values
-                                    appearing first.</p>
-                            </div>
-
-                            <div class="example-box">
-                                <h5 class="mb-3">Responsive Order (Resize your browser to see effect)</h5>
-                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
-                                    <div class="p-2 border-example-box bg-light-blue order-md-last">Item A (md-last)
-                                    </div>
-                                    <div class="p-2 border-example-box bg-light-green">Item B (default)</div>
-                                    <div class="p-2 border-example-box bg-light-red order-md-first">Item C (md-first)
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0">By default, A, B, C. On medium screens and up, C will be first, B
-                                    in middle, A last.</p>
-                            </div>
-                        </div>
-
-                        <div class="code-block">
-                            <code>
-                                &lt;!-- Default Order --&gt;<br>
-                                &lt;div class="d-flex"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;1&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;2&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;3&lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;!-- Using .order-first and .order-last --&gt;<br>
-                                &lt;div class="d-flex"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-last"&gt;Item 2 (Last)&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-first"&gt;Item 4 (First)&lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;!-- Numbered Order --&gt;<br>
-                                &lt;div class="d-flex"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-3"&gt;Item A&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-1"&gt;Item B&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-2"&gt;Item C&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-0"&gt;Item D&lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;!-- Responsive Order --&gt;<br>
-                                &lt;div class="d-flex"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-last"&gt;Item A&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item B&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-first"&gt;Item C&lt;/div&gt;<br>
-                                &lt;/div&gt;
-                            </code>
-                        </div>
-
-                        <h3><i class="fas fa-code"></i> Order Class Selector Reference</h3>
-                        <p>The following patterns outline all available order utility classes.</p>
-                        <h4>Default Order Classes:</h4>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-{value}</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets the <code>order</code> of a flex item. <code>{value}</code> can be
-                                        <code>0</code> through <code>5</code>. Items with lower order values appear
-                                        first.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-first</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets <code>order: -1 !important;</code>, ensuring the item appears first in the
-                                        visual order.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-last</code>
-                                    <span class="list-type-column">Utility Class</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>),
-                                        ensuring the item appears last in the visual order.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    Example:
-                                    <span class="list-type-column">Usage Example</span>
-                                </div>
-                                <div class="list-details">
-                                    <p><code>.order-1</code>, <code>.order-last</code></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4>Responsive Order Classes:</h4>
-                        <p>Apply order utilities responsively by appending the breakpoint abbreviation to the class
-                            name. This allows for different visual orders based on screen size.</p>
-                        <div class="list-box-no-flex">
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-{breakpoint}-{value}</code>
-                                    <span class="list-type-column">Utility Class Pattern</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets the <code>order</code> from the specified breakpoint and up.
-                                        <code>{value}</code> can be <code>0</code> through <code>5</code>.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-{breakpoint}-first</code>
-                                    <span class="list-type-column">Utility Class Pattern</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets <code>order: -1 !important;</code> from the specified breakpoint and up.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    <code>.order-{breakpoint}-last</code>
-                                    <span class="list-type-column">Utility Class Pattern</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>)
-                                        from the specified breakpoint and up.</p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    Available Breakpoints:
-                                    <span class="list-type-column">Breakpoints</span>
-                                </div>
-                                <div class="list-details">
-                                    <p>
-                                        <code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>,
-                                        <code>lg</code>, <code>xl</code>, <code>xxl</code>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="list-row-column">
-                                <div class="list-name-column">
-                                    Example:
-                                    <span class="list-type-column">Usage Example</span>
-                                </div>
-                                <div class="list-details">
-                                    <p><code>.order-sm-2</code>, <code>.order-lg-first</code></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="float-utilities">
                     <div class="component-card" id="float">
                         <div class="component-header">
@@ -2461,6 +2327,183 @@
                     </div>
                 </section>
 
+                <section id="gap-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-grip-horizontal"></i>
+                            <h3>Gap Properties</h3>
+                        </div>
+                        <p>The gap utilities allow you to control the spacing between items in flexbox and grid layouts. They provide a shorthand for setting both <code>row-gap</code> and <code>column-gap</code>, or you can specify them individually.</p>
+
+                        <h4>How it Works</h4>
+                        <p>The <code>gap</code> CSS property sets the space between rows and columns. It's a shorthand for <code>row-gap</code> and <code>column-gap</code>. These utilities are applied to the *container* of flex items or grid items, not to the items themselves. They are essential for creating clean and consistent spacing within dynamic layouts without resorting to margins on individual items, which can often lead to layout complexities.</p>
+                        <p>These utilities support a range of predefined spacing values, which correspond to a spacing scale (e.g., `0.25rem`, `0.5rem`, `1rem`, `1.5rem`, `3rem`), and include responsive variations for different screen sizes.</p>
+
+                        <h4>Examples</h4>
+                        <p>Observe how different gap utilities affect the spacing of items within a flex container.</p>
+
+                        <div class="example-row border-example-box example-flex-column gap-3">
+                            <div class="example-box">
+                                <h5 class="mb-3">Default Gap (`.gap-3`)</h5>
+                                <p>Applies a <code>1rem</code> gap between both rows and columns.</p>
+                                <div class="example-box-item bg-light-gray p-2">
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="bg-primary text-white p-2 border rounded-sm">Item 1</div>
+                                        <div class="bg-success text-white p-2 border rounded-sm">Item 2</div>
+                                        <div class="bg-danger text-white p-2 border rounded-sm">Item 3</div>
+                                        <div class="bg-warning text-dark p-2 border rounded-sm">Item 4</div>
+                                        <div class="bg-info text-white p-2 border rounded-sm">Item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Row Gap Only (`.row-gap-4`)</h5>
+                                <p>Applies a <code>1.5rem</code> gap only between rows (columns will still be next to each other if `column-gap` is not set or is `0`).</p>
+                                <div class="example-box-item bg-light-gray p-2">
+                                    <div class="d-flex flex-wrap row-gap-4">
+                                        <div class="bg-primary text-white p-2 border rounded-sm">Item 1</div>
+                                        <div class="bg-success text-white p-2 border rounded-sm">Item 2</div>
+                                        <div class="bg-danger text-white p-2 border rounded-sm">Item 3</div>
+                                        <div class="bg-warning text-dark p-2 border rounded-sm">Item 4</div>
+                                        <div class="bg-info text-white p-2 border rounded-sm">Item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Column Gap Only (`.column-gap-5`)</h5>
+                                <p>Applies a <code>3rem</code> gap only between columns (rows will still be next to each other if `row-gap` is not set or is `0`).</p>
+                                <div class="example-box-item bg-light-gray p-2">
+                                    <div class="d-flex flex-wrap column-gap-5">
+                                        <div class="bg-primary text-white p-2 border rounded-sm">Item 1</div>
+                                        <div class="bg-success text-white p-2 border rounded-sm">Item 2</div>
+                                        <div class="bg-danger text-white p-2 border rounded-sm">Item 3</div>
+                                        <div class="bg-warning text-dark p-2 border rounded-sm">Item 4</div>
+                                        <div class="bg-info text-white p-2 border rounded-sm">Item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Responsive Gap (e.g., `.gap-xxs-0 .gap-lg-4`)</h5>
+                                <p>No gap on extra-small screens, but <code>1.5rem</code> gap on large screens and up.</p>
+                                <div class="example-box-item bg-light-gray p-2">
+                                    <div class="d-flex flex-wrap gap-xxs-0 gap-lg-4">
+                                        <div class="bg-primary text-white p-2 border rounded-sm">Item 1</div>
+                                        <div class="bg-success text-white p-2 border rounded-sm">Item 2</div>
+                                        <div class="bg-danger text-white p-2 border rounded-sm">Item 3</div>
+                                        <div class="bg-warning text-dark p-2 border rounded-sm">Item 4</div>
+                                        <div class="bg-info text-white p-2 border rounded-sm">Item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Code Examples</h4>
+                        <div class="code-block">
+                            <pre><code>
+&lt;!-- General gap (both row and column gap) --&gt;
+&lt;div class="d-flex flex-wrap gap-3"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Row gap only --&gt;
+&lt;div class="d-flex flex-wrap row-gap-4"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Column gap only --&gt;
+&lt;div class="d-flex flex-wrap column-gap-5"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive gap example --&gt;
+&lt;div class="d-flex flex-wrap gap-xxs-0 gap-lg-4"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+
+                        <h3>Gap Class Selector Reference</h3>
+                        <p>The following patterns outline all available gap utility classes, including their responsive variations. Values (0-5) correspond to a spacing scale where 0 is <code>0</code>, 1 is <code>0.25rem</code>, 2 is <code>0.5rem</code>, 3 is <code>1rem</code>, 4 is <code>1.5rem</code>, and 5 is <code>3rem</code>.</p>
+
+                        <h4>Base Gap Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.gap-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets both <code>row-gap</code> and <code>column-gap</code> to the specified spacing <code>{value}</code> (e.g., <code>.gap-3</code> sets <code>gap: 1rem !important;</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.row-gap-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>row-gap</code> to the specified spacing <code>{value}</code> (e.g., <code>.row-gap-2</code> sets <code>row-gap: 0.5rem !important;</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.column-gap-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>column-gap</code> to the specified spacing <code>{value}</code> (e.g., <code>.column-gap-4</code> sets <code>column-gap: 1.5rem !important;</code>).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Responsive Gap Classes:</h4>
+                        <p>These classes apply the gap only at the specified breakpoint and up. Breakpoints include <code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.gap-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets both <code>row-gap</code> and <code>column-gap</code> to the specified spacing <code>{value}</code> at or above the <code>{breakpoint}</code>.</p>
+                                    <p>Example: <code>.gap-md-3</code> (<code>gap: 1rem !important;</code> from medium screens up).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.row-gap-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>row-gap</code> to the specified spacing <code>{value}</code> at or above the <code>{breakpoint}</code>.</p>
+                                    <p>Example: <code>.row-gap-lg-2</code> (<code>row-gap: 0.5rem !important;</code> from large screens up).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.column-gap-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>column-gap</code> to the specified spacing <code>{value}</code> at or above the <code>{breakpoint}</code>.</p>
+                                    <p>Example: <code>.column-gap-sm-5</code> (<code>column-gap: 3rem !important;</code> from small screens up).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="interactions-utilities">
                     <div class="component-card" id="interactions">
                         <div class="component-header">
@@ -2657,6 +2700,167 @@
                     </div>
                 </section>
 
+                <section id="object-fit-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-crop-alt"></i> <h3>Object Fit Properties</h3>
+                        </div>
+                        <p>Control how images, videos, and other replaced elements are resized to fit their container. These utilities apply the <code>object-fit</code> CSS property, which is crucial for maintaining aspect ratios and preventing content distortion within responsive layouts.</p>
+
+                        <h4>How it Works</h4>
+                        <p>The <code>object-fit</code> property specifies how the content of a replaced element (like <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code>) should be resized to fit its container, while maintaining its aspect ratio if desired. Unlike background images, which use <code>background-size</code>, <code>object-fit</code> applies directly to the element itself.</p>
+                        <p>These utility classes offer five different behaviors: <code>contain</code>, <code>cover</code>, <code>fill</code>, <code>scale-down</code>, and <code>none</code>, providing flexible control over how your media scales and crops within a given dimension.</p>
+
+                        <h4>Examples</h4>
+                        <p>See how different <code>object-fit</code> classes affect an image within a fixed-size container. The container for each image is 150px by 150px.</p>
+
+                        <div class="example-row border-example-box example-flex-column gap-3">
+                            <div class="example-box">
+                                <h5 class="mb-3"><code>.object-fit-contain</code></h5>
+                                <p>The image is scaled down to fit within the container while maintaining its aspect ratio. Empty space is added if necessary.</p>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/300/200" class="object-fit-contain img-fluid" alt="Landscape Image" style="width: 100%; height: 100%;">
+                                </div>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center mt-2" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/200/300" class="object-fit-contain img-fluid" alt="Portrait Image" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3"><code>.object-fit-cover</code></h5>
+                                <p>The image fills the container, maintaining its aspect ratio. Portions of the image may be clipped if its aspect ratio differs from the container.</p>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/300/200" class="object-fit-cover img-fluid" alt="Landscape Image" style="width: 100%; height: 100%;">
+                                </div>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center mt-2" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/200/300" class="object-fit-cover img-fluid" alt="Portrait Image" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3"><code>.object-fit-fill</code></h5>
+                                <p>The image fills the container, stretching or squishing to do so. The aspect ratio is **not** maintained.</p>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/300/200" class="object-fit-fill img-fluid" alt="Landscape Image" style="width: 100%; height: 100%;">
+                                </div>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center mt-2" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/200/300" class="object-fit-fill img-fluid" alt="Portrait Image" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3"><code>.object-fit-scale</code> (maps to `scale-down`)</h5>
+                                <p>The image is scaled down to the smallest size as if `none` or `contain` were specified. The smaller concrete size is used.</p>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/300/200" class="object-fit-scale img-fluid" alt="Landscape Image" style="width: 100%; height: 100%;">
+                                </div>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center mt-2" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/200/300" class="object-fit-scale img-fluid" alt="Portrait Image" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3"><code>.object-fit-none</code></h5>
+                                <p>The image is not resized. It maintains its intrinsic size. If larger than the container, it will be clipped.</p>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/300/200" class="object-fit-none img-fluid" alt="Landscape Image" style="width: 100%; height: 100%;">
+                                </div>
+                                <div class="example-box-item bg-light-gray p-2 d-flex justify-content-center align-items-center mt-2" style="width: 150px; height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                    <img src="https://picsum.photos/200/300" class="object-fit-none img-fluid" alt="Portrait Image" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Code Examples</h4>
+                        <div class="code-block">
+                            <pre><code>
+&lt;!-- Container for demonstration (fixed size, overflow hidden) --&gt;
+&lt;div style="width: 150px; height: 150px; overflow: hidden;"&gt;
+    &lt;img src="path/to/your/image.jpg" class="object-fit-contain" alt="Description"&gt;
+&lt;/div&gt;
+
+&lt;!-- object-fit: contain --&gt;
+&lt;img src="path/to/your/image.jpg" class="object-fit-contain" style="width: 100%; height: 100%;"&gt;
+
+&lt;!-- object-fit: cover --&gt;
+&lt;img src="path/to/your/image.jpg" class="object-fit-cover" style="width: 100%; height: 100%;"&gt;
+
+&lt;!-- object-fit: fill --&gt;
+&lt;img src="path/to/your/image.jpg" class="object-fit-fill" style="width: 100%; height: 100%;"&gt;
+
+&lt;!-- object-fit: scale-down (using .object-fit-scale utility) --&gt;
+&lt;img src="path/to/your/image.jpg" class="object-fit-scale" style="width: 100%; height: 100%;"&gt;
+
+&lt;!-- object-fit: none --&gt;
+&lt;img src="path/to/your/image.jpg" class="object-fit-none" style="width: 100%; height: 100%;"&gt;
+                            </code></pre>
+                        </div>
+
+                        <h3>Object Fit Class Selector Reference</h3>
+                        <p>The following patterns outline all available <code>object-fit</code> utility classes.</p>
+
+                        <h4>Object Fit Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.object-fit-contain</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>object-fit: contain !important;</code>. The content is scaled to maintain its aspect ratio while fitting within the element's content box.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.object-fit-cover</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>object-fit: cover !important;</code>. The content is scaled to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.object-fit-fill</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>object-fit: fill !important;</code>. The content is sized to fill the element's content box. The object's aspect ratio will **not** be maintained.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.object-fit-scale</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>object-fit: scale-down !important;</code>. The content is sized as if <code>none</code> or <code>contain</code> were specified, whichever results in the smaller concrete object size.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.object-fit-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies <code>object-fit: none !important;</code>. The content is not resized to fit. It maintains its intrinsic dimensions.</p>
+                                <p>When using this class, ensure the image's container has explicit dimensions (width/height) and potentially <code>overflow: hidden;</code> if clipping is desired.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>&lt;img src="..." class="object-fit-cover"&gt;</code></p>
+                                    <p><code>&lt;video src="..." class="object-fit-contain"&gt;&lt;/video&gt;</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="opacity-utilities">
                     <div class="component-card" id="opacity">
                         <div class="component-header">
@@ -2757,6 +2961,217 @@
                                 </div>
                                 <div class="list-details">
                                     <p><code>.opacity-50</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="order-utilities">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <i class="fas fa-sort-numeric-down"></i>
+                            <h3>Order Properties</h3>
+                        </div>
+                        <p>Control the visual order of flex items with these utility classes. These classes apply the
+                            <code>order</code> CSS property, allowing you to reorder items within a flex container
+                            regardless of their source order in the HTML.</p>
+
+                        <h4>How it Works</h4>
+                        <p>Order utility classes are used on **flex items** (direct children of a flex container, i.e.,
+                            an element with `display: flex` or `display: inline-flex`). The base classes follow the
+                            pattern <code>.order-{value}</code>, where <code>{value}</code> typically ranges from
+                            <code>0</code> to <code>5</code>. Additionally, special classes like
+                            <code>.order-first</code> and <code>.order-last</code> are available to quickly position
+                            items at the beginning or end of the flex line, respectively.</p>
+                        <p>Order utilities also support responsive variations using standard breakpoints (e.g.,
+                            <code>.order-md-2</code>, <code>.order-lg-first</code>), allowing for different visual
+                            orders on various screen sizes.</p>
+
+                        <h4>Examples</h4>
+                        <p>Demonstrations of how order utilities reorder flex items:</p>
+                        <div class="example-row border-example-box example-flex-column gap-3">
+                            <div class="example-box">
+                                <h5 class="mb-3">Default Order</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue">1</div>
+                                    <div class="p-2 border-example-box bg-light-blue">2</div>
+                                    <div class="p-2 border-example-box bg-light-blue">3</div>
+                                </div>
+                                <p class="mt-3 mb-0">Items are displayed in their source order (default `order: 0`).</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Using <code>.order-first</code> and <code>.order-last</code></h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue">1</div>
+                                    <div class="p-2 border-example-box bg-light-green order-last">2 (Last)</div>
+                                    <div class="p-2 border-example-box bg-light-blue">3</div>
+                                    <div class="p-2 border-example-box bg-light-red order-first">4 (First)</div>
+                                    <div class="p-2 border-example-box bg-light-blue">5</div>
+                                </div>
+                                <p class="mt-3 mb-0"><code>.order-first</code> sets <code>order: -1</code>, and
+                                    <code>.order-last</code> sets a high order value (e.g., `order: 6`).</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Numbered Order</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue order-3">Item A (order 3)</div>
+                                    <div class="p-2 border-example-box bg-light-green order-1">Item B (order 1)</div>
+                                    <div class="p-2 border-example-box bg-light-blue order-2">Item C (order 2)</div>
+                                    <div class="p-2 border-example-box bg-light-red order-0">Item D (order 0)</div>
+                                </div>
+                                <p class="mt-3 mb-0">Items are arranged by their `order` value, with lower values
+                                    appearing first.</p>
+                            </div>
+
+                            <div class="example-box">
+                                <h5 class="mb-3">Responsive Order (Resize your browser to see effect)</h5>
+                                <div class="example-box-item bg-light-gray p-2 d-flex gap-2">
+                                    <div class="p-2 border-example-box bg-light-blue order-md-last">Item A (md-last)
+                                    </div>
+                                    <div class="p-2 border-example-box bg-light-green">Item B (default)</div>
+                                    <div class="p-2 border-example-box bg-light-red order-md-first">Item C (md-first)
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0">By default, A, B, C. On medium screens and up, C will be first, B
+                                    in middle, A last.</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+                            <code>
+                                &lt;!-- Default Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;2&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;3&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Using .order-first and .order-last --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-last"&gt;Item 2 (Last)&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-first"&gt;Item 4 (First)&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Numbered Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-3"&gt;Item A&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-1"&gt;Item B&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-2"&gt;Item C&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-0"&gt;Item D&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;!-- Responsive Order --&gt;<br>
+                                &lt;div class="d-flex"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-last"&gt;Item A&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Item B&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="order-md-first"&gt;Item C&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+
+                        <h3><i class="fas fa-code"></i> Order Class Selector Reference</h3>
+                        <p>The following patterns outline all available order utility classes.</p>
+                        <h4>Default Order Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{value}</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the <code>order</code> of a flex item. <code>{value}</code> can be
+                                        <code>0</code> through <code>5</code>. Items with lower order values appear
+                                        first.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-first</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>order: -1 !important;</code>, ensuring the item appears first in the
+                                        visual order.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-last</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>),
+                                        ensuring the item appears last in the visual order.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.order-1</code>, <code>.order-last</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Responsive Order Classes:</h4>
+                        <p>Apply order utilities responsively by appending the breakpoint abbreviation to the class
+                            name. This allows for different visual orders based on screen size.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the <code>order</code> from the specified breakpoint and up.
+                                        <code>{value}</code> can be <code>0</code> through <code>5</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-first</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>order: -1 !important;</code> from the specified breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.order-{breakpoint}-last</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets a high <code>order</code> value (e.g., <code>order: 6 !important;</code>)
+                                        from the specified breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>,
+                                        <code>lg</code>, <code>xl</code>, <code>xxl</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.order-sm-2</code>, <code>.order-lg-first</code></p>
                                 </div>
                             </div>
                         </div>
@@ -4803,6 +5218,137 @@
                 </div>
             </section>
 
+            <section id="z-index-utilities">
+                <div class="component-card">
+                    <div class="component-header">
+                        <i class="fas fa-layer-group"></i> <h3>Z-Index Properties</h3>
+                    </div>
+                    <p>Control the stacking order of elements along the Z-axis (depth). These utilities apply the <code>z-index</code> CSS property, allowing you to specify which elements appear on top of others when they overlap.</p>
+
+                    <h4>How it Works</h4>
+                    <p>The <code>z-index</code> property affects elements that are positioned (i.e., have a <code>position</code> value other than <code>static</code>, such as <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>). Elements with a higher <code>z-index</code> value will appear on top of elements with a lower value when they overlap within the same <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/The_stacking_context" target="_blank" rel="noopener noreferrer">stacking context</a>.</p>
+                    <p>These utilities provide predefined <code>z-index</code> values from -1 to 3, allowing for quick control over stacking order for common UI patterns like modals, tooltips, and overlapping components. Remember that `z-index` only works on positioned elements.</p>
+
+                    <h4>Examples</h4>
+                    <p>Observe how different <code>z-index</code> utilities affect the stacking order of overlapping elements. Each example uses absolutely positioned elements within a relative container.</p>
+
+                    <div class="example-row border-example-box example-flex-column gap-3">
+                        <div class="example-box">
+                            <h5 class="mb-3">Default Stacking (No Z-Index)</h5>
+                            <p>Elements stack according to their order in the DOM (later elements on top).</p>
+                            <div class="example-box-item bg-light-gray p-2 position-relative" style="height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                <div style="position: absolute; top: 10px; left: 10px; width: 80px; height: 80px; background-color: rgba(255, 99, 71, 0.7); border: 1px solid tomato;">Box A</div>
+                                <div style="position: absolute; top: 30px; left: 30px; width: 80px; height: 80px; background-color: rgba(60, 179, 113, 0.7); border: 1px solid mediumseagreen;">Box B</div>
+                                <div style="position: absolute; top: 50px; left: 50px; width: 80px; height: 80px; background-color: rgba(65, 105, 225, 0.7); border: 1px solid royalblue;">Box C</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Positive Z-Index Stacking</h5>
+                            <p>Higher <code>z-index</code> values bring elements to the front.</p>
+                            <div class="example-box-item bg-light-gray p-2 position-relative" style="height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                <div class="z-1" style="position: absolute; top: 10px; left: 10px; width: 80px; height: 80px; background-color: rgba(255, 99, 71, 0.7); border: 1px solid tomato;">Box A (z-1)</div>
+                                <div class="z-3" style="position: absolute; top: 30px; left: 30px; width: 80px; height: 80px; background-color: rgba(60, 179, 113, 0.7); border: 1px solid mediumseagreen;">Box B (z-3)</div>
+                                <div class="z-2" style="position: absolute; top: 50px; left: 50px; width: 80px; height: 80px; background-color: rgba(65, 105, 225, 0.7); border: 1px solid royalblue;">Box C (z-2)</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Negative Z-Index Stacking</h5>
+                            <p>Negative <code>z-index</code> values push elements behind their parent or other elements.</p>
+                            <div class="example-box-item bg-light-gray p-2 position-relative" style="height: 150px; overflow: hidden; border: 1px dashed #ccc;">
+                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 0, 0.3); z-index: 0; display: flex; align-items: center; justify-content: center; border: 1px dashed orange;">Parent/Base (z-0)</div>
+                                <div class="z-1" style="position: absolute; top: 10px; left: 10px; width: 80px; height: 80px; background-color: rgba(255, 99, 71, 0.7); border: 1px solid tomato;">Box A (z-1)</div>
+                                <div class="z-n1" style="position: absolute; top: 30px; left: 30px; width: 80px; height: 80px; background-color: rgba(60, 179, 113, 0.7); border: 1px solid mediumseagreen;">Box B (z-n1)</div>
+                                <div class="z-0" style="position: absolute; top: 50px; left: 50px; width: 80px; height: 80px; background-color: rgba(65, 105, 225, 0.7); border: 1px solid royalblue;">Box C (z-0)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Code Examples</h4>
+                    <div class="code-block" style="width: 850px">
+                        <pre><code>
+&lt;!-- Example of Z-index usage --&gt;
+&lt;div class="position-relative" style="height: 150px; border: 1px dashed #ccc;"&gt;
+    &lt;div class="position-absolute z-1" style="top: 10px; left: 10px; background-color: red;"&gt;Element A (z-1)&lt;/div&gt;
+    &lt;div class="position-absolute z-3" style="top: 30px; left: 30px; background-color: green;"&gt;Element B (z-3)&lt;/div&gt;
+    &lt;div class="position-absolute z-2" style="top: 50px; left: 50px; background-color: blue;"&gt;Element C (z-2)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Example with negative z-index --&gt;
+&lt;div class="position-relative" style="height: 150px; border: 1px dashed #ccc;"&gt;
+    &lt;div class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%; background-color: lightyellow; z-index: 0;"&gt;Background Layer (z-0)&lt;/div&gt;
+    &lt;div class="position-absolute z-n1" style="top: 20px; left: 20px; background-color: lightcoral;"&gt;Hidden Behind (z-n1)&lt;/div&gt;
+    &lt;div class="position-absolute z-1" style="top: 40px; left: 40px; background-color: lightblue;"&gt;On Top (z-1)&lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+
+                    <h3>Z-Index Class Selector Reference</h3>
+                    <p>The following patterns outline all available <code>z-index</code> utility classes.</p>
+
+                    <h4>Z-Index Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.z-n1</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies <code>z-index: -1 !important;</code>. Positions the element behind most other elements in its stacking context.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.z-0</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies <code>z-index: 0 !important;</code>. Sets the element's stacking order to a base level.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.z-1</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies <code>z-index: 1 !important;</code>. Positions the element one layer above elements with <code>z-index: 0</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.z-2</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies <code>z-index: 2 !important;</code>. Positions the element two layers above elements with <code>z-index: 0</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.z-3</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies <code>z-index: 3 !important;</code>. Positions the element three layers above elements with <code>z-index: 0</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>&lt;div class="position-absolute z-1"&gt;...&lt;/div&gt;</code></p>
+                                <p><code>&lt;div class="modal z-3"&gt;...&lt;/div&gt;</code></p>
+                                <p><code>&lt;div class="backdrop z-n1"&gt;...&lt;/div&gt;</code></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="examples">
                 <h2><i class="fas fa-code"></i> Examples</h2>
                 <p>Explore practical implementation examples to see how the grid system works in real-world
@@ -4938,7 +5484,6 @@
         });
 
         const sections = document.querySelectorAll('section');
-        const divs = document.querySelectorAll('div');
         const navLinks = document.querySelectorAll('nav a');
 
         const sectionObserver = new IntersectionObserver((entries) => {
@@ -4960,10 +5505,6 @@
 
         sections.forEach(section => {
             sectionObserver.observe(section);
-        });
-
-        divs.forEach(div => {
-            sectionObserver.observe(div);
         });
 
         window.addEventListener('popstate', function () {
