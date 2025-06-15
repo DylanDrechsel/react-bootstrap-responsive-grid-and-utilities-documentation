@@ -2350,6 +2350,114 @@
                                 &lt;/div&gt;
                             </code>
                         </div>
+
+                        <h4>Float Class Selector Reference</h4>
+                        <p>The following patterns outline all available float utility classes.</p>
+                        <h4>Float Classes:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.float-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>float: left !important;</code> to float the element to the left.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.float-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>float: right !important;</code> to float the element to the right.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.float-none</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>float: none !important;</code> to reset any float applied to the element.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.float-start</code>, <code>.float-none</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Responsive Float Classes:</h4>
+                        <p>Apply float utilities responsively by appending the breakpoint abbreviation to the class name. This allows for different float behaviors based on screen size.</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.float-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Utility Class Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets the <code>float</code> property from the specified breakpoint and up. Values: <code>start</code> (left), <code>end</code> (right), <code>none</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>
+                                        <code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.float-start .float-md-none</code> (floats left by default, but no float on medium screens and up)</p>
+                                    <p><code>.float-lg-end</code> (floats right on large screens and up)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Clearfix Utility:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.clearfix</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Adds a <code>clear: both;</code> via the <code>::after</code> pseudo-element, effectively clearing floats within its parent container. Useful for containing floated content without adding extra markup.</p>
+                                    <p>CSS applied:
+                                        <pre><code>
+                                            .clearfix::after {
+                                            display: block;
+                                            clear: both;
+                                            content: "";
+                                            }
+                                        </code></pre>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>&lt;div class="clearfix"&gt;...floated content...&lt;/div&gt;</code></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
