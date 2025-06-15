@@ -537,7 +537,7 @@ p {
     padding: 2rem;
     margin: 1.8rem 0;
     box-shadow: var(--shadow-sm);
-    border-left: 4px solid var(--primary);
+    /* border-left: 4px solid var(--primary); */
 }
 .component-header {
     display: flex;

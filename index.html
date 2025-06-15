@@ -40,11 +40,11 @@
                             <li><a href="#display-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Display</a></li>
                             <li><a href="#flex-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i>Flex</a></li>
                             <li><a href="#order-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-sort-numeric-down"></i>Order</a></li>
-                            <li><a href="#float">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Float</a></li>
-                            <li><a href="#interactions">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>Interactions</a></li>
-                            <li><a href="#opacity">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i>Opacity</a></li>
-                            <li><a href="#overflow">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Overflow</a></li>
-                            <li><a href="#position">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i>Position</a></li>
+                            <li><a href="#float-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Float</a></li>
+                            <li><a href="#interactions-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-hand-pointer"></i>Interactions</a></li>
+                            <li><a href="#opacity-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-adjust"></i>Opacity</a></li>
+                            <li><a href="#overflow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Overflow</a></li>
+                            <li><a href="#position-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-thumbtack"></i>Position</a></li>
                             <li><a href="#shadow-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-cube"></i>Shadows</a></li>
                             <li><a href="#sizing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand-arrows-alt"></i>Sizing</a></li>
                             <li><a href="#spacing-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt"></i>Spacing</a></li>
@@ -1483,6 +1483,543 @@
                                 &lt;/div&gt;
                             </code>
                         </div>
+
+                        <h4>Flex Class Selector Reference</h4>
+                        <p>The following patterns outline all available flexbox utility classes.</p>
+                        <h4>Flex Direction:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-row</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-direction: row !important;</code> (horizontal, left-to-right).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-row-reverse</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-direction: row-reverse !important;</code> (horizontal, right-to-left).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-column</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-direction: column !important;</code> (vertical, top-to-bottom).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-column-reverse</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-direction: column-reverse !important;</code> (vertical, bottom-to-top).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-{breakpoint}-{direction}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies flex direction responsively from the specified breakpoint and up. Directions: <code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.flex-column .flex-md-row</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Flex Wrap:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-wrap</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-wrap: wrap !important;</code> allowing items to wrap to the next line.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-nowrap</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-wrap: nowrap !important;</code> preventing items from wrapping.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-wrap-reverse</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-wrap: wrap-reverse !important;</code> allowing items to wrap to the previous line.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-{breakpoint}-{wrap}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies flex wrap behavior responsively from the specified breakpoint and up. Wrap values: <code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.flex-nowrap .flex-sm-wrap</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Justify Content (Main Axis Alignment):</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: flex-start !important;</code> (items aligned to the start of the main axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: flex-end !important;</code> (items aligned to the end of the main axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: center !important;</code> (items centered along the main axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-between</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: space-between !important;</code> (items distributed with space between them, first and last items at edges).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-around</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: space-around !important;</code> (items distributed with equal space around them).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-evenly</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>justify-content: space-evenly !important;</code> (items distributed with equal space between and around them).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.justify-content-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies justify content responsively from the specified breakpoint and up. Values: <code>start</code>, <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, <code>evenly</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.justify-content-center .justify-content-lg-between</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Align Items (Cross Axis Alignment - Single Line):</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-items: flex-start !important;</code> (items aligned to the start of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-items: flex-end !important;</code> (items aligned to the end of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-items: center !important;</code> (items centered along the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-baseline</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-items: baseline !important;</code> (items aligned based on their baselines).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-stretch</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-items: stretch !important;</code> (items stretch to fill the container along the cross axis, respecting min/max height/width).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-items-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies align items responsively from the specified breakpoint and up. Values: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.align-items-start .align-items-md-center</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Align Content (Cross Axis Alignment - Multi-Line):</h4>
+                        <p>Note: This only applies when flex items wrap (i.e., when using <code>.flex-wrap</code>).</p>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: flex-start !important;</code> (wrapped lines aligned to the start of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: flex-end !important;</code> (wrapped lines aligned to the end of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: center !important;</code> (wrapped lines centered along the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-between</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: space-between !important;</code> (wrapped lines distributed with space between them, first and last lines at edges).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-around</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: space-around !important;</code> (wrapped lines distributed with equal space around them).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-stretch</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-content: stretch !important;</code> (wrapped lines stretch to fill the remaining space).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-content-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies align content responsively from the specified breakpoint and up. Values: <code>start</code>, <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, <code>stretch</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.flex-wrap .align-content-end</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Align Self (Cross Axis Alignment - Individual Item):</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-auto</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: auto !important;</code> (inherits default alignment or from parent <code>align-items</code>).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-start</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: flex-start !important;</code> (item aligned to the start of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-end</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: flex-end !important;</code> (item aligned to the end of the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-center</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: center !important;</code> (item centered along the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-baseline</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: baseline !important;</code> (item aligned based on its baseline).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-stretch</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>align-self: stretch !important;</code> (item stretches to fill the available space along the cross axis).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.align-self-{breakpoint}-{value}</code>
+                                    <span class="list-type-column">Responsive Pattern</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies align self responsively from the specified breakpoint and up. Values: <code>auto</code>, <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.align-self-center .align-self-lg-start</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Flex Grow & Shrink:</h4>
+                        <div class="list-box-no-flex">
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-fill</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex: 1 1 auto !important;</code> (item grows and shrinks as needed to fill available space).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-grow-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-grow: 0 !important;</code> (prevents item from growing).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-grow-1</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-grow: 1 !important;</code> (allows item to grow to fill available space).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-shrink-0</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-shrink: 0 !important;</code> (prevents item from shrinking).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-shrink-1</code>
+                                    <span class="list-type-column">Utility Class</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Sets <code>flex-shrink: 1 !important;</code> (allows item to shrink as needed).</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    <code>.flex-{breakpoint}-fill</code><br>
+                                    <code>.flex-{breakpoint}-grow-0/1</code><br>
+                                    <code>.flex-{breakpoint}-shrink-0/1</code>
+                                    <span class="list-type-column">Responsive Patterns</span>
+                                </div>
+                                <div class="list-details">
+                                    <p>Applies flex grow, shrink, or fill behavior responsively from the specified breakpoint and up.</p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Available Breakpoints:
+                                    <span class="list-type-column">Breakpoints</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>xxs</code>, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code></p>
+                                </div>
+                            </div>
+                            <div class="list-row-column">
+                                <div class="list-name-column">
+                                    Example:
+                                    <span class="list-type-column">Usage Example</span>
+                                </div>
+                                <div class="list-details">
+                                    <p><code>.flex-grow-1 .flex-md-grow-0</code>, <code>.flex-xl-fill</code></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -1698,7 +2235,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="float-utilities">
                     <div class="component-card" id="float">
                         <div class="component-header">
                             <i class="fas fa-grip-lines"></i>
@@ -1816,7 +2353,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="interactions-utilities">
                     <div class="component-card" id="interactions">
                         <div class="component-header">
                             <i class="fas fa-hand-pointer"></i>
@@ -1895,7 +2432,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="opacity-utilities">
                     <div class="component-card" id="opacity">
                         <div class="component-header">
                             <i class="fas fa-adjust"></i>
@@ -1941,7 +2478,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="overflow-utilities">
                     <div class="component-card" id="overflow">
                         <div class="component-header">
                             <i class="fas fa-arrows-alt"></i>
@@ -2064,7 +2601,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="position-utilities">
                     <div class="component-card" id="position">
                         <div class="component-header">
                             <i class="fas fa-thumbtack"></i>
@@ -2358,7 +2895,7 @@
                     </div>
                 </section>
 
-                <section id="utility-classes">
+                <section id="shadow-utilities">
                     <div class="component-card">
                         <div class="component-header">
                             <i class="fas fa-cube"></i>
