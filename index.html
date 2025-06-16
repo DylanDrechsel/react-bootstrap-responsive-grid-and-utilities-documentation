@@ -22,19 +22,18 @@
         <div class="grid">
             <nav>
                 <ul>
-                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
-                    <li><a href="#breakpoints"><i class="fas fa-mobile-alt"></i> Breakpoints</a></li>
-                    <li><a href="#grid-components"><i class="fas fa-th"></i> Grid Components</a>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i>Overview</a></li>
+                    <li><a href="#breakpoints"><i class="fas fa-mobile-alt"></i>Breakpoints</a></li>
+                    <li><a href="#grid-components"><i class="fas fa-th"></i>Grid Components</a>
                         <ul>
-                            <li><a href="#container-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-square"></i>
-                                    Container</a></li>
-                            <li><a href="#row-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i> Row</a>
+                            <li><a href="#container-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-square"></i>Container</a></li>
+                            <li><a href="#row-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Row</a>
                             </li>
-                            <li><a href="#col-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-columns"></i> Column</a>
+                            <li><a href="#col-component">&nbsp;&nbsp;&nbsp;<i class="fas fa-columns"></i>Column</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#utility-classes"><i class="fas fa-toolbox"></i> Utility Classes</a>
+                    <li><a href="#utility-classes"><i class="fas fa-toolbox"></i>Utility Classes</a>
                         <ul>
                             <li><a href="#aspect-ratio-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand"></i>Aspect Ratio</a></li>
                             <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i>Borders</a></li>
@@ -57,8 +56,8 @@
                             <li><a href="#z-index-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-layer-group"></i>Z-Index</a></li>
                         </ul>
                     </li>
-                    <li><a href="#examples"><i class="fas fa-code"></i> Examples</a></li>
-                    <li><a href="#customization"><i class="fas fa-cog"></i> Customization</a></li>
+                    <li><a href="#examples"><i class="fas fa-code"></i>Examples</a></li>
+                    <li><a href="#customization"><i class="fas fa-cog"></i>Customization</a></li>
                 </ul>
             </nav>
 
@@ -5468,8 +5467,9 @@
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
+                    console.log(targetElement.offsetTop);
                     window.scrollTo({
-                        top: targetElement.offsetTop + 450,
+                        top: targetElement.offsetTop + 400,
                         behavior: 'smooth'
                     });
 
@@ -5513,7 +5513,7 @@
                 const target = document.querySelector(hash);
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop + 450,
+                        top: target.offsetTop + 400,
                         behavior: 'smooth'
                     });
                 }
@@ -5521,5 +5521,4 @@
         });
     </script>
     </body>
-
 </html>
