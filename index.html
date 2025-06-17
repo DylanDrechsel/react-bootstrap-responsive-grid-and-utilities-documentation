@@ -37,6 +37,7 @@
                         <ul>
                             <li><a href="#aspect-ratio-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-expand"></i>Aspect Ratio</a></li>
                             <li><a href="#border-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-border-all"></i>Borders</a></li>
+                            <li><a href="#colors-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-palette"></i>Colors</a></li>
                             <li><a href="#display-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-eye"></i>Display</a></li>
                             <li><a href="#flex-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-arrows-alt-h"></i>Flex</a></li>
                             <li><a href="#float-utilities">&nbsp;&nbsp;&nbsp;<i class="fas fa-grip-lines"></i>Float</a></li>
@@ -853,6 +854,338 @@
                                 <div class="list-details">
                                     <p><code>.rounded-top</code>, <code>.rounded-end</code></p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="colors-utilities">
+                    <h2><i class="fas fa-palette"></i> Colors</h2>
+                    <p>Control the appearance of your content with a rich set of color utilities for text, backgrounds, and borders. These classes are designed to be fully customizable via SCSS variables, ensuring your application's styling remains consistent and easy to manage across all components.</p>
+                    <p>Beyond basic solid colors, this system also provides utilities for background gradients and background colors with adjustable opacity, giving you precise control over visual depth and layering.</p>
+
+                    <h3><i class="fas fa-swatchbook"></i> Customizable Theme Colors</h3>
+                    <p>The grid system's color palette is defined through SCSS variables, allowing for easy customization. Below is the default list of colors and their corresponding variable names and hex values:</p>
+
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$primary</code>
+                                <span class="list-type-column">#007bff</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Represents the main brand color (default: blue).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$secondary</code>
+                                <span class="list-type-column">#6c757d</span>
+                            </div>
+                            <div class="list-details">
+                                <p>A neutral, supporting color (default: gray).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$success</code>
+                                <span class="list-type-column">#28a745</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Indicates a successful or positive action (default: green).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$info</code>
+                                <span class="list-type-column">#17a2b8</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Provides informational context (default: cyan).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$warning</code>
+                                <span class="list-type-column">#ffc107</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Highlights a warning or caution (default: yellow).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$danger</code>
+                                <span class="list-type-column">#dc3545</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Denotes a critical or negative action (default: red).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$light</code>
+                                <span class="list-type-column">#f8f9fa</span>
+                            </div>
+                            <div class="list-details">
+                                <p>A very light, near-white color (default: off white).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$dark</code>
+                                <span class="list-type-column">#343a40</span>
+                            </div>
+                            <div class="list-details">
+                                <p>A very dark, near-black color (default: off black).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$white</code>
+                                <span class="list-type-column">#fff</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Pure white color.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$black</code>
+                                <span class="list-type-column">#000</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Pure black color.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$body</code>
+                                <span class="list-type-column">#212529</span>
+                            </div>
+                            <div class="list-details">
+                                <p>The default text color for body content (default: off gray).</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>$muted</code>
+                                <span class="list-type-column">#6c757d</span>
+                            </div>
+                            <div class="list-details">
+                                <p>A subdued text color, often used for secondary information (default: gray).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-paint-brush"></i> Examples</h3>
+                    <p>See how different color utilities can be applied:</p>
+
+                    <div class="example-row border-example-box example-flex-column gap-3">
+                        <div class="example-box">
+                            <h5 class="mb-3">Text Colors</h5>
+                            <p>Apply distinct colors to your text content using <code>.text-{color-name}</code>.</p>
+                            <div class="example-box-item bg-light-gray p-2">
+                                <p class="mb-1 text-primary"><code>.text-primary</code> - This is primary text.</p>
+                                <p class="mb-1 text-success"><code>.text-success</code> - This is success text.</p>
+                                <p class="mb-1 text-danger"><code>.text-danger</code> - This is danger text.</p>
+                                <p class="mb-1 text-info"><code>.text-info</code> - This is info text.</p>
+                                <p class="mb-1 text-warning"><code>.text-warning</code> - This is warning text.</p>
+                                <p class="mb-1 text-dark"><code>.text-dark</code> - This is dark text.</p>
+                                <p class="mb-1 text-muted"><code>.text-muted</code> - This is muted text.</p>
+                                <p class="mb-0 text-white" style="background-color: var(--dark); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm);"><code>.text-white</code> - White text on dark background.</p>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Background Colors</h5>
+                            <p>Apply solid background colors to elements using <code>.bg-{color-name}</code>.</p>
+                            <div class="example-box-item bg-light-gray p-2 d-flex flex-wrap gap-2">
+                                <div class="bg-primary text-white p-3 rounded-sm flex-fill text-center">.bg-primary</div>
+                                <div class="bg-success text-white p-3 rounded-sm flex-fill text-center">.bg-success</div>
+                                <div class="bg-danger text-white p-3 rounded-sm flex-fill text-center">.bg-danger</div>
+                                <div class="bg-info text-white p-3 rounded-sm flex-fill text-center">.bg-info</div>
+                                <div class="bg-warning text-dark p-3 rounded-sm flex-fill text-center">.bg-warning</div>
+                                <div class="bg-dark text-white p-3 rounded-sm flex-fill text-center">.bg-dark</div>
+                                <div class="bg-light text-dark p-3 rounded-sm flex-fill text-center">.bg-light</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Border Colors</h5>
+                            <p>Apply borders with specific theme colors using <code>.border-{color-name}</code>. (Requires a base border utility like <code>.border</code> to be present).</p>
+                            <div class="example-box-item bg-light-gray p-2 d-flex flex-wrap gap-2">
+                                <div class="border border-primary p-3 rounded-sm flex-fill text-center" style="border-width: 2px;">.border-primary</div>
+                                <div class="border border-success p-3 rounded-sm flex-fill text-center" style="border-width: 2px;">.border-success</div>
+                                <div class="border border-danger p-3 rounded-sm flex-fill text-center" style="border-width: 2px;">.border-danger</div>
+                                <div class="border border-dark p-3 rounded-sm flex-fill text-center" style="border-width: 2px;">.border-dark</div>
+                                <div class="border border-warning p-3 rounded-sm flex-fill text-center" style="border-width: 2px;">.border-warning</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Background Gradients</h5>
+                            <p>Add subtle linear gradients using <code>.bg-gradient-{color-name}</code>. These ascend from a lighter tint of the color to the full color.</p>
+                            <div class="example-box-item bg-light-gray p-2 d-flex flex-wrap gap-2">
+                                <div class="p-3 rounded-sm flex-fill text-center" style="background-image: linear-gradient(180deg, rgba(38, 143, 255, 1), #007bff); color: white;">.bg-gradient-primary</div>
+                                <div class="p-3 rounded-sm flex-fill text-center" style="background-image: linear-gradient(180deg, rgba(53, 191, 80, 1), #28a745); color: white;">.bg-gradient-success</div>
+                                <div class="p-3 rounded-sm flex-fill text-center" style="background-image: linear-gradient(180deg, rgba(228, 93, 107, 1), #dc3545); color: white;">.bg-gradient-danger</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5 class="mb-3">Background with Opacity</h5>
+                            <p>Apply background colors with predefined opacity levels (10%, 25%, 50%, 75%, 90%) using <code>.bg-{color}-opacity-{level}</code>.</p>
+                            <div class="example-box-item bg-light-gray p-2 d-flex flex-wrap gap-2">
+                                <div class="bg-primary-opacity-25 text-primary p-3 rounded-sm flex-fill text-center">.bg-primary-opacity-25</div>
+                                <div class="bg-success-opacity-50 text-success p-3 rounded-sm flex-fill text-center">.bg-success-opacity-50</div>
+                                <div class="bg-danger-opacity-75 text-danger p-3 rounded-sm flex-fill text-center">.bg-danger-opacity-75</div>
+                                <div class="bg-dark-opacity-90 text-dark p-3 rounded-sm flex-fill text-center">.bg-dark-opacity-90</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Code Examples</h4>
+                    <div class="code-block">
+                        <code>
+                            &lt;!-- Text Colors --&gt;<br>
+                            &lt;p class="text-primary"&gt;Primary colored text.&lt;/p&gt;<br>
+                            &lt;p class="text-success"&gt;Success colored text.&lt;/p&gt;<br>
+                            &lt;p class="text-white bg-dark"&gt;White text on dark background.&lt;/p&gt;<br>
+                            <br>
+                            &lt;!-- Background Colors --&gt;<br>
+                            &lt;div class="bg-primary p-3"&gt;Primary background.&lt;/div&gt;<br>
+                            &lt;div class="bg-success p-3"&gt;Success background.&lt;/div&gt;<br>
+                            <br>
+                            &lt;!-- Border Colors --&gt;<br>
+                            &lt;div class="border border-primary p-3"&gt;Primary border.&lt;/div&gt;<br>
+                            &lt;div class="border border-danger p-3"&gt;Danger border.&lt;/div&gt;<br>
+                            <br>
+                            &lt;!-- Background Gradients --&gt;<br>
+                            &lt;div class="bg-gradient-primary p-3 text-white"&gt;Primary gradient background.&lt;/div&gt;<br>
+                            &lt;div class="bg-gradient-success p-3 text-white"&gt;Success gradient background.&lt;/div&gt;<br>
+                            <br>
+                            &lt;!-- Background with Opacity --&gt;<br>
+                            &lt;div class="bg-primary-opacity-25 p-3 text-primary"&gt;Primary background with 25% opacity.&lt;/div&gt;<br>
+                            &lt;div class="bg-success-opacity-50 p-3 text-success"&gt;Success background with 50% opacity.&lt;/div&gt;
+                        </code>
+                    </div>
+
+                    <h3><i class="fas fa-code"></i> Color Class Selector Reference</h3>
+                    <p>The following patterns outline all available color utility classes. These classes apply <code>!important</code> to ensure they override other styles.</p>
+
+                    <h4>Text Color Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.text-{color-name}</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets the <code>color</code> property to the specified theme color.</p>
+                                <p><strong>Available color names:</strong> <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>, <code>light</code>, <code>dark</code>, <code>white</code>, <code>black</code>, <code>body</code>, <code>muted</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.text-primary</code>, <code>.text-dark</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Background Color Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.bg-{color-name}</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets the <code>background-color</code> property to the specified theme color.</p>
+                                <p><strong>Available color names:</strong> <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>, <code>light</code>, <code>dark</code>, <code>white</code>, <code>black</code>, <code>body</code>, <code>muted</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.bg-success</code>, <code>.bg-light</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Border Color Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.border-{color-name}</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets the <code>border-color</code> property to the specified theme color. Typically used in conjunction with border width or side utilities (e.g., <code>.border</code>, <code>.border-2</code>, <code>.border-top</code>).</p>
+                                <p><strong>Available color names:</strong> <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>, <code>light</code>, <code>dark</code>, <code>white</code>, <code>black</code>, <code>body</code>, <code>muted</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.border-primary</code>, <code>.border-dark</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Background Gradient Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.bg-gradient-{color-name}</code>
+                                <span class="list-type-column">Utility Class</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Applies a <code>linear-gradient</code> background, transitioning from a lighter tint of the specified color to the full color.</p>
+                                <p><strong>Available color names:</strong> <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code>, <code>light</code>, <code>dark</code>, <code>white</code>, <code>black</code>, <code>body</code>, <code>muted</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.bg-gradient-primary</code>, <code>.bg-gradient-info</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Background with Opacity Classes:</h4>
+                    <div class="list-box-no-flex">
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                <code>.bg-{color}-opacity-{level}</code>
+                                <span class="list-type-column">Utility Class Pattern</span>
+                            </div>
+                            <div class="list-details">
+                                <p>Sets the <code>background-color</code> with a specific opacity level (e.g., <code>rgba({color}, {level}/100)</code>).</p>
+                                <p><strong>Available color names:</strong> All theme colors (<code>primary</code>, <code>secondary</code>, etc.).</p>
+                                <p><strong>Available opacity levels:</strong> <code>10</code>, <code>25</code>, <code>50</code>, <code>75</code>, <code>90</code>.</p>
+                            </div>
+                        </div>
+                        <div class="list-row-column">
+                            <div class="list-name-column">
+                                Example:
+                                <span class="list-type-column">Usage Example</span>
+                            </div>
+                            <div class="list-details">
+                                <p><code>.bg-primary-opacity-25</code>, <code>.bg-dark-opacity-75</code></p>
                             </div>
                         </div>
                     </div>
