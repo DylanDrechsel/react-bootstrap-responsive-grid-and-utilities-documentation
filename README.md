@@ -53,23 +53,36 @@ npm install react-bootstrap-responsive-grid-and-utilities
 # or
 yarn add react-bootstrap-responsive-grid-and-utilities
 ```
-
 ---
 
 ## Usage
 
-1. Import Components and Styles:
+1. Import Styles:
+```
+// In your main.tsx or a relevant file
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.tsx'
+import 'react-bootstrap-responsive-grid-and-utilities/dist/index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+```
+
+2. Import Components:
 ```
 // In your main App.tsx or a relevant component file
 import { Container, Row, Col } from 'react-bootstrap-responsive-grid-and-utilities';
-import 'react-bootstrap-responsive-grid-and-utilities/dist/index.css'; // Don't forget to import the CSS!
 ```
 
-2. Example - Responsive Grid and Spacing:
+3. Example - Responsive Grid and Spacing:
 ```
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap-responsive-grid-and-utilities';
-import 'react-bootstrap-responsive-grid-and-utilities/dist/index.css'; // Make sure to import the CSS once in your app
 
 function MyPage() {
   return (
